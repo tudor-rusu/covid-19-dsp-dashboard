@@ -8,7 +8,7 @@ This project is about developing a web interface for management of COVID-19 priv
 **Project stack**  
 * PHP 7.2
 * MySQL 5.7
-* Laravel
+* Laravel 7.3.0
 * Composer
 
 ## Install and run on local machine
