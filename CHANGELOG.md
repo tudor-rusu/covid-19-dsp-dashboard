@@ -5,6 +5,11 @@
 
 ### Modify
 - README.md
+=======
+- deploy with Composer a bare vanilla Laravel
+
+### Modified
+- update README.md and CHANGELOG.md
 
 ## [0.0.1] - 2020-03-26
 
