@@ -9,14 +9,15 @@ var Document = function () {
     });
 
     this.reset();
-}
+};
 
 Document.prototype.reset = function () {
 
-    this.doc.setFont('Times New Roman');
+    this.doc.setFont('TimesNewRoman');
     this.doc.setFontStyle('normal');
     this.doc.setFontSize(10);
-}
+    this.doc.setTextColor(0, 0, 0);
+};
 
 Document.prototype.download = function (data) {
 
@@ -24,8 +25,23 @@ Document.prototype.download = function (data) {
 
     this.fill(data);
 
-    this.doc.save();
-}
+    this.doc.save(this.getName(data));
+};
+
+Document.prototype.getName = function(data) {
+
+    let date = new Date();
+    let year = date.getUTCFullYear();
+    let month = date.getUTCMonth() + 1; // months from 1-12
+    let day = date.getDate();
+
+    if (month <= 9) {
+
+        month = '0' + month;
+    }
+
+    return 'declaratie_' + year + month + day + '.pdf';
+};
 
 Document.prototype.draw = function () {
 
@@ -34,7 +50,7 @@ Document.prototype.draw = function () {
     this.doc.setFontStyle('bold');
     this.doc.setFontSize(12);
     this.doc.text('DECLARAȚIE', 105, 16, { align: 'center' });
-    
+
     this.reset();
 
     // left column
@@ -53,7 +69,7 @@ Document.prototype.draw = function () {
     this.doc.text('Pașaport/C.I.', 10, 45);
     this.doc.text('Serie', 35, 45);
     this.doc.line(45, 46, 60, 46);
-    this.doc.text('Numar', 67, 45);
+    this.doc.text('Număr', 67, 45);
     this.doc.line(80, 46, 100, 46);
 
     this.doc.text('Data nașterii (zi/lună/an)', 10, 50);
@@ -166,7 +182,7 @@ Document.prototype.draw = function () {
     // date
     this.doc.text('Data și locul', 50, 275);
     this.doc.text('Semnătura', 140, 275);
-}
+};
 
 Document.prototype.fill = function (data) {
 
@@ -218,4 +234,4 @@ Document.prototype.fill = function (data) {
     this.doc.text(data.vehicle, 103, 253, { align: 'center' });
     this.doc.text(data.route, 100, 257, { align: 'center' });
     this.doc.text(data.documentDate + ', ' + data.documentLocality, 59, 280, { align: 'center' });
-}
+};
