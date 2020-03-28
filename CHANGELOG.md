@@ -1,11 +1,6 @@
 ## [0.1.0] - 2020-03-26
 
 ### Added
-- deploy all files from vanilla Laravel 7.3
-
-### Modify
-- README.md
-=======
 - deploy with Composer a bare vanilla Laravel
 
 ### Modified
