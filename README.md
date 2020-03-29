@@ -46,7 +46,7 @@ cp .env.example .env
 ```shell script
 nano .env
 ```
-* Modify, add and remove to reflect the specifics of your setup
+* Modify and add parameters to reflect the specifics of your setup
 ```shell script
 APP_NAME="COVID-19 - DSP declarations management"
 
@@ -59,11 +59,10 @@ DB_ROOT_PASSWORD=toor
 MAIL_MAILER=smtp
 MAIL_HOST=0.0.0.0
 MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-#MAIL_FROM_ADDRESS=null
-#MAIL_FROM_NAME="${APP_NAME}"
+MAIL_FROM_ADDRESS="covid19_dsp@testmail.com"
+
+COVID19_DSP_API=https://covid-api-dev.citizennext.ro/
+COVID19_DSP_API_KEY="Zeileeg4xahdi4zixeaquo0aothooj0b"
 ```
 
 ### Run local
@@ -84,53 +83,7 @@ f13affc27734        adminer                 "entrypoint.sh docke…"   13 hours 
 4a33b9341bfe        covid19_dsp/php         "docker-php-entrypoi…"   13 hours ago        Up 2 minutes        9000/tcp                                         covid19-dsp-app
 b00db15a073c        mailhog/mailhog         "MailHog"                13 hours ago        Up 2 minutes        0.0.0.0:1025->1025/tcp, 0.0.0.0:8025->8025/tcp   covid19-dsp-mailhog
 ```
-* Run in `covid19-dsp-app` container `composer install`
-```shell script
-docker container exec -it covid19-dsp-app composer install
-```
-* Generate a key and copy it to your `.env` file, ensuring that your user sessions and encrypted data remain secure
-```shell script
-docker container exec -it covid19-dsp-app php artisan key:generate
-```
-* Cache these settings into a file
-```shell script
-docker container exec -it covid19-dsp-app php artisan config:cache
-```
-* Now user will be able to check it in browser
-```shell script
-http://localhost/         - main app
-http://localhost:8080/    - adminer (use for Server - covid19-dsp-db, User - root)
-http://localhost:8081/    - phpmyadmin
-http://localhost:8025/    - MailHog 
-```
-in Docker running terminal user could check Redis
-```shell script
-...
-covid19-dsp-redis         | 1:M 29 Mar 2020 07:31:34.362 * DB loaded from disk: 0.000 seconds
-covid19-dsp-redis         | 1:M 29 Mar 2020 07:31:34.362 * Ready to accept connections
-...
-```
-* Open the `covid19-dsp-db` container and log into the MySQL root administrative account
-```shell script
-docker container exec -it covid19-dsp-db mysql -u root -p
-```
-* Create the user account that will be allowed to access this database and flush the privileges to notify the MySQL
- server of the changes
- ```mysql
-mysql> GRANT ALL ON laravel.* TO 'laravel'@'%' IDENTIFIED BY 'laravel';
-mysql> FLUSH PRIVILEGES;
-mysql> EXIT;
-```
-* Migrate the data and check it with `tinker`
-```shell script
-docker container exec -it covid19-dsp-app php artisan migrate
-
-Migration table created successfully.
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (0.1 seconds)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (0.05 seconds)
-```
+* Check the migrated data with `tinker`
 ```shell script
 docker container exec -it covid19-dsp-app php artisan tinker
 Psy Shell v0.10.2 (PHP 7.2.29 — cli) by Justin Hileman
