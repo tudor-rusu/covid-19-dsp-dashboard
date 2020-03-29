@@ -1,3 +1,12 @@
+## [0.2.0] - 2020-03-29
+
+### Added
+- deploy all files from Docker containerization
+- deploy files for PDF generation
+
+### Modify
+- README.md and and CHANGELOG.md
+
 ## [0.1.0] - 2020-03-26
 
 ### Added
