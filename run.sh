@@ -75,6 +75,10 @@ echo -en "\n"
 echo "${RED}Generate a key and copy it to your .env file, ensuring that your user sessions and encrypted data remain secure${RESET}"
 docker container exec -it covid19-dsp-app php artisan key:generate
 echo -en "\n"
+echo "${RED}Run 'npm' for frontend${RESET}"
+docker container exec -it covid19-dsp-app npm install
+docker container exec -it covid19-dsp-app npm run dev
+echo -en "\n"
 echo "${RED}Cache these settings into a file${RESET}"
 docker container exec -it covid19-dsp-app php artisan config:cache
 
