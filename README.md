@@ -46,7 +46,7 @@ cp .env.example .env
 ```shell script
 nano .env
 ```
-* Modify, add and remove to reflect the specifics of your setup
+* Modify and add parameters to reflect the specifics of your setup
 ```shell script
 APP_NAME="COVID-19 - DSP declarations management"
 
@@ -59,11 +59,10 @@ DB_ROOT_PASSWORD=toor
 MAIL_MAILER=smtp
 MAIL_HOST=0.0.0.0
 MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-#MAIL_FROM_ADDRESS=null
-#MAIL_FROM_NAME="${APP_NAME}"
+MAIL_FROM_ADDRESS="covid19_dsp@testmail.com"
+
+COVID19_DSP_API=https://covid-api-dev.citizennext.ro/
+COVID19_DSP_API_KEY="Zeileeg4xahdi4zixeaquo0aothooj0b"
 ```
 
 ### Run local

@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+
+                        <div class="form-group row">
+                            <label for="checkpoint" class="col-md-4 col-form-label text-md-right">{{ __
+                            ('Border Checkpoint') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="checkpoint" name="checkpoint" class="form-control">
+                                    <option value="" selected disabled style="display:none">{{ __
+                            ('Select a checkpoint') }}</option>
+                                    @foreach ($checkpoints as $checkpoint)
+                                        <option value="{{ $checkpoint['id'] }}">{{ $checkpoint['name'] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

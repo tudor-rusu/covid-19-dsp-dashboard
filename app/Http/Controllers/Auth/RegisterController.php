@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'checkpoint' => ['string', 'max:255'],
         ]);
     }
 
@@ -68,6 +69,14 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'checkpoint' => $data['checkpoint'],
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        $checkpoints = User::checkPointList();
+
+        return view('auth.register', compact('checkpoints'));
     }
 }
