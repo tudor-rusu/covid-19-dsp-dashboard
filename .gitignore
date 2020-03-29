@@ -33,3 +33,5 @@ Homestead.json
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 *.iws
+
+/docker/docker-compose.yml
