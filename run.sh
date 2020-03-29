@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+BLUE=`tput setaf 4`
+RESET=`tput sgr0` # reset colors
+
 declare -a PLATFORM_LIST=("docker/docker-compose-main.yml")
 
 if [ $# -ne 0 ]; then
@@ -61,4 +66,27 @@ if [ $# -ne 0 ]; then
 fi;
 
 docker-compose $(printf -- "-f %s " "${PLATFORM_LIST[@]}") config > docker/docker-compose.yml
-docker-compose -f docker/docker-compose.yml up
+docker-compose -f docker/docker-compose.yml up -d
+
+echo -en "\n"
+echo "${RED}Run in covid19-dsp-app container composer install${RESET}"
+docker container exec -it covid19-dsp-app composer install
+echo -en "\n"
+echo "${RED}Generate a key and copy it to your .env file, ensuring that your user sessions and encrypted data remain secure${RESET}"
+docker container exec -it covid19-dsp-app php artisan key:generate
+echo -en "\n"
+echo "${RED}Cache these settings into a file${RESET}"
+docker container exec -it covid19-dsp-app php artisan config:cache
+
+eval "$(grep ^DB_ROOT_PASSWORD= .env)"
+echo -en "\n"
+echo "${RED}Create the user account that will be allowed to access this database and flush the privileges to notify the MySQL
+ server of the changes${RESET}"
+docker container exec -it covid19-dsp-db mysql -uroot -p$DB_ROOT_PASSWORD -e "GRANT ALL ON laravel.* TO 'laravel'@'%' IDENTIFIED BY
+'laravel';FLUSH PRIVILEGES;"
+
+echo -en "\n"
+echo "${RED}Migrate the data${RESET}"
+docker container exec -it covid19-dsp-app php artisan migrate
+
+
