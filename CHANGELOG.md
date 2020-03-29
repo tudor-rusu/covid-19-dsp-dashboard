@@ -1,3 +1,14 @@
+## [0.3.0] - 2020-03-29
+
+### Added
+- install npm, redis, laravel/ui and improved run.sh
+- deploy all files for Bootstrap Auth Module
+- add Border Checkpoints
+- mail verification
+
+### Modify
+- README.md and and CHANGELOG.md
+
 ## [0.2.0] - 2020-03-29
 
 ### Added
