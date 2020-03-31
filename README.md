@@ -49,6 +49,7 @@ nano .env
 * Modify and add parameters to reflect the specifics of your setup
 ```shell script
 APP_NAME="COVID-19 - DSP declarations management"
+APP_LOCALE=ro
 
 DB_HOST=covid19-dsp-db
 DB_DATABASE=laravel
