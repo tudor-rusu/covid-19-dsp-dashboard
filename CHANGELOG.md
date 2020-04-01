@@ -1,3 +1,13 @@
+## [0.4.0] - 2020-04-01
+
+### Added
+- add romanian translations files
+- override mails and notification
+
+### Modify
+- update all files related to translations
+- README.md and and CHANGELOG.md
+
 ## [0.3.0] - 2020-03-29
 
 ### Added
