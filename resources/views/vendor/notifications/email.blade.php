@@ -4,9 +4,9 @@
 # {{ $greeting }}
 @else
 @if ($level === 'error')
-# @lang('Whoops!')
+# @lang('auth.Whoops!')
 @else
-# @lang('Hello!')
+# @lang('auth.Hello!')
 @endif
 @endif
 
@@ -43,7 +43,7 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-@lang('Regards'),<br>
+@lang('auth.Regards'),<br>
 {{ config('app.name') }}
 @endif
 
@@ -51,10 +51,8 @@
 @isset($actionText)
 @slot('subcopy')
 @lang(
-    "If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below\n".
-    'into your web browser: [:displayableActionUrl](:actionURL)',
+    'auth.If you’re having trouble clicking the button, copy and paste the URL below into your web browser: [:displayableActionUrl](:actionURL)',
     [
-        'actionText' => $actionText,
         'actionURL' => $actionUrl,
         'displayableActionUrl' => $displayableActionUrl,
     ]

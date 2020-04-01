@@ -2,12 +2,15 @@
 
 namespace App;
 
+use App\Notifications\CustomResetPassword;
+use App\Notifications\CustomVerifyEmail;
+use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Http;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
 {
     use Notifiable;
 
@@ -52,5 +55,21 @@ class User extends Authenticatable implements MustVerifyEmail
                 ])->json();
 
         return $response['data'];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new CustomVerifyEmail());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomResetPassword($token));
     }
 }
