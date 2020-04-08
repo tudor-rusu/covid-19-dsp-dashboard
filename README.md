@@ -62,8 +62,8 @@ MAIL_HOST=0.0.0.0
 MAIL_PORT=1025
 MAIL_FROM_ADDRESS="covid19_dsp@testmail.com"
 
-COVID19_DSP_API=https://covid-api-dev.citizennext.ro/
-COVID19_DSP_API_KEY="Zeileeg4xahdi4zixeaquo0aothooj0b"
+COVID19_DSP_API="<url_provided_provided_by_api_maintainer>"
+COVID19_DSP_API_KEY="<key_provided_by_api_maintainer>"
 ```
 
 ### Run local
