@@ -1,3 +1,10 @@
+## [0.5.0] - 2020-04-09
+
+### Modify
+- remove routes related to registration, verify email and reset password
+- update app layout to reflect new requirements
+- README.md and and CHANGELOG.md
+
 ## [0.4.0] - 2020-04-01
 
 ### Added
