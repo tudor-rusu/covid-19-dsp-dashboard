@@ -81,6 +81,9 @@ docker container exec -it covid19-dsp-app npm run dev
 echo -en "\n"
 echo "${RED}Cache these settings into a file${RESET}"
 docker container exec -it covid19-dsp-app php artisan config:cache
+echo -en "\n"
+echo "${RED}Refresh .env file and config${RESET}"
+docker container exec -it covid19-dsp-app php artisan config:clear
 
 eval "$(grep ^DB_ROOT_PASSWORD= .env)"
 echo -en "\n"
@@ -92,5 +95,3 @@ docker container exec -it covid19-dsp-db mysql -uroot -p$DB_ROOT_PASSWORD -e "GR
 echo -en "\n"
 echo "${RED}Migrate the data${RESET}"
 docker container exec -it covid19-dsp-app php artisan migrate
-
-

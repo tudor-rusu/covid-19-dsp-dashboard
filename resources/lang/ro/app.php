@@ -13,5 +13,9 @@ return [
     |
     */
 
-    'Dashboard'   => 'Lista declaraţii',
+    'Dashboard' => 'Lista declaraţii',
+    'Unauthorized' => 'Accesul la API nu este autorizat, verificati cheia de acces.',
+    'Not Found' => 'API nu a gasit nici o data.',
+    'An unexpected condition was encountered' => 'Server-ul API nu poate accesat.',
+    'Unknown error' => 'Eroare necunoscută'
 ];

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Checkpoint;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -19,10 +21,18 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Factory|View
      */
     public function index()
     {
-        return view('home');
+        $checkpoints = Checkpoint::all(Checkpoint::API_BORDER_URL(), ['status' => 'active']);
+
+        if(!is_array($checkpoints)) {
+            session()->flash('type', 'danger');
+            session()->flash('message', $checkpoints);
+            $checkpoints = [];
+        }
+
+        return view('home', ['checkpoints' => $checkpoints]);
     }
 }
