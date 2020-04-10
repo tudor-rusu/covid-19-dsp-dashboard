@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Http;
 
-class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
+class User extends Authenticatable
 {
     use Notifiable, SoftDeletes;
 
@@ -34,15 +34,6 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
     ];
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    /**
      * Provide the list of all active border checkpoints
      *
      * @return array
@@ -56,21 +47,5 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
                 ])->json();
 
         return $response['data'];
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function sendEmailVerificationNotification()
-    {
-        $this->notify(new CustomVerifyEmail());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new CustomResetPassword($token));
     }
 }
