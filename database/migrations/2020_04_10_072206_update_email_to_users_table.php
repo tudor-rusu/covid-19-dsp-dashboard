@@ -21,7 +21,7 @@ class UpdateEmailToUsersTable extends Migration
 
 
         Schema::table('users', function (Blueprint $table) {
-            $schemaManager = Schema::getConnection()->getDoctrineSchemaManager();
+            $schemaManager = Schema::connection('mysql')->getConnection()->getDoctrineSchemaManager();;
             $usersTable = $schemaManager->listTableDetails('users');
 
             if ($usersTable->hasIndex('users_email_unique')) {
