@@ -1,3 +1,13 @@
+## [0.6.0] - 2020-04-10
+
+### Modify
+- update User by managing "Border Checkpoint"
+- add soft delete
+- add username and order
+- make email not required
+- make username unique and required
+- CHANGELOG.md
+
 ## [0.5.0] - 2020-04-09
 
 ### Modify

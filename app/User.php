@@ -2,17 +2,13 @@
 
 namespace App;
 
-use App\Notifications\CustomResetPassword;
-use App\Notifications\CustomVerifyEmail;
-use Illuminate\Contracts\Auth\CanResetPassword;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Http;
 
-class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
+class User extends Authenticatable
 {
-    use Notifiable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'checkpoint',
+        'name', 'email', 'password', 'checkpoint', 'username', 'import_order_number',
     ];
 
     /**
@@ -30,15 +26,6 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      */
     protected $hidden = [
         'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
 
     /**
@@ -55,21 +42,5 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
                 ])->json();
 
         return $response['data'];
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function sendEmailVerificationNotification()
-    {
-        $this->notify(new CustomVerifyEmail());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new CustomResetPassword($token));
     }
 }
