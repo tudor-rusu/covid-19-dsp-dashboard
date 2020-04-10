@@ -39,5 +39,7 @@ return [
     'Reset Password Notification' => 'Notificare de resetare a parolei',
     'You are receiving this email because we received a password reset request for your account.' => 'Ați primit acest e-mail deoarece am primit o solicitare de resetare a parolei pentru contul dumneavoastră.',
     'This password reset link will expire in :count minutes.' => 'Acest link de resetare a parolei va expira în :count minute.',
-    'If you did not request a password reset, no further action is required.' => 'Dacă nu ați solicitat o resetare a parolei, nu este necesară nici o acțiune suplimentară.'
+    'If you did not request a password reset, no further action is required.' => 'Dacă nu ați solicitat o resetare a parolei, nu este necesară nici o acțiune suplimentară.',
+    'Username' => 'Nume de utilizator',
+    'Username and Password are wrong.' => 'Numele de utilizator şi parola nu sunt valide.'
 ];
