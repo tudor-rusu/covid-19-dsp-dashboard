@@ -1,3 +1,9 @@
+## [0.6.1] - 2020-04-10
+
+### Modify
+- refactor Login to able login user by username instead email
+- CHANGELOG.md
+
 ## [0.6.0] - 2020-04-10
 
 ### Modify
