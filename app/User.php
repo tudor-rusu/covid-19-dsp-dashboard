@@ -6,13 +6,14 @@ use App\Notifications\CustomResetPassword;
 use App\Notifications\CustomVerifyEmail;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Http;
 
 class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
 {
-    use Notifiable;
+    use Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
