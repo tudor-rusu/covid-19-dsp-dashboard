@@ -4,6 +4,7 @@ namespace App;
 
 use App\Traits\ApiTrait;
 use Exception;
+use Illuminate\Support\Facades\Cache;
 
 class Declaration
 {
@@ -28,23 +29,25 @@ class Declaration
      */
     public static function all(string $url, array $params)
     {
-        try {
-            $apiRequest = self::connectApi()
-                ->get($url, $params);
+        return Cache::untilUpdated('declarations', env('CACHE_DECLARATIONS_PERSISTENCE'), function() use ($url, $params) {
+            try {
+                $apiRequest = self::connectApi()
+                    ->get($url, $params);
 
-            if (!$apiRequest->successful()) {
-                throw new Exception(self::returnStatus($apiRequest->status()));
+                if (!$apiRequest->successful()) {
+                    throw new Exception(self::returnStatus($apiRequest->status()));
+                }
+
+                if ($apiRequest['data']) {
+                    return $apiRequest['data'];
+                } else {
+                    return $apiRequest['message'];
+                }
+
+            } catch(Exception $exception) {
+                return $exception->getMessage();
             }
-
-            if ($apiRequest['data']) {
-                return $apiRequest['data'];
-            } else {
-                return $apiRequest['message'];
-            }
-
-        } catch(Exception $exception) {
-            return $exception->getMessage();
-        }
+        });
     }
 
     /**
