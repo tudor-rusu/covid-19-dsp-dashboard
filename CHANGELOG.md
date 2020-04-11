@@ -1,3 +1,17 @@
+## [0.7.0] - 2020-04-11
+
+### Added
+- Checkpoint model
+- Declaration model
+- ApiTrait
+- declaration.blade -> view declaration
+- Datatables library in Composer
+
+### Modify
+- refactor HomeController to able list declarations and show one declaration
+- routing web
+- CHANGELOG.md
+
 ## [0.6.1] - 2020-04-10
 
 ### Modify
@@ -6,12 +20,14 @@
 
 ## [0.6.0] - 2020-04-10
 
-### Modify
-- update User by managing "Border Checkpoint"
+### Added
 - add soft delete
 - add username and order
 - make email not required
 - make username unique and required
+
+### Modify
+- update User by managing "Border Checkpoint"
 - CHANGELOG.md
 
 ## [0.5.0] - 2020-04-09

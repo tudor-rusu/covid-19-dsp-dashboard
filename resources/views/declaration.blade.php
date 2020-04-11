@@ -22,16 +22,8 @@
                         </div>
                     @endif
 
-{{--                    @if (count($checkpoints) > 0)--}}
-{{--                        @foreach ($checkpoints as $checkpoint)--}}
-{{--                            {{ $checkpoint['name'] }}<br>--}}
-{{--                        @endforeach--}}
-{{--                    @endif--}}
-
-                    @if (count($declarations) > 0)
-                        @foreach ($declarations as $declaration)
-                            {{ $declaration['code'] }}<br>
-                        @endforeach
+                    @if ($declaration)
+                        {{ $declaration['name'] }} <br>
                     @endif
                 </div>
             </div>
