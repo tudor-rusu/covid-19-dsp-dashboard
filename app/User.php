@@ -2,13 +2,23 @@
 
 namespace App;
 
+use App\Traits\ApiTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\Http;
 
 class User extends Authenticatable
 {
-    use SoftDeletes;
+    use SoftDeletes,
+        ApiTrait;
+
+    /**
+     * Set a constant with expression in value, in a static content
+     *
+     * @return string
+     */
+    public static function API_BORDER_URL() {
+        return env('COVID19_DSP_API') . 'border/checkpoint';
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -28,19 +38,4 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * Provide the list of all active border checkpoints
-     *
-     * @return array
-     */
-    public static function checkPointList()
-    {
-        $response = Http::withHeaders([
-                    'X-API-KEY' => env('COVID19_DSP_API_KEY')
-                ])->get(env('COVID19_DSP_API') . 'border/checkpoint', [
-                    'status' => 'active'
-                ])->json();
-
-        return $response['data'];
-    }
 }

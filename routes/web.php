@@ -21,3 +21,4 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 /* App Routes */
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/declaratie/{code}', 'HomeController@show')->name('declaratie');

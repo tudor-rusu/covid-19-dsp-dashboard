@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Checkpoint;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class RegisterController extends Controller
 {
@@ -72,10 +75,21 @@ class RegisterController extends Controller
         ]);
     }
 
+    /**
+     * Show registration form
+     *
+     * @return Factory|View
+     */
     public function showRegistrationForm()
     {
-        $checkpoints = User::checkPointList();
+        $checkpoints = Checkpoint::all(Checkpoint::API_BORDER_URL(), ['status' => 'active']);
 
-        return view('auth.register', compact('checkpoints'));
+        if(!is_array($checkpoints)) {
+            session()->flash('type', 'danger');
+            session()->flash('message', $checkpoints);
+            $checkpoints = [];
+        }
+
+        return view('auth.register', compact(['checkpoints' => $checkpoints]));
     }
 }
