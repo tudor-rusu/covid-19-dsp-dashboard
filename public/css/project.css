@@ -1,0 +1,26 @@
+td.details-control {
+    background: url('/icons/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('/icons/details_close.png') no-repeat center center;
+}
+.table-details-control {
+    margin: 0 !important;
+}
+.table-details-control td {
+    background: #FFFFFF !important;
+    border: none !important;
+}
+.code-control {
+    cursor: pointer;
+}
+.code-control img {
+    float: right;
+    transform: translateY(30%);
+}
+#declaratii_processing {
+    background: transparent !important;
+    border: none !important;
+}
+

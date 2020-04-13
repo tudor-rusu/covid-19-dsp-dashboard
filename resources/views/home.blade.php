@@ -21,18 +21,90 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <table class="table table-striped table-bordered" id="declaratii">
+                        <thead>
+                        <tr>
+                            <th class="text-center">{{ __('app.Code') }}</th>
+                            <th class="text-center">{{ __('app.Name') }}</th>
+                            <th class="text-center">{{ __('app.Auto') }}</th>
+                            <th class="text-center">{{ __('app.Border') }}</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <script>
+                        function format ( d ) {
+                            return '<table class="table table-sm table-details-control">'+
+                                '<tr>'+
+                                "<td>{{ __('app.Phone') }}: <strong>"+ d.phone+'</strong></td>'+
+                                '</tr><tr>'+
+                                "<td>{{ __('app.Travelling from date') }}: <strong>"+ d
+                                    .travelling_from_date+'</strong> '+
+                                "{{ __('app.Travelling from city') }}: <strong>"+ d
+                                    .travelling_from_city+'</strong></td>'+
+                                '</tr><tr>'+
+                                "<td>{{ __('app.Itinerary country list') }}: <strong>"+ d
+                                    .itinerary_country_list+'</strong></td>'+
+                                '</tr>'+
+                                '</table>';
+                        }
+                        $(document).ready( function () {
+                            var table = $('#declaratii').DataTable({
+                                processing: true,
+                                serverSide: true,
+                                ajax: "{{ url('declaratii') }}",
+                                columns: [
+                                    {
+                                        data:       'code',
+                                        name:       'code',
+                                        className:  'code-control',
+                                    },
+                                    { data: 'name', name: 'name' },
+                                    { data: 'auto', name: 'auto' },
+                                    { data: 'checkpoint', name: 'checkpoint' },
+                                    {
+                                        data:           null,
+                                        className:      'details-control',
+                                        orderable:      false,
+                                        defaultContent: ''
+                                    }
+                                ],
+                                columnDefs: [
+                                    {
+                                        render: function (data, type, row) {
+                                            let signed = (row['signed'] == 1) ? '<img src="/icons/check.svg" alt="" ' +
+                                                'width="14px" height="14px">' : '<img src="/icons/attention.svg" ' +
+                                                'alt="" width="14px" height="14px">';
+                                            return row['code'] + '  ' + signed + '<span class="d-none">'+row['url']+'</span>';
+                                        },
+                                        'targets': 0,
+                                    },
+                                ],
+                                order: [[0, 'asc']],
+                                pageLength: 10,
+                                language: {
+                                    url: "{{ asset('js/traducere_ro.json' )}}"
+                                },
+                                responsive: true
+                            });
+                            $('#declaratii tbody').on('click', 'td.details-control', function () {
+                                let tr = $(this).closest('tr');
+                                let row = table.row( tr );
 
-{{--                    @if (count($checkpoints) > 0)--}}
-{{--                        @foreach ($checkpoints as $checkpoint)--}}
-{{--                            {{ $checkpoint['name'] }}<br>--}}
-{{--                        @endforeach--}}
-{{--                    @endif--}}
-
-                    @if (count($declarations) > 0)
-                        @foreach ($declarations as $declaration)
-                            {{ $declaration['code'] }}<br>
-                        @endforeach
-                    @endif
+                                if ( row.child.isShown() ) {
+                                    row.child.hide();
+                                    tr.removeClass('shown');
+                                } else {
+                                    row.child( format(row.data()) ).show();
+                                    tr.addClass('shown');
+                                }
+                            } );
+                            $('#declaratii tbody').on('click', 'td.code-control', function () {
+                                let url = $(this).find('span.d-none').text();
+                                window.location=url;
+                            } );
+                        });
+                    </script>
                 </div>
             </div>
         </div>

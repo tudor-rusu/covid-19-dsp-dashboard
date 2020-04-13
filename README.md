@@ -64,6 +64,7 @@ MAIL_FROM_ADDRESS="covid19_dsp@testmail.com"
 
 COVID19_DSP_API="<url_provided_provided_by_api_maintainer>"
 COVID19_DSP_API_KEY="<key_provided_by_api_maintainer>"
+CACHE_DECLARATIONS_PERSISTENCE=5 # time in minutes for cache persistence
 ```
 
 ### Run local
