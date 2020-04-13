@@ -1,3 +1,14 @@
+## [0.8.0] - 2020-04-13
+
+### Added
+- icons, css and js related to Datatables
+- cache as macro
+- Countries library in Composer
+
+### Modify
+- refactor HomeController and Declaration model to able list declarations and show one declaration
+- CHANGELOG.md
+
 ## [0.7.0] - 2020-04-11
 
 ### Added
