@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Checkpoint;
 use App\Declaration;
+use Exception;
+use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
 
@@ -26,23 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $declarations = Declaration::all(Declaration::API_DECLARATION_URL(), ['page' => 1, 'per_page' => 10]);
-
-        if(!is_array($declarations)) {
-            session()->flash('type', 'danger');
-            session()->flash('message', $declarations);
-            $declarations = [];
-        }
-
-        $checkpoints = Checkpoint::all(Checkpoint::API_BORDER_URL(), ['status' => 'active']);
-
-        if(!is_array($checkpoints)) {
-            session()->flash('type', 'danger');
-            session()->flash('message', $checkpoints);
-            $checkpoints = [];
-        }
-
-        return view('home', ['checkpoints' => $checkpoints, 'declarations' => $declarations]);
+        return view('home');
     }
 
     /**
@@ -72,5 +57,30 @@ class HomeController extends Controller
 
 //        return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
         return view('declaration', ['declaration' => $declaration]);
+    }
+
+    /**
+     * Return the formated declarations list
+     *
+     * @return mixed
+     * @throws Exception
+     */
+    public function list()
+    {
+        $declarations = Declaration::all(
+            Declaration::API_DECLARATION_URL(),
+            ['page' => 1, 'per_page' => 1000000],
+            'datatables'
+        );
+
+        if(!is_array($declarations)) {
+            session()->flash('type', 'danger');
+            session()->flash('message', $declarations);
+            $declarations = [];
+        }
+//        dd($declarations);die;
+
+        return datatables()->of($declarations)
+            ->make(true);
     }
 }
