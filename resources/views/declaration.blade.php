@@ -157,6 +157,9 @@
                                     </tr>
                                 </table>
                             </div>
+                            <div class="col-md-6 text-right">
+                                <img src="data:image/png;base64,{{ $declaration['qr_src'] }}">
+                            </div>
                         </div>
                     </section>
                     @endif

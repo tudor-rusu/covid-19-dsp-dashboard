@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use PeterColes\Countries\CountriesFacade;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
@@ -66,6 +67,7 @@ class HomeController extends Controller
             }
             $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
                 ->format('d/m/Y');
+            $declaration['qr_src'] = base64_encode(QrCode::format('png')->size(100)->generate($declaration['code']));
         }
 
 //        $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
