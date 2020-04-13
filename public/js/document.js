@@ -19,11 +19,15 @@ Document.prototype.reset = function () {
     this.doc.setTextColor(0, 0, 0);
 };
 
-Document.prototype.download = function (data) {
+Document.prototype.download = function (data, signature, qrcode) {
 
     this.draw();
 
     this.fill(data);
+
+    this.addSignature(signature);
+
+    this.addQrCode(qrcode);
 
     this.doc.save(this.getName(data));
 };
@@ -50,7 +54,7 @@ Document.prototype.draw = function () {
     this.doc.setFontStyle('bold');
     this.doc.setFontSize(12);
     this.doc.text('DECLARAȚIE', 105, 16, { align: 'center' });
-
+    
     this.reset();
 
     // left column
@@ -234,4 +238,14 @@ Document.prototype.fill = function (data) {
     this.doc.text(data.vehicle, 103, 253, { align: 'center' });
     this.doc.text(data.route, 100, 257, { align: 'center' });
     this.doc.text(data.documentDate + ', ' + data.documentLocality, 59, 280, { align: 'center' });
+};
+
+Document.prototype.addSignature = function (signature) {
+
+    this.doc.addImage(signature, 'PNG', 155, 260, 40, 30);
+};
+
+Document.prototype.addQrCode = function (qrcode) {
+
+    this.doc.addImage(qrcode, 'PNG', 185, 45, 15, 15);
 };

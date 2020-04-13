@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Declaration;
+use Carbon\Carbon;
 use Exception;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use PeterColes\Countries\CountriesFacade;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
@@ -33,30 +37,46 @@ class HomeController extends Controller
     /**
      * Show the declaration.
      *
-     * @param string $code
+     * @param string  $code
+     * @param Request $request
      *
      * @return Factory|View
      */
-    public function show(string $code)
+    public function show(string $code, Request $request)
     {
+        if ($request->session()->has('language')) {
+            app()->setLocale($request->session()->get('language'));
+            $countries = CountriesFacade::lookup($request->session()->get('language'));
+        } else {
+            $countries = CountriesFacade::lookup('ro_RO');
+        }
+
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
+
 
         if(!is_array($declaration)) {
             session()->flash('type', 'danger');
             session()->flash('message', $declaration);
             $declaration = [];
+        } else {
+            $declaration['travelling_from_country'] = $countries[$declaration['travelling_from_country_code']];
+            if (app()->getLocale() === 'ro') {
+                $declaration['travelling_from_date'] = Carbon::createFromFormat('Y-m-d', $declaration['travelling_from_date'])
+                    ->format('d m Y');
+            }
+            $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
+                ->format('d/m/Y');
         }
 
 //        $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
-
+//
 //        if(!is_array($signature)) {
 //            session()->flash('type', 'danger');
 //            session()->flash('message', $signature);
 //            $signature = [];
 //        }
 
-//        return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
-        return view('declaration', ['declaration' => $declaration]);
+        return view('declaration', ['declaration' => $declaration, 'signature' => '']);
     }
 
     /**
@@ -78,9 +98,26 @@ class HomeController extends Controller
             session()->flash('message', $declarations);
             $declarations = [];
         }
-//        dd($declarations);die;
 
         return datatables()->of($declarations)
             ->make(true);
+    }
+
+    /**
+     * Change language
+     *
+     * @param Request $request
+     *
+     * @return RedirectResponse|void
+     */
+    public function postChangeLanguage(Request $request)
+    {
+        if($request->input('lang')) {
+            $request->session()->put('language', $request->input('lang'));
+            app()->setLocale($request->input('lang'));
+            return back();
+        }
+
+        return;
     }
 }
