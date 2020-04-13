@@ -23,4 +23,7 @@ tr.shown td.details-control {
     background: transparent !important;
     border: none !important;
 }
+#change-language {
+    margin: 0 !important;
+}
 

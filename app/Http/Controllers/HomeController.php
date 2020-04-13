@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Declaration;
 use Exception;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
@@ -33,12 +35,17 @@ class HomeController extends Controller
     /**
      * Show the declaration.
      *
-     * @param string $code
+     * @param string  $code
+     * @param Request $request
      *
      * @return Factory|View
      */
-    public function show(string $code)
+    public function show(string $code, Request $request)
     {
+        if ($request->session()->has('language')) {
+            app()->setLocale($request->session()->get('language'));
+        }
+
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
 
         if(!is_array($declaration)) {
@@ -78,9 +85,26 @@ class HomeController extends Controller
             session()->flash('message', $declarations);
             $declarations = [];
         }
-//        dd($declarations);die;
 
         return datatables()->of($declarations)
             ->make(true);
+    }
+
+    /**
+     * Change language
+     *
+     * @param Request $request
+     *
+     * @return RedirectResponse|void
+     */
+    public function postChangeLanguage(Request $request)
+    {
+        if($request->input('lang')) {
+            $request->session()->put('language', $request->input('lang'));
+            app()->setLocale($request->input('lang'));
+            return back();
+        }
+
+        return;
     }
 }
