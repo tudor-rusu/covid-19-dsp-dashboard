@@ -30,7 +30,20 @@ return [
     'Travelling from city' => 'din',
     'Itinerary country list' => 'A tranzitat',
 
-    'Declaration' => 'Declarație',
+    'Declaration header' => 'Declarație',
+    'Declaration' => 'Declaration',
     'romanian' => 'română',
-    'english' => 'engleză'
+    'english' => 'engleză',
+    'Name in declaration' => 'Name',
+    'Surname' => 'Surname',
+    'Sex' => 'Gender',
+    'Travelling from country' => 'The country of departure',
+    'City' => 'City/Town',
+    'Date' => 'Date',
+    'Passport' => 'Passport',
+    'ID' => 'I.D.',
+    'Series' => 'Series',
+    'No' => 'No.',
+    'Date of birth' => 'Date of birth (D/M/Y)',
+    'Date of arrival' => 'Date of arrival in Romania'
 ];

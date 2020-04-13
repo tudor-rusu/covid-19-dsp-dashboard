@@ -26,4 +26,11 @@ tr.shown td.details-control {
 #change-language {
     margin: 0 !important;
 }
+#header-declaration {
+    margin: 0 0 1rem 0;
+}
+#declaration-view h4 {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
 

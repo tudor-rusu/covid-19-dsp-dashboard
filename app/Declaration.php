@@ -66,23 +66,26 @@ class Declaration
      */
     public static function find(string $url, string $code)
     {
-        try {
-            $apiRequest = self::connectApi()
-                ->get($url . DIRECTORY_SEPARATOR . $code);
+        return Cache::untilUpdated('declaration-' . $code, env('CACHE_DECLARATIONS_PERSISTENCE'), function() use ($url,
+            $code) {
+            try {
+                $apiRequest = self::connectApi()
+                    ->get($url . DIRECTORY_SEPARATOR . $code);
 
-            if (!$apiRequest->successful()) {
-                throw new Exception(self::returnStatus($apiRequest->status()));
+                if (!$apiRequest->successful()) {
+                    throw new Exception(self::returnStatus($apiRequest->status()));
+                }
+
+                if ($apiRequest['status'] === 'success') {
+                    return $apiRequest['declaration'];
+                } else {
+                    return $apiRequest['message'];
+                }
+
+            } catch(Exception $exception) {
+                return $exception->getMessage();
             }
-
-            if ($apiRequest['status'] === 'success') {
-                return $apiRequest['declaration'];
-            } else {
-                return $apiRequest['message'];
-            }
-
-        } catch(Exception $exception) {
-            return $exception->getMessage();
-        }
+        });
     }
 
     /**
@@ -95,23 +98,26 @@ class Declaration
      */
     public static function getSignature(string $url, string $code)
     {
-        try {
-            $apiRequest = self::connectApi()
-                ->get($url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'signature');
+//        return Cache::untilUpdated('signature-declaration-' . $code, env('CACHE_DECLARATIONS_PERSISTENCE'),
+//            function() use ($url, $code) {
+            try {
+                $apiRequest = self::connectApi()
+                    ->get($url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'signature');
 
-            if (!$apiRequest->successful()) {
-                throw new Exception(self::returnStatus($apiRequest->status()));
+                if (!$apiRequest->successful()) {
+                    throw new Exception(self::returnStatus($apiRequest->status()));
+                }
+
+                if ($apiRequest['status'] === 'success') {
+                    return $apiRequest['signature'];
+                } else {
+                    return $apiRequest['message'];
+                }
+
+            } catch(Exception $exception) {
+                return $exception->getMessage();
             }
-
-            if ($apiRequest['status'] === 'success') {
-                return $apiRequest['signature'];
-            } else {
-                return $apiRequest['message'];
-            }
-
-        } catch(Exception $exception) {
-            return $exception->getMessage();
-        }
+//        });
     }
 
     /**
@@ -145,7 +151,6 @@ class Declaration
                 }
                 $formattedDeclarations[$key]['itinerary_country_list'] = substr(trim($formattedDeclarations[$key]['itinerary_country_list']), 0, -1);
             }
-
         }
 
         return $formattedDeclarations;
