@@ -1,3 +1,12 @@
+## [0.8.1] - 2020-04-13
+
+### Added
+- new JS scripts for PDF integrations
+
+### Modify
+- move JS for PDF from resources to public namespace
+- CHANGELOG.md
+
 ## [0.8.0] - 2020-04-13
 
 ### Added
