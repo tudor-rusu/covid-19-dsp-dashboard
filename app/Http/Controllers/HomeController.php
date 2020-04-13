@@ -68,6 +68,16 @@ class HomeController extends Controller
             $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
                 ->format('d/m/Y');
             $declaration['qr_src'] = base64_encode(QrCode::format('png')->size(100)->generate($declaration['code']));
+            if (count($declaration['isolation_addresses']) > 0) {
+                if (app()->getLocale() === 'ro') {
+                    foreach ($declaration['isolation_addresses'] as $key => $address) {
+                        $declaration['isolation_addresses'][$key]['city_arrival_date'] = Carbon::createFromFormat('Y-m-d', $address['city_arrival_date'])
+                            ->format('d m Y');
+                        $declaration['isolation_addresses'][$key]['city_departure_date'] = Carbon::createFromFormat('Y-m-d', $address['city_departure_date'])
+                            ->format('d m Y');
+                    }
+                }
+            }
         }
 
 //        $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);

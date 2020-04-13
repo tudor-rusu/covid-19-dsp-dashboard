@@ -45,5 +45,14 @@ return [
     'Series' => 'Series',
     'No' => 'No.',
     'Date of birth' => 'Date of birth (D/M/Y)',
-    'Date of arrival' => 'Date of arrival in Romania'
+    'Date of arrival' => 'Date of arrival in Romania',
+    'I estimate that I will be staying in Romania' => 'I estimate that I will be staying in Romania for more than 24 hours at the following addresses',
+    'Table No' => 'No.',
+    'Table Location (town/city)' => 'Location<br />(town/city)',
+    'Table Date of arrival' => 'Date of<br />arrival',
+    'Table Date of departure' => 'Date of<br />departure',
+    'Table Complete address' => 'Complete address',
+    'During my stay' => 'During my stay /travel to Romania I can be reached at',
+    'Table Phone' => 'Phone',
+    'Table E-mail' => 'E-mail'
 ];

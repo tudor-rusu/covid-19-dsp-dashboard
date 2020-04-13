@@ -33,4 +33,21 @@ tr.shown td.details-control {
     margin-top: 0.5rem;
     font-weight: bold;
 }
+.table thead th {
+    border-bottom: 1px solid #343a40 !important;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #343a40 !important;
+}
+#declaration-view .table-borderless td {
+    padding: 0.3rem 0 !important;
+}
+p.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+#declaration-view hr.sub-section {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: 0.5rem;
+}
 

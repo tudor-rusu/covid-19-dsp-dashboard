@@ -161,6 +161,64 @@
                                 <img src="data:image/png;base64,{{ $declaration['qr_src'] }}">
                             </div>
                         </div>
+                        <hr class="sub-section">
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom">
+                                    <strong>{{ __('app.I estimate that I will be staying in Romania') }}:</strong>
+                                </p>
+                                <table class="table table-bordered border border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center align-middle" width="50px" scope="col">
+                                                {!! __('app.Table No') !!}
+                                            </th>
+                                            <th class="text-center align-middle" scope="col">{!! __('app.Table Location (town/city)') !!}</th>
+                                            <th class="text-center align-middle" scope="col">{!! __('app.Table Date of arrival') !!}</th>
+                                            <th class="text-center align-middle" scope="col">{!! __('app.Table Date of departure') !!}</th>
+                                            <th class="text-center align-middle" scope="col">{{ __('app.Table Complete address') }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @if( count($declaration['isolation_addresses']) > 0)
+                                        @foreach ($declaration['isolation_addresses'] as $address)
+                                        <tr>
+                                            <td class="text-center align-middle">{{ $loop->iteration }}</td>
+                                            <td>{{ $address['city'] }}, {{ $address['county'] }}</td>
+                                            <td>{{ $address['city_arrival_date'] }}</td>
+                                            <td>{{ $address['city_departure_date'] }}</td>
+                                            <td>{{ $address['city_full_address'] }}</td>
+                                        </tr>
+                                        @endforeach
+                                    @else
+                                        @for ($i = 1; $i <= 3; $i++)
+                                        <tr>
+                                            @for ($j = 1; $j <= 5; $j++)
+                                            <td style="height: 2.5rem;"></td>
+                                            @endfor
+                                        </tr>
+                                        @endfor
+                                    @endif
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom"><strong>{{ __('app.During my stay') }}:</strong></p>
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td>
+                                            {{ __('app.Table Phone') }}: <strong>{{ $declaration['phone'] }}</strong>
+                                        </td>
+                                        <td>
+                                            {{ __('app.Table E-mail') }}: <strong>{{ $declaration['email'] }}</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <hr class="sub-section">
                     </section>
                     @endif
 

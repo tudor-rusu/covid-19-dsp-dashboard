@@ -45,5 +45,14 @@ return [
     'Series' => 'Serie',
     'No' => 'Nr.',
     'Date of birth' => 'Data nașterii (Z/L/A)',
-    'Date of arrival' => 'Data sosirii în România'
+    'Date of arrival' => 'Data sosirii în România',
+    'I estimate that I will be staying in Romania' => 'Estimez că voi rămâne în România mai mult de 24 de ore la următoarele adrese',
+    'Table No' => 'Nr.<br />Crt.',
+    'Table Location (town/city)' => 'Locația<br />(oraș)',
+    'Table Date of arrival' => 'Data sosirii',
+    'Table Date of departure' => 'Data plecării',
+    'Table Complete address' => 'Adresa completă',
+    'During my stay' => 'Pe perioada șederii/călătoriei în România pot fi contactat la',
+    'Table Phone' => 'Telefon',
+    'Table E-mail' => 'E-mail'
 ];
