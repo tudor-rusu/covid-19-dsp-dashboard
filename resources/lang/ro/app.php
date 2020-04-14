@@ -32,6 +32,8 @@ return [
 
     'Declaration header' => 'Declarație',
     'Declaration' => 'Declarație',
+    'Print' => 'Imprimare',
+    'Declarations list' => 'Listă declarații',
     'romanian' => 'română',
     'english' => 'engleză',
     'Name in declaration' => 'Nume',

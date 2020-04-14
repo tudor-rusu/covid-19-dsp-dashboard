@@ -14,7 +14,14 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    {{ __('app.Declaration header') }} @if ($declaration) <strong>{{ $declaration['code'] }}</strong>
+                    <h5 class="top-title float-left">
+                    {{ __('app.Declaration header') }}
+                    @if ($declaration) <strong>{{ $declaration['code'] }}</strong> @endif
+                    </h5>
+                    @if (!empty($signature))
+                        <img src="/icons/check.svg" alt="" width="20px" height="20px">
+                    @else
+                        <img src="/icons/attention.svg" alt="" width="20px" height="20px">
                     @endif
                     <div class="float-right">
                         <form method="POST" action="{{ route('change-lang') }}">
@@ -28,6 +35,18 @@
                                 </select>
                             </div>
                         </form>
+                    </div>
+                    <div class="float-right">
+                        <a href="{{ route('home') }}" class="btn btn-secondary btn-sm btn-top" role="button"
+                           aria-pressed="true">
+                            {{ __('app.Declarations list') }}
+                        </a>
+                    </div>
+                    <div class="float-right">
+                        <a href="javascript:void(0);" class="btn btn-danger btn-sm btn-top" role="button"
+                           aria-pressed="true">
+                            {{ __('app.Print') }}
+                        </a>
                     </div>
                 </div>
 

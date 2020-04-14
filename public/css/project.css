@@ -29,15 +29,22 @@ tr.shown td.details-control {
 #header-declaration {
     margin: 0 0 1rem 0;
 }
+.btn-top {
+    margin: 0 10px 0 0 !important;
+}
+.card-header h5.top-title {
+    margin: 0.2rem 1rem 0 0;
+    font-size: 1.175rem;
+}
 #declaration-view h4 {
     margin-top: 0.5rem;
     font-weight: bold;
 }
-.table thead th {
+#declaration-view .table thead th {
     border-bottom: 1px solid #343a40 !important;
 }
-.table-bordered th,
-.table-bordered td {
+#declaration-view .table-bordered th,
+#declaration-view .table-bordered td {
     border: 1px solid #343a40 !important;
 }
 #declaration-view .table-borderless td {

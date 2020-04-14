@@ -53,13 +53,28 @@ class HomeController extends Controller
         }
 
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
-
+        $signature = '';
 
         if(!is_array($declaration)) {
             session()->flash('type', 'danger');
             session()->flash('message', $declaration);
             $declaration = [];
         } else {
+            if($declaration['signed']) {
+                $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
+
+                if(is_array($signature)) {
+                    if ($signature['status'] === 'success') {
+                        $signature = $signature['signature'];
+                    } else {
+                        $signature = $signature['message'];
+                    }
+                } else {
+                    session()->flash('type', 'danger');
+                    session()->flash('message', $signature);
+                    $signature = '';
+                }
+            }
             $declaration['travelling_from_country'] = $countries[$declaration['travelling_from_country_code']];
             if (app()->getLocale() === 'ro') {
                 $declaration['travelling_from_date'] = Carbon::createFromFormat('Y-m-d', $declaration['travelling_from_date'])
@@ -80,15 +95,7 @@ class HomeController extends Controller
             }
         }
 
-//        $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
-//
-//        if(!is_array($signature)) {
-//            session()->flash('type', 'danger');
-//            session()->flash('message', $signature);
-//            $signature = [];
-//        }
-
-        return view('declaration', ['declaration' => $declaration, 'signature' => '']);
+        return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
     }
 
     /**
