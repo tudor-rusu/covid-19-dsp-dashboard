@@ -56,5 +56,27 @@ return [
     'Table Complete address' => 'Complete address',
     'During my stay' => 'During my stay /travel to Romania I can be reached at',
     'Table Phone' => 'Phone',
-    'Table E-mail' => 'E-mail'
+    'Table E-mail' => 'E-mail',
+    'Have you lived in' => '1. Have you lived in/visited areas where there were persons suffering from the infection with the new coronavirus (COVID-19)?',
+    'Answer Yes' => 'Yes',
+    'Answer No' => 'No',
+    'Have you come in direct' => '2. Have you come in direct contact with persons suffering from the infection with the new coronavirus (COVID-19) at work, ' .
+        'nearby your residence or when visiting medical units or other type of places in the last 14 days?',
+    'Have you been hospitalized' => '3. Have you been hospitalized during the last three weeks?',
+    'Have you had one' => '4. Have you had one or more of the following symptoms?',
+    'Fever' => 'Fever',
+    'Difficulty in swallowing' => 'Difficulty in swallowing',
+    'Difficulty in breathing' => 'Difficulty in breathing',
+    'Intense coughing' => 'Intense coughing',
+    'Important notice and agreement' => '<strong>Important notice and agreement</strong>. In the context of the recorded developments ' .
+        'starting January 2020 regarding the infection with the new coronavirus COVID-19, in order to remain in Romania, ' .
+        'all passengers from or who have recently traveled to<br /><strong>China</strong>, <strong>Italy</strong>, <strong>South Korea</strong>, <strong>Iran</strong> ' .
+        '__________________________________________________________________________________________<br />are required to fill in the above questionnaire. ' .
+        'Please note that the data and information provided here are required for collection and processing by the ______________________ County Public Health Department. ' .
+        'The required and collected data and information are processed in accordance with fhe provisions of Regulation, no. 67912016 on the protection ' .
+        'of natural persons with regard to the processing of personal data and on the free movement of such data, with strict compliance of the principles ' .
+        'related to fundamental rights. The persons whose data are processed have the right to modify, intervene and oppose through a written, dated and ' .
+        'signed request addressed to the data operator.',
+    'I am aware that the refusal' => 'I am aware that the refusal to fill in the questionnaire may cause the refusal of my entry in Romania, in order ' .
+        'to eliminate any possible threats to the public health of Romania.'
 ];

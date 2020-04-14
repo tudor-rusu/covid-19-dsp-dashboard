@@ -238,6 +238,188 @@
                             </div>
                         </div>
                         <hr class="sub-section">
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom"><strong>{{ __('app.Have you lived in') }}:</strong></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ $declaration['q_visited'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ !$declaration['q_visited'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer No') }}</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom"><strong>{{ __('app.Have you come in direct') }}:</strong></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ $declaration['q_contacted'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ !$declaration['q_contacted'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer No') }}</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom"><strong>{{ __('app.Have you been hospitalized') }}:</strong></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ $declaration['q_hospitalized'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                           onclick="return false;" {{ !$declaration['q_hospitalized'] ? 'checked' : '' }}>
+                                    <label class="form-check-label">
+                                        <strong>{{ __('app.Answer No') }}</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p class="no-margin-bottom"><strong>{{ __('app.Have you had one') }}:</strong></p>
+                                <table class="table table-bordered border border-dark">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong class="table-padding-left">{{ __('app.Fever') }}</strong></td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ $declaration['fever'] ? 'checked' : '' }}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ !$declaration['fever'] ? 'checked' : ''}}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer No') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="table-padding-left">
+                                                    {{ __('app.Difficulty in swallowing') }}
+                                                </strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ $declaration['swallow'] ? 'checked' : '' }}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ !$declaration['swallow'] ? 'checked' : ''}}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer No') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="table-padding-left">
+                                                    {{ __('app.Difficulty in breathing') }}
+                                                </strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ $declaration['breath'] ? 'checked' : '' }}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ !$declaration['breath'] ? 'checked' : ''}}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer No') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="table-padding-left">
+                                                    {{ __('app.Intense coughing') }}
+                                                </strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ $declaration['cough'] ? 'checked' : '' }}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer Yes') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           onclick="return false;"
+                                                        {{ !$declaration['cough'] ? 'checked' : ''}}>
+                                                    <label class="form-check-label">
+                                                        <strong>{{ __('app.Answer No') }}</strong>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr class="sub-section">
+                        <div class="row">
+                            <div class="col-md-12 text-justify">
+                                <p>
+                                    {!! __('app.Important notice and agreement') !!}
+                                </p>
+                                <p class="no-margin-bottom">
+                                    <span class="bullet-padding-right">&#8226;</span>
+                                    {!! __('app.I am aware that the refusal') !!}
+                                </p>
+                            </div>
+                        </div>
                     </section>
                     @endif
 

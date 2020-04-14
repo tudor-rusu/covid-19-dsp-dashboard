@@ -56,5 +56,28 @@ return [
     'Table Complete address' => 'Adresa completă',
     'During my stay' => 'Pe perioada șederii/călătoriei în România pot fi contactat la',
     'Table Phone' => 'Telefon',
-    'Table E-mail' => 'E-mail'
+    'Table E-mail' => 'E-mail',
+    'Have you lived in' => '1. Ați locuit/vizitat zone în care se aflau persoane suferinde din cauza infecției cu noul coronavirus (COVID-19)?',
+    'Answer Yes' => 'Da',
+    'Answer No' => 'Nu',
+    'Have you come in direct' => '2. Ați venit în contact direct cu persoane suferinde din cauza infecției cu noul coronavirus (COVID-19) la serviciu, în ' .
+        'vecinătatea locuinței sau vizitând unități medicale ori alte genuri de locuri în ultimele 14 zile?',
+    'Have you been hospitalized' => '3. Ați fost spitalizat în ultimele trei săptămâni?',
+    'Have you had one' => '4. Ați avut una sau mai multe dintre următoarele simptome?',
+    'Fever' => 'Febră',
+    'Difficulty in swallowing' => 'Dificultatea de a înghiți',
+    'Difficulty in breathing' => 'Dificultatea de a respira',
+    'Intense coughing' => 'Tuse intensă',
+    'Important notice and agreement' => '<strong>Aviz important și acord:</strong> în contextul evoluțiilor îregistrate începând cu ianuarie 2020 ' .
+        'în legătură cu infecția cu noul coronavirus COVID-19, pentru a putea rămâne în România, toți pasagerii din sau care au călătorit recent în<br />' .
+        '<strong>China</strong>, <strong>Italia</strong>, <strong>Coreea de Sud</strong>, <strong>Iran</strong> ' .
+        '__________________________________________________________________________________________<br />sunt obligați să ' .
+        'completeze chestionarul de mai sus. Vă rugăm să rețineți că datele și informațiile furnizate aici sunt solicitate pentru colectare și prelucrare de ' .
+        'către Direcția de Sănătate Publică Județeană ______________________________. Datele și informațiile solicitate și colectate sunt prelucrate în ' .
+        'conformitate cu prevederile Regulamentului nr. 67912016 privind protecția persoanelor fizice în ceea ce privește prelucrarea datelor cu ' .
+        'caracter personal și libera circulație a acestor date, cu respectarea strictă a principiilor legate de drepturile fundarnentale. ' .
+        'Persoanele ale căror date sunt prelucrate beneficiază de dreptul de a-și exercita drepturile de modificare, intervenție și opoziție ' .
+        'printr-o cerere semnată, datată și scrisă, adresată operatorului de date.',
+    'I am aware that the refusal' => 'Sunt conștient că un refuz de a completa chestionarul poate provoca refuzul intrării mele pe teritoriul României, ' .
+        'în scopul eliminării eventualelor amenințări la adresa sănătății publice a României.'
 ];

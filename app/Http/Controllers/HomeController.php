@@ -93,6 +93,10 @@ class HomeController extends Controller
                     }
                 }
             }
+            $declaration['fever'] = in_array('fever', $declaration['symptoms']) ?? true;
+            $declaration['swallow'] = in_array('swallow', $declaration['symptoms']) ?? true;
+            $declaration['breath'] = in_array('breath', $declaration['symptoms']) ?? true;
+            $declaration['cough'] = in_array('cough', $declaration['symptoms']) ?? true;
         }
 
         return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
