@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use PeterColes\Countries\CountriesFacade;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
@@ -52,13 +53,28 @@ class HomeController extends Controller
         }
 
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
-
+        $signature = '';
 
         if(!is_array($declaration)) {
             session()->flash('type', 'danger');
             session()->flash('message', $declaration);
             $declaration = [];
         } else {
+            if($declaration['signed']) {
+                $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
+
+                if(is_array($signature)) {
+                    if ($signature['status'] === 'success') {
+                        $signature = $signature['signature'];
+                    } else {
+                        $signature = $signature['message'];
+                    }
+                } else {
+                    session()->flash('type', 'danger');
+                    session()->flash('message', $signature);
+                    $signature = '';
+                }
+            }
             $declaration['travelling_from_country'] = $countries[$declaration['travelling_from_country_code']];
             if (app()->getLocale() === 'ro') {
                 $declaration['travelling_from_date'] = Carbon::createFromFormat('Y-m-d', $declaration['travelling_from_date'])
@@ -66,17 +82,37 @@ class HomeController extends Controller
             }
             $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
                 ->format('d/m/Y');
+            $declaration['qr_src'] = base64_encode(QrCode::format('png')->size(100)->generate($declaration['code']));
+            if (count($declaration['isolation_addresses']) > 0) {
+                if (app()->getLocale() === 'ro') {
+                    foreach ($declaration['isolation_addresses'] as $key => $address) {
+                        $declaration['isolation_addresses'][$key]['city_arrival_date'] = Carbon::createFromFormat('Y-m-d', $address['city_arrival_date'])
+                            ->format('d m Y');
+                        $declaration['isolation_addresses'][$key]['city_departure_date'] = Carbon::createFromFormat('Y-m-d', $address['city_departure_date'])
+                            ->format('d m Y');
+                    }
+                }
+            }
+            $declaration['fever'] = in_array('fever', $declaration['symptoms']) ?? true;
+            $declaration['swallow'] = in_array('swallow', $declaration['symptoms']) ?? true;
+            $declaration['breath'] = in_array('breath', $declaration['symptoms']) ?? true;
+            $declaration['cough'] = in_array('cough', $declaration['symptoms']) ?? true;
+            $declaration['itinerary'] = '';
+            if (count($declaration['itinerary_country_list']) > 0) {
+                foreach($declaration['itinerary_country_list'] as $country) {
+                    $declaration['itinerary'] .= '<strong>' . $countries[$country] . '</strong>, ';
+                }
+                $declaration['itinerary'] = substr($declaration['itinerary'], 0, -2);
+            }
+            $declaration['border'] = '';
+            if ($declaration['border_checkpoint'] && $declaration['border_checkpoint']['status'] === 'active') {
+                $declaration['border'] = $declaration['border_checkpoint']['name'];
+            }
+            $declaration['current_date'] = (app()->getLocale() === 'ro') ? Carbon::now()->format('d m Y') :
+                Carbon::now()->format('m/d/Y');
         }
 
-//        $signature = Declaration::getSignature(Declaration::API_DECLARATION_URL(), $code);
-//
-//        if(!is_array($signature)) {
-//            session()->flash('type', 'danger');
-//            session()->flash('message', $signature);
-//            $signature = [];
-//        }
-
-        return view('declaration', ['declaration' => $declaration, 'signature' => '']);
+        return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
     }
 
     /**

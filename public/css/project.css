@@ -29,8 +29,41 @@ tr.shown td.details-control {
 #header-declaration {
     margin: 0 0 1rem 0;
 }
+.btn-top {
+    margin: 0 10px 0 0 !important;
+}
+.card-header h5.top-title {
+    margin: 0.2rem 1rem 0 0;
+    font-size: 1.175rem;
+}
 #declaration-view h4 {
     margin-top: 0.5rem;
     font-weight: bold;
+}
+#declaration-view .table thead th {
+    border-bottom: 1px solid #343a40 !important;
+}
+#declaration-view .table-bordered th,
+#declaration-view .table-bordered td {
+    border: 1px solid #343a40 !important;
+}
+#declaration-view .table-borderless td {
+    padding: 0.3rem 0 !important;
+}
+p.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+#declaration-view hr.sub-section {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: 0.5rem;
+}
+#declaration-view .table-padding-left {
+    padding-left: 10%;
+}
+#declaration-view .bullet-padding-right {
+    padding-right: 1rem;
+}
+#declaration-view td.legend-top-margin {
+    padding: 3rem 0 0.3rem !important;
 }
 
