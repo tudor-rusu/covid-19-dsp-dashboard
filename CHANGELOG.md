@@ -1,3 +1,12 @@
+## [0.9.1] - 2020-04-15
+
+### Added
+- print PDF scripts
+
+### Modify
+- view related to Declaration view
+- CHANGELOG.md
+
 ## [0.9.0] - 2020-04-15
 
 ### Added
