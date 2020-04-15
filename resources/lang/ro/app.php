@@ -79,5 +79,26 @@ return [
         'Persoanele ale căror date sunt prelucrate beneficiază de dreptul de a-și exercita drepturile de modificare, intervenție și opoziție ' .
         'printr-o cerere semnată, datată și scrisă, adresată operatorului de date.',
     'I am aware that the refusal' => 'Sunt conștient că un refuz de a completa chestionarul poate provoca refuzul intrării mele pe teritoriul României, ' .
-        'în scopul eliminării eventualelor amenințări la adresa sănătății publice a României.'
+        'în scopul eliminării eventualelor amenințări la adresa sănătății publice a României.',
+    'Acknowledging the provisions' => 'Cunoscând prevederile <strong>art. 326 din Codul Penal cu privire la falsul în declarații și art. 352 din Codul Penal ' .
+        'cu privire la zădărnicirea combaterii bolilor</strong>,  declar prin prezenta, pe propria răspundere, că am sosit pe teritoriul României plecând din ' .
+        'țara de origine, cu tranzitarea teritoriului următoarelor țări:',
+    'and that I will follow' => 'și că <strong>voi urma indicațiile personalului medical</strong> care mi-au fost aduse la cunostință pe timpul efectuării ' .
+        'controlului de frontieră în punctul de trecere a frontierei',
+    '(name)' => '(denumire)',
+    'I declare on my own responsibility' => 'Declar pe propria răspundere faptul că, pentru a preveni răspândirea pe teritoriul României a virusului Covid-19, ' .
+        'după părăsirea perimetrului punctului de trecere a frontierei <strong>mă voi deplasa la domiciliu /reședință /instituție medicală /clădire cu ' .
+        'destinație specială /altă adresă</strong> (a se indica adresa exactă)',
+    'ambulance' => 'ambulanță',
+    'auto' => 'auto',
+    'for self-isolation or quarantine' => '<strong>pentru auto-izolare sau plasare în carantină</strong>, folosind',
+    'indicate car or ambulance' => '(a se indica număr de inmatriculare auto sau ambulanță)',
+    'following the route' => 'urmând traseul',
+    'I agree that the provided information' => 'Sunt de acord că informațiile furnizate pot fi consultate și prelucrate de către autoritățile competente.',
+    'Date and place' => 'Data și locul',
+    'Signature' => 'Semnătură',
+    'Legend for DSP staff' => '<strong>Legendă pentru personalul DSP</strong>:<br />' .
+        'Risc crescut de contagiozitate = "DA" la punctul 4<br />' .
+        'Risc crescut de expunere = "DA" la punctele 1,2 și 3<br />' .
+        'Risc scăzut = "NU" la toate întrebările'
 ];

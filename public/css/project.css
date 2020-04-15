@@ -63,5 +63,7 @@ p.no-margin-bottom {
 #declaration-view .bullet-padding-right {
     padding-right: 1rem;
 }
-
+#declaration-view td.legend-top-margin {
+    padding: 3rem 0 0.3rem !important;
+}
 

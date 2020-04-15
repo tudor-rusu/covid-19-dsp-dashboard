@@ -418,11 +418,90 @@
                                     <span class="bullet-padding-right">&#8226;</span>
                                     {!! __('app.I am aware that the refusal') !!}
                                 </p>
+                                <p class="no-margin-bottom">
+                                    <span class="bullet-padding-right">&#8226;</span>
+                                    {!! __('app.Acknowledging the provisions') !!}&nbsp;
+                                    @if (strlen($declaration['itinerary']) > 0)
+                                       {!! $declaration['itinerary'] !!}
+                                    @else
+                                        ____________________________________________________
+                                    @endif
+                                    &nbsp;{!! __('app.and that I will follow') !!}&nbsp;
+                                    @if (strlen($declaration['border']) > 0)
+                                        <strong>{{ $declaration['border'] }}</strong>.
+                                    @else
+                                        ____________________________________________________ {{ __('app.(name)') }}.
+                                    @endif
+                                </p>
+                                <p class="no-margin-bottom">
+                                    <span class="bullet-padding-right">&#8226;</span>
+                                    {!! __('app.I declare on my own responsibility') !!}:&nbsp;
+                                    @if (strlen($declaration['travel_route']) > 0)
+                                        <strong>{!! $declaration['travel_route'] !!}</strong>,
+                                    @else
+                                        ____________________________________________________________________,
+                                    @endif
+                                    &nbsp;{!! __('app.for self-isolation or quarantine') !!}:&nbsp;
+                                    @if (strlen($declaration['vehicle_registration_no']) > 0)
+                                        {{ __('app.' . $declaration['vehicle_type']) }}
+                                        <strong>{{ $declaration['vehicle_registration_no'] }}</strong>
+                                    @else
+                                        _____________________ {{ __('app.indicate car or ambulance') }}
+                                    @endif
+                                    &nbsp;, {{ __('app.following the route') }}:<br />
+                                    __________________________________________________________________________________ .
+                                </p>
+                                <p class="no-margin-bottom">
+                                    <span class="bullet-padding-right">&#8226;</span>
+                                    {{ __('app.I agree that the provided information') }}.
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="sub-section">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td><strong>{{ __('app.Date and place') }}</strong>:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {{ $declaration['current_date'] }},&nbsp;
+                                            @if (strlen($declaration['border']) > 0)
+                                                {{ $declaration['border'] }}
+                                            @else
+                                                ________________________________
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="legend-top-margin">
+                                            <small>
+                                                {!! __('app.Legend for DSP staff') !!}
+                                            </small>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td><strong>{{ __('app.Signature') }}</strong>:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @if (strlen($signature) > 0)
+                                                <img src="{{ $signature }}" alt="" title="" />
+                                            @else
+                                                ________________________________
+                                            @endif
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </section>
                     @endif
-
                 </div>
             </div>
         </div>

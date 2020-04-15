@@ -78,5 +78,26 @@ return [
         'related to fundamental rights. The persons whose data are processed have the right to modify, intervene and oppose through a written, dated and ' .
         'signed request addressed to the data operator.',
     'I am aware that the refusal' => 'I am aware that the refusal to fill in the questionnaire may cause the refusal of my entry in Romania, in order ' .
-        'to eliminate any possible threats to the public health of Romania.'
+        'to eliminate any possible threats to the public health of Romania.',
+    'Acknowledging the provisions' => 'Acknowledging the provisions of <strong>art. 326 of the Criminal Code regarding false statements and art. 352 ' .
+        'regarding the thwarting disease control</strong>, I hereby declare, on my own responsibility, that I have arrived on the territory of Romania ' .
+        'leaving the country of origin, transiting the territory of the following countries:',
+    'and that I will follow' => 'and that <strong>I will follow the instructions provided by the medical personnel</strong> during the border control at ' .
+        'the border crossing point',
+    '(name)' => '(name)',
+    'I declare on my own responsibility' => 'I declare on my own responsibility that, in order to prevent the spread of Covid-19 virus on the territory of ' .
+        'Romania, after leaving the border crossing point area <strong>I will travel to home /residence /medical institution /special purpose building /other ' .
+        'address</strong> (to indicate the exact address)',
+    'for self-isolation or quarantine' => '<strong>for self-isolation or quarantine</strong> using',
+    'ambulance' => 'ambulance',
+    'auto' => 'auto',
+    'indicate car or ambulance' => '(indicate auto or ambulance registration number)',
+    'following the route' => 'following the route',
+    'I agree that the provided information' => 'I agree that the provided information can be consulted and processed by the competent authorities',
+    'Date and place' => 'Date and place',
+    'Signature' => 'Signature',
+    'Legend for DSP staff' => '<strong>Legend for DSP staff</strong>:<br />' .
+        'Increased risk of infectiousness = "YES" in item 4<br />' .
+        'Increased risk of exposure = "YES" in items 1.2 and 3<br />' .
+        'Low risk = "NO" to all questions'
 ];

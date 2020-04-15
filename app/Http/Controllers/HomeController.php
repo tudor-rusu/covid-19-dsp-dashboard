@@ -97,6 +97,19 @@ class HomeController extends Controller
             $declaration['swallow'] = in_array('swallow', $declaration['symptoms']) ?? true;
             $declaration['breath'] = in_array('breath', $declaration['symptoms']) ?? true;
             $declaration['cough'] = in_array('cough', $declaration['symptoms']) ?? true;
+            $declaration['itinerary'] = '';
+            if (count($declaration['itinerary_country_list']) > 0) {
+                foreach($declaration['itinerary_country_list'] as $country) {
+                    $declaration['itinerary'] .= '<strong>' . $countries[$country] . '</strong>, ';
+                }
+                $declaration['itinerary'] = substr($declaration['itinerary'], 0, -2);
+            }
+            $declaration['border'] = '';
+            if ($declaration['border_checkpoint'] && $declaration['border_checkpoint']['status'] === 'active') {
+                $declaration['border'] = $declaration['border_checkpoint']['name'];
+            }
+            $declaration['current_date'] = (app()->getLocale() === 'ro') ? Carbon::now()->format('d m Y') :
+                Carbon::now()->format('m/d/Y');
         }
 
         return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
