@@ -1,3 +1,14 @@
+## [0.9.0] - 2020-04-15
+
+### Added
+- new translations related to Declaration view
+- QR code service
+
+### Modify
+- model, controller and view related to Declaration view
+- translations, routes and configurations
+- CHANGELOG.md
+
 ## [0.8.1] - 2020-04-13
 
 ### Added

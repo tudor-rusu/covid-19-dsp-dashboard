@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "petercoles/multilingual-country-list": "^1.2",
+        "simplesoftwareio/simple-qrcode": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.9"
     },
     "require-dev": {

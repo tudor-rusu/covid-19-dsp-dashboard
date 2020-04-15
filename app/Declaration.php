@@ -98,26 +98,19 @@ class Declaration
      */
     public static function getSignature(string $url, string $code)
     {
-//        return Cache::untilUpdated('signature-declaration-' . $code, env('CACHE_DECLARATIONS_PERSISTENCE'),
-//            function() use ($url, $code) {
-            try {
-                $apiRequest = self::connectApi()
-                    ->get($url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'signature');
+        try {
+            $apiRequest = self::connectApi()
+                ->get($url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'signature');
 
-                if (!$apiRequest->successful()) {
-                    throw new Exception(self::returnStatus($apiRequest->status()));
-                }
-
-                if ($apiRequest['status'] === 'success') {
-                    return $apiRequest['signature'];
-                } else {
-                    return $apiRequest['message'];
-                }
-
-            } catch(Exception $exception) {
-                return $exception->getMessage();
+            if (!$apiRequest->successful()) {
+                throw new Exception(self::returnStatus($apiRequest->status()));
             }
-//        });
+
+            return $apiRequest->json();
+
+        } catch(Exception $exception) {
+            return $exception->getMessage();
+        }
     }
 
     /**
