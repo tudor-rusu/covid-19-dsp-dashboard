@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('js_scripts')
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/document.js' )}}"></script>
+    <script type="text/javascript" src="{{ asset('js/document-font-bold.js' )}}"></script>
+    <script type="text/javascript" src="{{ asset('js/document-font-normal.js' )}}"></script>
+@endsection
+
 @section('content')
 <div class="container">
     @if (session('message'))
@@ -43,7 +50,8 @@
                         </a>
                     </div>
                     <div class="float-right">
-                        <a href="javascript:void(0);" class="btn btn-danger btn-sm btn-top" role="button"
+                        <a href="javascript:void(0);" id="print-declaration" class="btn btn-danger btn-sm btn-top"
+                           role="button"
                            aria-pressed="true">
                             {{ __('app.Print') }}
                         </a>
@@ -501,6 +509,19 @@
                             </div>
                         </div>
                     </section>
+                    <script type="text/javascript">
+                        $(document).ready( function () {
+                            $('#print-declaration').click( function () {
+                                let signature = '{{ $signature }}';
+                                let qrcode = '{{ $qrCode }}';
+                                let data = {!! $pdfData !!};
+
+                                let doc = new Document();
+
+                                doc.download(data, signature, qrcode);
+                            });
+                        });
+                    </script>
                     @endif
                 </div>
             </div>

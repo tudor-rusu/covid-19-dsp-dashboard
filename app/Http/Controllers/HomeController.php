@@ -53,7 +53,11 @@ class HomeController extends Controller
         }
 
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
+        $pdfData = '';
         $signature = '';
+        $qrCode = '';
+        $addresses = [];
+        $visitedCountries = [];
 
         if(!is_array($declaration)) {
             session()->flash('type', 'danger');
@@ -83,6 +87,7 @@ class HomeController extends Controller
             $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
                 ->format('d/m/Y');
             $declaration['qr_src'] = base64_encode(QrCode::format('png')->size(100)->generate($declaration['code']));
+            $qrCode = 'data:image/png;base64,' . $declaration['qr_src'];
             if (count($declaration['isolation_addresses']) > 0) {
                 if (app()->getLocale() === 'ro') {
                     foreach ($declaration['isolation_addresses'] as $key => $address) {
@@ -92,6 +97,13 @@ class HomeController extends Controller
                             ->format('d m Y');
                     }
                 }
+                foreach ($declaration['isolation_addresses'] as $key => $address) {
+                    $addresses[$key]['locality'] = $address['city'] . (($address['county'] && strlen
+                            ($address['county']) > 0) ? ', ' . $address['county'] : '');
+                    $addresses[$key]['dateArrival'] = $address['city_arrival_date'];
+                    $addresses[$key]['dateLeave'] = $address['city_departure_date'];
+                    $addresses[$key]['fullAddress'] = $address['city_full_address'];
+                }
             }
             $declaration['fever'] = in_array('fever', $declaration['symptoms']) ?? true;
             $declaration['swallow'] = in_array('swallow', $declaration['symptoms']) ?? true;
@@ -100,6 +112,7 @@ class HomeController extends Controller
             $declaration['itinerary'] = '';
             if (count($declaration['itinerary_country_list']) > 0) {
                 foreach($declaration['itinerary_country_list'] as $country) {
+                    $visitedCountries[] = $countries[$country];
                     $declaration['itinerary'] .= '<strong>' . $countries[$country] . '</strong>, ';
                 }
                 $declaration['itinerary'] = substr($declaration['itinerary'], 0, -2);
@@ -110,9 +123,48 @@ class HomeController extends Controller
             }
             $declaration['current_date'] = (app()->getLocale() === 'ro') ? Carbon::now()->format('d m Y') :
                 Carbon::now()->format('m/d/Y');
+            $pdfData = [
+                'code' => $declaration['code'],
+                'locale' => app()->getLocale(),
+                'lastName' => $declaration['name'],
+                'firstName' => $declaration['surname'],
+                'sex' => $declaration['sex'],
+                'idCardSeries' => $declaration['document_series'],
+                'idCardNumber' => $declaration['document_number'],
+                'birthday' => $declaration['birth_date'],
+                'dateArrival' => $declaration['current_date'],
+                'countryLeave' => $declaration['travelling_from_country'],
+                'localityLeave' => $declaration['travelling_from_city'],
+                'dateLeave' => $declaration['travelling_from_date'],
+                'phoneNumber' => $declaration['phone'],
+                'emailAddress' => $declaration['email'],
+                'addresses' => $addresses,
+                'answers' => [
+                    'hasVisited' => $declaration['q_visited'],
+                    'hasContacted' => $declaration['q_contacted'],
+                    'isHospitalized' => $declaration['q_hospitalized'],
+                    'hasFever' => $declaration['fever'],
+                    'hasDifficultySwallow' => $declaration['swallow'],
+                    'hasDifficultyBreath' => $declaration['breath'],
+                    'hasIntenseCough' => $declaration['cough'],
+                ],
+                'organization' => '',
+                'visitedCountries' => $visitedCountries,
+                'borderCrossingPoint' => $declaration['border'],
+                'destination' => trim(str_replace("\n", ' ', $declaration['travel_route'])),
+                'vehicle' => $declaration['vehicle_registration_no'],
+                'route' => '',
+                'documentDate' => $declaration['current_date'],
+                'documentLocality' => $declaration['border']
+            ];
         }
 
-        return view('declaration', ['declaration' => $declaration, 'signature' => $signature]);
+        return view('declaration', [
+            'declaration'   => $declaration,
+            'pdfData'       => json_encode($pdfData),
+            'signature'     => $signature,
+            'qrCode'        => $qrCode
+        ]);
     }
 
     /**

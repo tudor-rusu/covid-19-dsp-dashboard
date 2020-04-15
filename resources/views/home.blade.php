@@ -32,7 +32,7 @@
                         </tr>
                         </thead>
                     </table>
-                    <script>
+                    <script type="text/javascript">
                         function format ( d ) {
                             return '<table class="table table-sm table-details-control">'+
                                 '<tr>'+
@@ -49,7 +49,7 @@
                                 '</table>';
                         }
                         $(document).ready( function () {
-                            var table = $('#declaratii').DataTable({
+                            let table = $('#declaratii').DataTable({
                                 processing: true,
                                 serverSide: true,
                                 ajax: "{{ url('declaratii') }}",

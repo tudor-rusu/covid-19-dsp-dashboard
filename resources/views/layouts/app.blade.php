@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    @yield('js_scripts')
     <script type="text/javascript" src="{{ asset('js/project.js' )}}"></script>
 
     <!-- Fonts -->
