@@ -2,9 +2,10 @@
 
 @section('js_scripts')
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/document.js' )}}"></script>
     <script type="text/javascript" src="{{ asset('js/document-font-bold.js' )}}"></script>
     <script type="text/javascript" src="{{ asset('js/document-font-normal.js' )}}"></script>
+    <script type="text/javascript" src="{{ asset('js/document-trans.js' )}}"></script>
+    <script type="text/javascript" src="{{ asset('js/document.js' )}}"></script>
 @endsection
 
 @section('content')
