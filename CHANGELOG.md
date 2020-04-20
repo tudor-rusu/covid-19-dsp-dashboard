@@ -1,3 +1,11 @@
+## [0.9.2] - 2020-04-20
+
+### Added
+- english translations for PDF
+
+### Modify
+- CHANGELOG.md
+
 ## [0.9.1] - 2020-04-15
 
 ### Added
