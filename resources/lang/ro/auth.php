@@ -41,5 +41,6 @@ return [
     'This password reset link will expire in :count minutes.' => 'Acest link de resetare a parolei va expira în :count minute.',
     'If you did not request a password reset, no further action is required.' => 'Dacă nu ați solicitat o resetare a parolei, nu este necesară nici o acțiune suplimentară.',
     'Username' => 'Nume de utilizator',
-    'Username and Password are wrong.' => 'Numele de utilizator şi parola nu sunt valide.'
+    'Username and Password are wrong.' => 'Numele de utilizator şi parola nu sunt valide.',
+    'Reset user password' => 'Resetare parole utilizatori'
 ];
