@@ -2,6 +2,18 @@
 
 @section('content')
 <div class="container">
+    @if (session('message'))
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card alert alert-{{ session('type') }} alert-dismissible fade show" role="alert">
+                    {{ session('message') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

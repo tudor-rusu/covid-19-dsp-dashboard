@@ -15,6 +15,7 @@ return [
 
     'failed'   => 'Datele de identificare nu pot fi confirmate.',
     'throttle' => 'Prea multe încercări de intrare în cont. Puteți încerca din nou peste :seconds secunde.',
+    'Username and/or Password are wrong.' => 'Numele de utilizator și/sau Parola nu sunt corecte.',
     'Reset Password' => 'Resetare parolă',
     'Register' => 'Înregistrare',
     'Name' => 'Nume',

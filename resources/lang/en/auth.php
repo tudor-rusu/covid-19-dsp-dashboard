@@ -17,5 +17,6 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     // only for declaration view
     'Logout' => 'Delogare',
+    'Username and/or Password are wrong.' => 'Username and/or Password are wrong.'
 
 ];

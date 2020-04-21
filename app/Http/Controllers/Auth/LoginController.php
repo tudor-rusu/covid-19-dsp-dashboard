@@ -60,6 +60,8 @@ class LoginController extends Controller
         if(auth()->attempt(array('username' => $input['username'], 'password' => $input['password']))) {
             return redirect()->route('home');
         } else {
+            session()->flash('type', 'danger');
+            session()->flash('message', __('auth.Username and/or Password are wrong.'));
             return redirect()->route('login')
                 ->with('error', __('auth.Username and Password are wrong.'));
         }
