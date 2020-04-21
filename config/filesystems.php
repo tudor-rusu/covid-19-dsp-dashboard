@@ -64,6 +64,11 @@ return [
             'endpoint' => env('AWS_URL'),
         ],
 
+        'dsp_data' => [
+            'driver' => 'local',
+            'root' => base_path('database/data')
+        ],
+
     ],
 
     /*
