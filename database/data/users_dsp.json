@@ -1,0 +1,1367 @@
+[
+    {
+        "id": "1",
+        "username": "albita-1",
+        "password": "sc5e6pag",
+        "checkpoint-name": "Albița",
+        "checkpoint-id": "1"
+    },
+    {
+        "id": "2",
+        "username": "albita-2",
+        "password": "gxvk2e49",
+        "checkpoint-name": "Albița",
+        "checkpoint-id": "1"
+    },
+    {
+        "id": "3",
+        "username": "albita-3",
+        "password": "rcn956x7",
+        "checkpoint-name": "Albița",
+        "checkpoint-id": "1"
+    },
+    {
+        "id": "4",
+        "username": "aero-arad-1",
+        "password": "s4c3f5h2",
+        "checkpoint-name": "Aeroportul Internațional Arad",
+        "checkpoint-id": "2"
+    },
+    {
+        "id": "5",
+        "username": "aero-arad-2",
+        "password": "pzkbe82m",
+        "checkpoint-name": "Aeroportul Internațional Arad",
+        "checkpoint-id": "2"
+    },
+    {
+        "id": "6",
+        "username": "aero-arad-3",
+        "password": "hd9usape",
+        "checkpoint-name": "Aeroportul Internațional Arad",
+        "checkpoint-id": "2"
+    },
+    {
+        "id": "7",
+        "username": "aero-aurel-vlaicu-1",
+        "password": "3tkm627p",
+        "checkpoint-name": "Aeroportul Internațional Aurel Vlaicu",
+        "checkpoint-id": "3"
+    },
+    {
+        "id": "8",
+        "username": "aero-aurel-vlaicu-2",
+        "password": "nm83uk92",
+        "checkpoint-name": "Aeroportul Internațional Aurel Vlaicu",
+        "checkpoint-id": "3"
+    },
+    {
+        "id": "9",
+        "username": "aero-aurel-vlaicu-3",
+        "password": "z75evg4n",
+        "checkpoint-name": "Aeroportul Internațional Aurel Vlaicu",
+        "checkpoint-id": "3"
+    },
+    {
+        "id": "10",
+        "username": "aero-bacau-1",
+        "password": "k9hzsp6g",
+        "checkpoint-name": "Aeroportul Internațional Bacău",
+        "checkpoint-id": "4"
+    },
+    {
+        "id": "11",
+        "username": "aero-bacau-2",
+        "password": "p9agdun6",
+        "checkpoint-name": "Aeroportul Internațional Bacău",
+        "checkpoint-id": "4"
+    },
+    {
+        "id": "12",
+        "username": "aero-bacau-3",
+        "password": "6xeambzu",
+        "checkpoint-name": "Aeroportul Internațional Bacău",
+        "checkpoint-id": "4"
+    },
+    {
+        "id": "13",
+        "username": "bechet-1",
+        "password": "ex2zfp5a",
+        "checkpoint-name": "Bechet",
+        "checkpoint-id": "5"
+    },
+    {
+        "id": "14",
+        "username": "bechet-2",
+        "password": "92kgzprb",
+        "checkpoint-name": "Bechet",
+        "checkpoint-id": "5"
+    },
+    {
+        "id": "15",
+        "username": "bechet-3",
+        "password": "28arfs69",
+        "checkpoint-name": "Bechet",
+        "checkpoint-id": "5"
+    },
+    {
+        "id": "16",
+        "username": "bors-1",
+        "password": "knrz2bt6",
+        "checkpoint-name": "Borș",
+        "checkpoint-id": "6"
+    },
+    {
+        "id": "17",
+        "username": "bors-2",
+        "password": "73dm65vc",
+        "checkpoint-name": "Borș",
+        "checkpoint-id": "6"
+    },
+    {
+        "id": "18",
+        "username": "bors-3",
+        "password": "gcrpanvd",
+        "checkpoint-name": "Borș",
+        "checkpoint-id": "6"
+    },
+    {
+        "id": "19",
+        "username": "braila-1",
+        "password": "nbtzdckv",
+        "checkpoint-name": "Brăila",
+        "checkpoint-id": "7"
+    },
+    {
+        "id": "20",
+        "username": "braila-2",
+        "password": "ahd492bs",
+        "checkpoint-name": "Brăila",
+        "checkpoint-id": "7"
+    },
+    {
+        "id": "21",
+        "username": "braila-3",
+        "password": "zxgvc3e2",
+        "checkpoint-name": "Brăila",
+        "checkpoint-id": "7"
+    },
+    {
+        "id": "22",
+        "username": "calafat-1",
+        "password": "gdtupz4s",
+        "checkpoint-name": "Calafat",
+        "checkpoint-id": "8"
+    },
+    {
+        "id": "23",
+        "username": "calafat-2",
+        "password": "b3dna5zx",
+        "checkpoint-name": "Calafat",
+        "checkpoint-id": "8"
+    },
+    {
+        "id": "24",
+        "username": "calafat-3",
+        "password": "6nd9cusm",
+        "checkpoint-name": "Calafat",
+        "checkpoint-id": "8"
+    },
+    {
+        "id": "25",
+        "username": "calarasi-1",
+        "password": "zx3b7ftm",
+        "checkpoint-name": "Călărași",
+        "checkpoint-id": "9"
+    },
+    {
+        "id": "26",
+        "username": "calarasi-2",
+        "password": "t7uh29xb",
+        "checkpoint-name": "Călărași",
+        "checkpoint-id": "9"
+    },
+    {
+        "id": "27",
+        "username": "calarasi-3",
+        "password": "c65b3z89",
+        "checkpoint-name": "Călărași",
+        "checkpoint-id": "9"
+    },
+    {
+        "id": "28",
+        "username": "capul-midia-1",
+        "password": "rnx9ztbc",
+        "checkpoint-name": "Capul Midia",
+        "checkpoint-id": "10"
+    },
+    {
+        "id": "29",
+        "username": "capul-midia-2",
+        "password": "82zsbrae",
+        "checkpoint-name": "Capul Midia",
+        "checkpoint-id": "10"
+    },
+    {
+        "id": "30",
+        "username": "capul-midia-3",
+        "password": "vp382uxe",
+        "checkpoint-name": "Capul Midia",
+        "checkpoint-id": "10"
+    },
+    {
+        "id": "31",
+        "username": "carei-1",
+        "password": "hfkt73ed",
+        "checkpoint-name": "Carei",
+        "checkpoint-id": "11"
+    },
+    {
+        "id": "32",
+        "username": "carei-2",
+        "password": "9r2czn4v",
+        "checkpoint-name": "Carei",
+        "checkpoint-id": "11"
+    },
+    {
+        "id": "33",
+        "username": "carei-3",
+        "password": "ucnhrag5",
+        "checkpoint-name": "Carei",
+        "checkpoint-id": "11"
+    },
+    {
+        "id": "34",
+        "username": "campulung-la-tisa-1",
+        "password": "7gavnzmk",
+        "checkpoint-name": "Câmpulung la Tisa",
+        "checkpoint-id": "12"
+    },
+    {
+        "id": "35",
+        "username": "campulung-la-tisa-2",
+        "password": "6tvdphxu",
+        "checkpoint-name": "Câmpulung la Tisa",
+        "checkpoint-id": "12"
+    },
+    {
+        "id": "36",
+        "username": "campulung-la-tisa-3",
+        "password": "n8fz6dx4",
+        "checkpoint-name": "Câmpulung la Tisa",
+        "checkpoint-id": "12"
+    },
+    {
+        "id": "37",
+        "username": "cenad-1",
+        "password": "xmbaced3",
+        "checkpoint-name": "Cenad",
+        "checkpoint-id": "13"
+    },
+    {
+        "id": "38",
+        "username": "cenad-2",
+        "password": "zxvmb8ua",
+        "checkpoint-name": "Cenad",
+        "checkpoint-id": "13"
+    },
+    {
+        "id": "39",
+        "username": "cenad-3",
+        "password": "kcfum3vg",
+        "checkpoint-name": "Cenad",
+        "checkpoint-id": "13"
+    },
+    {
+        "id": "40",
+        "username": "cernavoda-1",
+        "password": "ghtnm4d9",
+        "checkpoint-name": "Cernavodă",
+        "checkpoint-id": "14"
+    },
+    {
+        "id": "41",
+        "username": "cernavoda-2",
+        "password": "xafrenhg",
+        "checkpoint-name": "Cernavodă",
+        "checkpoint-id": "14"
+    },
+    {
+        "id": "42",
+        "username": "cernavoda-3",
+        "password": "74a3f8pd",
+        "checkpoint-name": "Cernavodă",
+        "checkpoint-id": "14"
+    },
+    {
+        "id": "43",
+        "username": "aero-cluj-1",
+        "password": "b25fduka",
+        "checkpoint-name": "Aeroportul Internațional Cluj",
+        "checkpoint-id": "15"
+    },
+    {
+        "id": "44",
+        "username": "aero-cluj-2",
+        "password": "t4akv2ps",
+        "checkpoint-name": "Aeroportul Internațional Cluj",
+        "checkpoint-id": "15"
+    },
+    {
+        "id": "45",
+        "username": "aero-cluj-3",
+        "password": "7z3tn9dg",
+        "checkpoint-name": "Aeroportul Internațional Cluj",
+        "checkpoint-id": "15"
+    },
+    {
+        "id": "46",
+        "username": "constanta-1",
+        "password": "p346da9r",
+        "checkpoint-name": "Constanța",
+        "checkpoint-id": "16"
+    },
+    {
+        "id": "47",
+        "username": "constanta-2",
+        "password": "4egbx85z",
+        "checkpoint-name": "Constanța",
+        "checkpoint-id": "16"
+    },
+    {
+        "id": "48",
+        "username": "constanta-3",
+        "password": "uxpmf65h",
+        "checkpoint-name": "Constanța",
+        "checkpoint-id": "16"
+    },
+    {
+        "id": "49",
+        "username": "constanta-sud-1",
+        "password": "vsm4nh28",
+        "checkpoint-name": "Constanța Sud",
+        "checkpoint-id": "17"
+    },
+    {
+        "id": "50",
+        "username": "constanta-sud-2",
+        "password": "mdzvcfn5",
+        "checkpoint-name": "Constanța Sud",
+        "checkpoint-id": "17"
+    },
+    {
+        "id": "51",
+        "username": "constanta-sud-3",
+        "password": "bs94xc2v",
+        "checkpoint-name": "Constanța Sud",
+        "checkpoint-id": "17"
+    },
+    {
+        "id": "52",
+        "username": "corabia-1",
+        "password": "eu73d6ax",
+        "checkpoint-name": "Corabia",
+        "checkpoint-id": "18"
+    },
+    {
+        "id": "53",
+        "username": "corabia-2",
+        "password": "uva7mxcf",
+        "checkpoint-name": "Corabia",
+        "checkpoint-id": "18"
+    },
+    {
+        "id": "54",
+        "username": "corabia-3",
+        "password": "z62agvkc",
+        "checkpoint-name": "Corabia",
+        "checkpoint-id": "18"
+    },
+    {
+        "id": "55",
+        "username": "aero-craiova-1",
+        "password": "ft7gpcnr",
+        "checkpoint-name": "Aeroportul Internațional Craiova",
+        "checkpoint-id": "19"
+    },
+    {
+        "id": "56",
+        "username": "aero-craiova-2",
+        "password": "x4d9htmf",
+        "checkpoint-name": "Aeroportul Internațional Craiova",
+        "checkpoint-id": "19"
+    },
+    {
+        "id": "57",
+        "username": "aero-craiova-3",
+        "password": "kx83bgu4",
+        "checkpoint-name": "Aeroportul Internațional Craiova",
+        "checkpoint-id": "19"
+    },
+    {
+        "id": "58",
+        "username": "curtici-1",
+        "password": "967hvgd3",
+        "checkpoint-name": "Curtici",
+        "checkpoint-id": "20"
+    },
+    {
+        "id": "59",
+        "username": "curtici-2",
+        "password": "3xpunk28",
+        "checkpoint-name": "Curtici",
+        "checkpoint-id": "20"
+    },
+    {
+        "id": "60",
+        "username": "curtici-3",
+        "password": "9sr6248t",
+        "checkpoint-name": "Curtici",
+        "checkpoint-id": "20"
+    },
+    {
+        "id": "61",
+        "username": "drobeta-turnu-severin-1",
+        "password": "pnfdxsak",
+        "checkpoint-name": "Drobeta Turnu Severin",
+        "checkpoint-id": "21"
+    },
+    {
+        "id": "62",
+        "username": "drobeta-turnu-severin-2",
+        "password": "57v4kehr",
+        "checkpoint-name": "Drobeta Turnu Severin",
+        "checkpoint-id": "21"
+    },
+    {
+        "id": "63",
+        "username": "drobeta-turnu-severin-3",
+        "password": "serbcf83",
+        "checkpoint-name": "Drobeta Turnu Severin",
+        "checkpoint-id": "21"
+    },
+    {
+        "id": "64",
+        "username": "episcopia-bihor-1",
+        "password": "e768gm2f",
+        "checkpoint-name": "Episcopia Bihor",
+        "checkpoint-id": "22"
+    },
+    {
+        "id": "65",
+        "username": "episcopia-bihor-2",
+        "password": "f3t97xze",
+        "checkpoint-name": "Episcopia Bihor",
+        "checkpoint-id": "22"
+    },
+    {
+        "id": "66",
+        "username": "episcopia-bihor-3",
+        "password": "hs6ctk94",
+        "checkpoint-name": "Episcopia Bihor",
+        "checkpoint-id": "22"
+    },
+    {
+        "id": "67",
+        "username": "falciu-1",
+        "password": "mpzb2aft",
+        "checkpoint-name": "Fălciu",
+        "checkpoint-id": "23"
+    },
+    {
+        "id": "68",
+        "username": "falciu-2",
+        "password": "f9vapsg7",
+        "checkpoint-name": "Fălciu",
+        "checkpoint-id": "23"
+    },
+    {
+        "id": "69",
+        "username": "falciu-3",
+        "password": "f43xphdr",
+        "checkpoint-name": "Fălciu",
+        "checkpoint-id": "23"
+    },
+    {
+        "id": "70",
+        "username": "galati-1",
+        "password": "br75umt2",
+        "checkpoint-name": "Galați",
+        "checkpoint-id": "24"
+    },
+    {
+        "id": "71",
+        "username": "galati-2",
+        "password": "zrf7dgex",
+        "checkpoint-name": "Galați",
+        "checkpoint-id": "24"
+    },
+    {
+        "id": "72",
+        "username": "galati-3",
+        "password": "7rvf6zcm",
+        "checkpoint-name": "Galați",
+        "checkpoint-id": "24"
+    },
+    {
+        "id": "73",
+        "username": "giurgiu-1",
+        "password": "b9mg5st4",
+        "checkpoint-name": "Giurgiu",
+        "checkpoint-id": "25"
+    },
+    {
+        "id": "74",
+        "username": "giurgiu-2",
+        "password": "2vhz9bgu",
+        "checkpoint-name": "Giurgiu",
+        "checkpoint-id": "25"
+    },
+    {
+        "id": "75",
+        "username": "giurgiu-3",
+        "password": "e7kvnbp5",
+        "checkpoint-name": "Giurgiu",
+        "checkpoint-id": "25"
+    },
+    {
+        "id": "76",
+        "username": "aero-henri-coanda-1",
+        "password": "vtkzh9nb",
+        "checkpoint-name": "Aeroportul Internațional Henri Coandă",
+        "checkpoint-id": "26"
+    },
+    {
+        "id": "77",
+        "username": "aero-henri-coanda-2",
+        "password": "bxczdg7v",
+        "checkpoint-name": "Aeroportul Internațional Henri Coandă",
+        "checkpoint-id": "26"
+    },
+    {
+        "id": "78",
+        "username": "aero-henri-coanda-3",
+        "password": "t4m5karz",
+        "checkpoint-name": "Aeroportul Internațional Henri Coandă",
+        "checkpoint-id": "26"
+    },
+    {
+        "id": "79",
+        "username": "aero-iasi-1",
+        "password": "534bdvsn",
+        "checkpoint-name": "Aeroportul Internațional Iași",
+        "checkpoint-id": "27"
+    },
+    {
+        "id": "80",
+        "username": "aero-iasi-2",
+        "password": "dnxgmahf",
+        "checkpoint-name": "Aeroportul Internațional Iași",
+        "checkpoint-id": "27"
+    },
+    {
+        "id": "81",
+        "username": "aero-iasi-3",
+        "password": "8ptaxdcb",
+        "checkpoint-name": "Aeroportul Internațional Iași",
+        "checkpoint-id": "27"
+    },
+    {
+        "id": "82",
+        "username": "jimbolia-1",
+        "password": "ht72subv",
+        "checkpoint-name": "Jimbolia",
+        "checkpoint-id": "28"
+    },
+    {
+        "id": "83",
+        "username": "jimbolia-2",
+        "password": "9xrdbfn7",
+        "checkpoint-name": "Jimbolia",
+        "checkpoint-id": "28"
+    },
+    {
+        "id": "84",
+        "username": "jimbolia-3",
+        "password": "5e7ds4xu",
+        "checkpoint-name": "Jimbolia",
+        "checkpoint-id": "28"
+    },
+    {
+        "id": "85",
+        "username": "lipnita-1",
+        "password": "crmanbz5",
+        "checkpoint-name": "Lipnița",
+        "checkpoint-id": "29"
+    },
+    {
+        "id": "86",
+        "username": "lipnita-2",
+        "password": "8f24exvb",
+        "checkpoint-name": "Lipnița",
+        "checkpoint-id": "29"
+    },
+    {
+        "id": "87",
+        "username": "lipnita-3",
+        "password": "p49ntzfm",
+        "checkpoint-name": "Lipnița",
+        "checkpoint-id": "29"
+    },
+    {
+        "id": "88",
+        "username": "mangalia-1",
+        "password": "548hk62e",
+        "checkpoint-name": "Mangalia",
+        "checkpoint-id": "30"
+    },
+    {
+        "id": "89",
+        "username": "mangalia-2",
+        "password": "82mcaxte",
+        "checkpoint-name": "Mangalia",
+        "checkpoint-id": "30"
+    },
+    {
+        "id": "90",
+        "username": "mangalia-3",
+        "password": "vepk5cr2",
+        "checkpoint-name": "Mangalia",
+        "checkpoint-id": "30"
+    },
+    {
+        "id": "91",
+        "username": "aero-mihail-kogalniceanu-1",
+        "password": "msrxu39b",
+        "checkpoint-name": "Aeroportul Internațional Mihail Kogălniceanu",
+        "checkpoint-id": "31"
+    },
+    {
+        "id": "92",
+        "username": "aero-mihail-kogalniceanu-2",
+        "password": "sr39knmf",
+        "checkpoint-name": "Aeroportul Internațional Mihail Kogălniceanu",
+        "checkpoint-id": "31"
+    },
+    {
+        "id": "93",
+        "username": "aero-mihail-kogalniceanu-3",
+        "password": "3zcm52x9",
+        "checkpoint-name": "Aeroportul Internațional Mihail Kogălniceanu",
+        "checkpoint-id": "31"
+    },
+    {
+        "id": "94",
+        "username": "moldova-veche-1",
+        "password": "34zm29a7",
+        "checkpoint-name": "Moldova Veche",
+        "checkpoint-id": "32"
+    },
+    {
+        "id": "95",
+        "username": "moldova-veche-2",
+        "password": "3df4xcea",
+        "checkpoint-name": "Moldova Veche",
+        "checkpoint-id": "32"
+    },
+    {
+        "id": "96",
+        "username": "moldova-veche-3",
+        "password": "ht4pvf3c",
+        "checkpoint-name": "Moldova Veche",
+        "checkpoint-id": "32"
+    },
+    {
+        "id": "97",
+        "username": "naidas-1",
+        "password": "m95kt3z2",
+        "checkpoint-name": "Naidăș",
+        "checkpoint-id": "33"
+    },
+    {
+        "id": "98",
+        "username": "naidas-2",
+        "password": "vxg8zma7",
+        "checkpoint-name": "Naidăș",
+        "checkpoint-id": "33"
+    },
+    {
+        "id": "99",
+        "username": "naidas-3",
+        "password": "s39ha6mr",
+        "checkpoint-name": "Naidăș",
+        "checkpoint-id": "33"
+    },
+    {
+        "id": "100",
+        "username": "nadlac-1",
+        "password": "urtxe6a3",
+        "checkpoint-name": "Nădlac",
+        "checkpoint-id": "34"
+    },
+    {
+        "id": "101",
+        "username": "nadlac-2",
+        "password": "dngarzs4",
+        "checkpoint-name": "Nădlac",
+        "checkpoint-id": "34"
+    },
+    {
+        "id": "102",
+        "username": "nadlac-3",
+        "password": "hm9ne7ua",
+        "checkpoint-name": "Nădlac",
+        "checkpoint-id": "34"
+    },
+    {
+        "id": "103",
+        "username": "nicolina-1",
+        "password": "dv9p7urc",
+        "checkpoint-name": "Nicolina",
+        "checkpoint-id": "35"
+    },
+    {
+        "id": "104",
+        "username": "nicolina-2",
+        "password": "5bvc29ua",
+        "checkpoint-name": "Nicolina",
+        "checkpoint-id": "35"
+    },
+    {
+        "id": "105",
+        "username": "nicolina-3",
+        "password": "46a8bxvs",
+        "checkpoint-name": "Nicolina",
+        "checkpoint-id": "35"
+    },
+    {
+        "id": "106",
+        "username": "oancea-1",
+        "password": "phcf7n84",
+        "checkpoint-name": "Oancea",
+        "checkpoint-id": "36"
+    },
+    {
+        "id": "107",
+        "username": "oancea-2",
+        "password": "bcgsh47n",
+        "checkpoint-name": "Oancea",
+        "checkpoint-id": "36"
+    },
+    {
+        "id": "108",
+        "username": "oancea-3",
+        "password": "bm2e8fdu",
+        "checkpoint-name": "Oancea",
+        "checkpoint-id": "36"
+    },
+    {
+        "id": "109",
+        "username": "oltenita-1",
+        "password": "vprxumzk",
+        "checkpoint-name": "Oltenița",
+        "checkpoint-id": "37"
+    },
+    {
+        "id": "110",
+        "username": "oltenita-2",
+        "password": "6x2bdupc",
+        "checkpoint-name": "Oltenița",
+        "checkpoint-id": "37"
+    },
+    {
+        "id": "111",
+        "username": "oltenita-3",
+        "password": "6zr7f5nt",
+        "checkpoint-name": "Oltenița",
+        "checkpoint-id": "37"
+    },
+    {
+        "id": "112",
+        "username": "aero-oradea-1",
+        "password": "rkzgdut8",
+        "checkpoint-name": "Aeroportul Internațional Oradea",
+        "checkpoint-id": "38"
+    },
+    {
+        "id": "113",
+        "username": "aero-oradea-2",
+        "password": "8eb6xa2g",
+        "checkpoint-name": "Aeroportul Internațional Oradea",
+        "checkpoint-id": "38"
+    },
+    {
+        "id": "114",
+        "username": "aero-oradea-3",
+        "password": "5kacmhgp",
+        "checkpoint-name": "Aeroportul Internațional Oradea",
+        "checkpoint-id": "38"
+    },
+    {
+        "id": "115",
+        "username": "orsova-1",
+        "password": "9ub2vxaz",
+        "checkpoint-name": "Orșova",
+        "checkpoint-id": "39"
+    },
+    {
+        "id": "116",
+        "username": "orsova-2",
+        "password": "ng5u7fcx",
+        "checkpoint-name": "Orșova",
+        "checkpoint-id": "39"
+    },
+    {
+        "id": "117",
+        "username": "orsova-3",
+        "password": "579hevns",
+        "checkpoint-name": "Orșova",
+        "checkpoint-id": "39"
+    },
+    {
+        "id": "118",
+        "username": "ostrov-1",
+        "password": "29xkurvd",
+        "checkpoint-name": "Ostrov",
+        "checkpoint-id": "40"
+    },
+    {
+        "id": "119",
+        "username": "ostrov-2",
+        "password": "xhb75kur",
+        "checkpoint-name": "Ostrov",
+        "checkpoint-id": "40"
+    },
+    {
+        "id": "120",
+        "username": "ostrov-3",
+        "password": "9pxvb6az",
+        "checkpoint-name": "Ostrov",
+        "checkpoint-id": "40"
+    },
+    {
+        "id": "121",
+        "username": "petea-1",
+        "password": "m4bfurv2",
+        "checkpoint-name": "Petea",
+        "checkpoint-id": "41"
+    },
+    {
+        "id": "122",
+        "username": "petea-2",
+        "password": "hx7m5fgr",
+        "checkpoint-name": "Petea",
+        "checkpoint-id": "41"
+    },
+    {
+        "id": "123",
+        "username": "petea-3",
+        "password": "dp8eu39r",
+        "checkpoint-name": "Petea",
+        "checkpoint-id": "41"
+    },
+    {
+        "id": "124",
+        "username": "portile-de-fier-i-1",
+        "password": "kse7zuh5",
+        "checkpoint-name": "Porțile de Fier I",
+        "checkpoint-id": "42"
+    },
+    {
+        "id": "125",
+        "username": "portile-de-fier-i-2",
+        "password": "nxm8ftv6",
+        "checkpoint-name": "Porțile de Fier I",
+        "checkpoint-id": "42"
+    },
+    {
+        "id": "126",
+        "username": "portile-de-fier-i-3",
+        "password": "35hvpkfm",
+        "checkpoint-name": "Porțile de Fier I",
+        "checkpoint-id": "42"
+    },
+    {
+        "id": "127",
+        "username": "portile-de-fier-ii-1",
+        "password": "us7ngx96",
+        "checkpoint-name": "Porțile de Fier II",
+        "checkpoint-id": "43"
+    },
+    {
+        "id": "128",
+        "username": "portile-de-fier-ii-2",
+        "password": "8et79aup",
+        "checkpoint-name": "Porțile de Fier II",
+        "checkpoint-id": "43"
+    },
+    {
+        "id": "129",
+        "username": "portile-de-fier-ii-3",
+        "password": "kn5u6axh",
+        "checkpoint-name": "Porțile de Fier II",
+        "checkpoint-id": "43"
+    },
+    {
+        "id": "130",
+        "username": "salonta-1",
+        "password": "98aechx7",
+        "checkpoint-name": "Salonta",
+        "checkpoint-id": "44"
+    },
+    {
+        "id": "131",
+        "username": "salonta-2",
+        "password": "np3zth52",
+        "checkpoint-name": "Salonta",
+        "checkpoint-id": "44"
+    },
+    {
+        "id": "132",
+        "username": "salonta-3",
+        "password": "b6g8dtxh",
+        "checkpoint-name": "Salonta",
+        "checkpoint-id": "44"
+    },
+    {
+        "id": "133",
+        "username": "aero-satu-mare-1",
+        "password": "9g4ze365",
+        "checkpoint-name": "Aeroportul Internațional Satu Mare",
+        "checkpoint-id": "45"
+    },
+    {
+        "id": "134",
+        "username": "aero-satu-mare-2",
+        "password": "tbn8azx2",
+        "checkpoint-name": "Aeroportul Internațional Satu Mare",
+        "checkpoint-id": "45"
+    },
+    {
+        "id": "135",
+        "username": "aero-satu-mare-3",
+        "password": "4r9g7m2s",
+        "checkpoint-name": "Aeroportul Internațional Satu Mare",
+        "checkpoint-id": "45"
+    },
+    {
+        "id": "136",
+        "username": "sacuieni-1",
+        "password": "938bf4ra",
+        "checkpoint-name": "Săcuieni",
+        "checkpoint-id": "46"
+    },
+    {
+        "id": "137",
+        "username": "sacuieni-2",
+        "password": "hepg6us4",
+        "checkpoint-name": "Săcuieni",
+        "checkpoint-id": "46"
+    },
+    {
+        "id": "138",
+        "username": "sacuieni-3",
+        "password": "4mr36u5a",
+        "checkpoint-name": "Săcuieni",
+        "checkpoint-id": "46"
+    },
+    {
+        "id": "139",
+        "username": "sculeni-1",
+        "password": "dt5bshx4",
+        "checkpoint-name": "Sculeni",
+        "checkpoint-id": "47"
+    },
+    {
+        "id": "140",
+        "username": "sculeni-2",
+        "password": "57mk4z96",
+        "checkpoint-name": "Sculeni",
+        "checkpoint-id": "47"
+    },
+    {
+        "id": "141",
+        "username": "sculeni-3",
+        "password": "c529r48d",
+        "checkpoint-name": "Sculeni",
+        "checkpoint-id": "47"
+    },
+    {
+        "id": "142",
+        "username": "aero-sibiu-1",
+        "password": "t6ns4uxk",
+        "checkpoint-name": "Aeroportul Internațional Sibiu",
+        "checkpoint-id": "48"
+    },
+    {
+        "id": "143",
+        "username": "aero-sibiu-2",
+        "password": "dvf6sn57",
+        "checkpoint-name": "Aeroportul Internațional Sibiu",
+        "checkpoint-id": "48"
+    },
+    {
+        "id": "144",
+        "username": "aero-sibiu-3",
+        "password": "5cus89ab",
+        "checkpoint-name": "Aeroportul Internațional Sibiu",
+        "checkpoint-id": "48"
+    },
+    {
+        "id": "145",
+        "username": "sighetu-marmatiei-1",
+        "password": "n34psg5c",
+        "checkpoint-name": "Sighetu Marmației",
+        "checkpoint-id": "49"
+    },
+    {
+        "id": "146",
+        "username": "sighetu-marmatiei-2",
+        "password": "hutxgkza",
+        "checkpoint-name": "Sighetu Marmației",
+        "checkpoint-id": "49"
+    },
+    {
+        "id": "147",
+        "username": "sighetu-marmatiei-3",
+        "password": "td3g2rcn",
+        "checkpoint-name": "Sighetu Marmației",
+        "checkpoint-id": "49"
+    },
+    {
+        "id": "148",
+        "username": "stamora-moravita-1",
+        "password": "hmvubrn5",
+        "checkpoint-name": "Stamora-Moravița",
+        "checkpoint-id": "50"
+    },
+    {
+        "id": "149",
+        "username": "stamora-moravita-2",
+        "password": "f7dxtbhv",
+        "checkpoint-name": "Stamora-Moravița",
+        "checkpoint-id": "50"
+    },
+    {
+        "id": "150",
+        "username": "stamora-moravita-3",
+        "password": "3mb5z7rp",
+        "checkpoint-name": "Stamora-Moravița",
+        "checkpoint-id": "50"
+    },
+    {
+        "id": "151",
+        "username": "stanca-1",
+        "password": "r354meva",
+        "checkpoint-name": "Stânca",
+        "checkpoint-id": "51"
+    },
+    {
+        "id": "152",
+        "username": "stanca-2",
+        "password": "ax478gmk",
+        "checkpoint-name": "Stânca",
+        "checkpoint-id": "51"
+    },
+    {
+        "id": "153",
+        "username": "stanca-3",
+        "password": "5d8g9ut4",
+        "checkpoint-name": "Stânca",
+        "checkpoint-id": "51"
+    },
+    {
+        "id": "154",
+        "username": "aero-suceava-1",
+        "password": "n2b7rk6p",
+        "checkpoint-name": "Aeroportul Internațional Suceava",
+        "checkpoint-id": "52"
+    },
+    {
+        "id": "155",
+        "username": "aero-suceava-2",
+        "password": "dbga3use",
+        "checkpoint-name": "Aeroportul Internațional Suceava",
+        "checkpoint-id": "52"
+    },
+    {
+        "id": "156",
+        "username": "aero-suceava-3",
+        "password": "d3kshr6n",
+        "checkpoint-name": "Aeroportul Internațional Suceava",
+        "checkpoint-id": "52"
+    },
+    {
+        "id": "157",
+        "username": "sulina-1",
+        "password": "vm473d8p",
+        "checkpoint-name": "Sulina",
+        "checkpoint-id": "53"
+    },
+    {
+        "id": "158",
+        "username": "sulina-2",
+        "password": "9h7ugm25",
+        "checkpoint-name": "Sulina",
+        "checkpoint-id": "53"
+    },
+    {
+        "id": "159",
+        "username": "sulina-3",
+        "password": "marxk5ug",
+        "checkpoint-name": "Sulina",
+        "checkpoint-id": "53"
+    },
+    {
+        "id": "160",
+        "username": "aero-transilvania-targu-mures-1",
+        "password": "6vrpsb5t",
+        "checkpoint-name": "Aeroportul Internațional Transilvania, Târgu Mureș",
+        "checkpoint-id": "54"
+    },
+    {
+        "id": "161",
+        "username": "aero-transilvania-targu-mures-2",
+        "password": "rxkh8azn",
+        "checkpoint-name": "Aeroportul Internațional Transilvania, Târgu Mureș",
+        "checkpoint-id": "54"
+    },
+    {
+        "id": "162",
+        "username": "aero-transilvania-targu-mures-3",
+        "password": "bugvmnce",
+        "checkpoint-name": "Aeroportul Internațional Transilvania, Târgu Mureș",
+        "checkpoint-id": "54"
+    },
+    {
+        "id": "163",
+        "username": "aero-traian-vuia-1",
+        "password": "vf68mrpz",
+        "checkpoint-name": "Aeroportul Internațional Traian Vuia",
+        "checkpoint-id": "55"
+    },
+    {
+        "id": "164",
+        "username": "aero-traian-vuia-2",
+        "password": "vxtazgn3",
+        "checkpoint-name": "Aeroportul Internațional Traian Vuia",
+        "checkpoint-id": "55"
+    },
+    {
+        "id": "165",
+        "username": "aero-traian-vuia-3",
+        "password": "z9rnevkp",
+        "checkpoint-name": "Aeroportul Internațional Traian Vuia",
+        "checkpoint-id": "55"
+    },
+    {
+        "id": "166",
+        "username": "tulcea-1",
+        "password": "tgxm4cba",
+        "checkpoint-name": "Tulcea",
+        "checkpoint-id": "56"
+    },
+    {
+        "id": "167",
+        "username": "tulcea-2",
+        "password": "bcuatp4f",
+        "checkpoint-name": "Tulcea",
+        "checkpoint-id": "56"
+    },
+    {
+        "id": "168",
+        "username": "tulcea-3",
+        "password": "nv5fph3c",
+        "checkpoint-name": "Tulcea",
+        "checkpoint-id": "56"
+    },
+    {
+        "id": "169",
+        "username": "turnu-1",
+        "password": "5nxscv97",
+        "checkpoint-name": "Turnu",
+        "checkpoint-id": "57"
+    },
+    {
+        "id": "170",
+        "username": "turnu-2",
+        "password": "v34make2",
+        "checkpoint-name": "Turnu",
+        "checkpoint-id": "57"
+    },
+    {
+        "id": "171",
+        "username": "turnu-3",
+        "password": "gne9t27u",
+        "checkpoint-name": "Turnu",
+        "checkpoint-id": "57"
+    },
+    {
+        "id": "172",
+        "username": "turnu-magurele-1",
+        "password": "de2gk5h6",
+        "checkpoint-name": "Turnu Măgurele",
+        "checkpoint-id": "58"
+    },
+    {
+        "id": "173",
+        "username": "turnu-magurele-2",
+        "password": "n4d6cfkp",
+        "checkpoint-name": "Turnu Măgurele",
+        "checkpoint-id": "58"
+    },
+    {
+        "id": "174",
+        "username": "turnu-magurele-3",
+        "password": "e6kfm7td",
+        "checkpoint-name": "Turnu Măgurele",
+        "checkpoint-id": "58"
+    },
+    {
+        "id": "175",
+        "username": "urziceni-1",
+        "password": "9p4sfdx3",
+        "checkpoint-name": "Urziceni",
+        "checkpoint-id": "59"
+    },
+    {
+        "id": "176",
+        "username": "urziceni-2",
+        "password": "t8zravg5",
+        "checkpoint-name": "Urziceni",
+        "checkpoint-id": "59"
+    },
+    {
+        "id": "177",
+        "username": "urziceni-3",
+        "password": "5dkrx89m",
+        "checkpoint-name": "Urziceni",
+        "checkpoint-id": "59"
+    },
+    {
+        "id": "178",
+        "username": "valea-lui-mihai-1",
+        "password": "92zkbtaf",
+        "checkpoint-name": "Valea lui Mihai",
+        "checkpoint-id": "60"
+    },
+    {
+        "id": "179",
+        "username": "valea-lui-mihai-2",
+        "password": "hgzfcp5k",
+        "checkpoint-name": "Valea lui Mihai",
+        "checkpoint-id": "60"
+    },
+    {
+        "id": "180",
+        "username": "valea-lui-mihai-3",
+        "password": "38c4kd79",
+        "checkpoint-name": "Valea lui Mihai",
+        "checkpoint-id": "60"
+    },
+    {
+        "id": "181",
+        "username": "vama-veche-1",
+        "password": "rdu6ka9s",
+        "checkpoint-name": "Vama Veche",
+        "checkpoint-id": "61"
+    },
+    {
+        "id": "182",
+        "username": "vama-veche-2",
+        "password": "zetg682k",
+        "checkpoint-name": "Vama Veche",
+        "checkpoint-id": "61"
+    },
+    {
+        "id": "183",
+        "username": "vama-veche-3",
+        "password": "vfn93cht",
+        "checkpoint-name": "Vama Veche",
+        "checkpoint-id": "61"
+    },
+    {
+        "id": "184",
+        "username": "varsand-1",
+        "password": "mkdbznu4",
+        "checkpoint-name": "Vărșand",
+        "checkpoint-id": "62"
+    },
+    {
+        "id": "185",
+        "username": "varsand-2",
+        "password": "cafsnv7b",
+        "checkpoint-name": "Vărșand",
+        "checkpoint-id": "62"
+    },
+    {
+        "id": "186",
+        "username": "varsand-3",
+        "password": "pvxfruts",
+        "checkpoint-name": "Vărșand",
+        "checkpoint-id": "62"
+    },
+    {
+        "id": "187",
+        "username": "vicsani-1",
+        "password": "d5mk7hvz",
+        "checkpoint-name": "Vicșani",
+        "checkpoint-id": "63"
+    },
+    {
+        "id": "188",
+        "username": "vicsani-2",
+        "password": "updh3akb",
+        "checkpoint-name": "Vicșani",
+        "checkpoint-id": "63"
+    },
+    {
+        "id": "189",
+        "username": "vicsani-3",
+        "password": "h6m3sbpd",
+        "checkpoint-name": "Vicșani",
+        "checkpoint-id": "63"
+    },
+    {
+        "id": "190",
+        "username": "vladimirescu-1",
+        "password": "975zhvbs",
+        "checkpoint-name": "Vladimirescu",
+        "checkpoint-id": "64"
+    },
+    {
+        "id": "191",
+        "username": "vladimirescu-2",
+        "password": "gvtmbner",
+        "checkpoint-name": "Vladimirescu",
+        "checkpoint-id": "64"
+    },
+    {
+        "id": "192",
+        "username": "vladimirescu-3",
+        "password": "x5smbk62",
+        "checkpoint-name": "Vladimirescu",
+        "checkpoint-id": "64"
+    },
+    {
+        "id": "193",
+        "username": "zimnicea-1",
+        "password": "t6m4b8x5",
+        "checkpoint-name": "Zimnicea",
+        "checkpoint-id": "65"
+    },
+    {
+        "id": "194",
+        "username": "zimnicea-2",
+        "password": "h7sk58d4",
+        "checkpoint-name": "Zimnicea",
+        "checkpoint-id": "65"
+    },
+    {
+        "id": "195",
+        "username": "zimnicea-3",
+        "password": "zkhc7n82",
+        "checkpoint-name": "Zimnicea",
+        "checkpoint-id": "65"
+    }
+]

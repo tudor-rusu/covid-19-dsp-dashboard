@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\DspResetAdminPass::class
+        Commands\DspResetAdminPass::class,
+        Commands\DspSeedUsers::class,
+        Commands\DspResetUsers::class
     ];
 
     /**
