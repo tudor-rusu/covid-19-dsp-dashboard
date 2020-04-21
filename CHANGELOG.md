@@ -1,3 +1,13 @@
+## [0.9.4] - 2020-04-21
+
+### Added
+- build seeders and migrate for DSP users
+- build two new commands related to DSP users
+
+### Modify
+- CHANGELOG.md, README.md
+- add small modifications on top nav menu
+
 ## [0.9.3] - 2020-04-21
 
 ### Added

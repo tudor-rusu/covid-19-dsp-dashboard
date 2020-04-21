@@ -117,6 +117,23 @@ In production, an administrator with SSH access to the server will run a command
 docker container exec -it covid19-dsp-app php artisan dsp:reset_admin_pass
 ```
 
+### Re-seed or reset users
+If for any reason you need to re-seed or reset `Users` table there is implemented two commands. The full list with
+ users and generic passwords are located on `\database\data\users_dsp.json`.   
+
+In production, an administrator with SSH access to the server will run commands in the root of the application. On
+ local/development just run this commands in the app container in the root of the application.  
+
+Re-seed `Users` table, attention this command will truncate entire table.
+```
+docker container exec -it covid19-dsp-app php artisan dsp:users:seed
+```
+Reset `Users` table, attention this command will truncate entire table, only user `admin_dsp` will remain having
+ generic password.
+```
+docker container exec -it covid19-dsp-app php artisan dsp:users:reset
+```
+
 * Enjoy!
 
 
