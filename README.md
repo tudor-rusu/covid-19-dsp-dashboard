@@ -48,7 +48,7 @@ nano .env
 ```
 * Modify and add parameters to reflect the specifics of your setup
 ```shell script
-APP_NAME="COVID-19 - DSP declarations management"
+APP_NAME="DSP Declaraţii<br />Coronavirus COVID-19"
 APP_LOCALE=ro
 
 DB_HOST=covid19-dsp-db
@@ -65,6 +65,7 @@ MAIL_FROM_ADDRESS="covid19_dsp@testmail.com"
 COVID19_DSP_API="<url_provided_provided_by_api_maintainer>"
 COVID19_DSP_API_KEY="<key_provided_by_api_maintainer>"
 CACHE_DECLARATIONS_PERSISTENCE=5 # time in minutes for cache persistence
+ADMIN_USER='admin_dsp'
 ```
 
 ### Run local
@@ -106,6 +107,16 @@ Psy Shell v0.10.2 (PHP 7.2.29 — cli) by Justin Hileman
    }
 >>> 
 ```
+
+### Reset admin user password
+The admin user designated by the customer (DSP) has a `username` set in `.env` file - `ADMIN_USER='admin_dsp'` - and the `generic password` is provided. If for any reason this password is changed or forget, we implemented an Artisan command for resetting to the generic value.   
+
+In production, an administrator with SSH access to the server will run a command in the root of the application. On local/development just run this command in the app container in the root of the application.  
+ 
+```
+docker container exec -it covid19-dsp-app php artisan dsp:reset_admin_pass
+```
+
 * Enjoy!
 
 

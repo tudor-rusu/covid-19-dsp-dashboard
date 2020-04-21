@@ -1,3 +1,15 @@
+## [0.9.3] - 2020-04-21
+
+### Added
+- update style related to user admin requirements
+- add migrations and seeder for DSP admin user
+- build the command for reset admin password
+
+### Modify
+- CHANGELOG.md, .env.example, README.md
+- top nav bar layout, related to admin user
+- LoginController and login view
+
 ## [0.9.2] - 2020-04-20
 
 ### Added

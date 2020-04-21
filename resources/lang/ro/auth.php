@@ -15,6 +15,7 @@ return [
 
     'failed'   => 'Datele de identificare nu pot fi confirmate.',
     'throttle' => 'Prea multe încercări de intrare în cont. Puteți încerca din nou peste :seconds secunde.',
+    'Username and/or Password are wrong.' => 'Numele de utilizator și/sau Parola nu sunt corecte.',
     'Reset Password' => 'Resetare parolă',
     'Register' => 'Înregistrare',
     'Name' => 'Nume',
@@ -41,5 +42,6 @@ return [
     'This password reset link will expire in :count minutes.' => 'Acest link de resetare a parolei va expira în :count minute.',
     'If you did not request a password reset, no further action is required.' => 'Dacă nu ați solicitat o resetare a parolei, nu este necesară nici o acțiune suplimentară.',
     'Username' => 'Nume de utilizator',
-    'Username and Password are wrong.' => 'Numele de utilizator şi parola nu sunt valide.'
+    'Username and Password are wrong.' => 'Numele de utilizator şi parola nu sunt valide.',
+    'Reset user password' => 'Resetare parole utilizatori'
 ];
