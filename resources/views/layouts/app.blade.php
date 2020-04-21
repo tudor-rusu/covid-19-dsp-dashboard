@@ -60,7 +60,7 @@
                         @else
                             @if ( Auth::user()->username === env('ADMIN_USER'))
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name-top-nav" href="#" role="button"
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-admin-top-nav" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ (Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}
                                     <span class="caret"></span>
