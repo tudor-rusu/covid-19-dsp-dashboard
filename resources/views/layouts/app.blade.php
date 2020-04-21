@@ -30,7 +30,10 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'COVID-19 - DSP Declaraţii') }}
+                    <img alt="Guvernul Romaniei" class="top-brand" src="{{ asset('images/gov-ro.png') }}">
+                    <h1 class="top-brand-title">
+                        {!! config('app.name', 'DSP Declaraţii<br />Coronavirus COVID-19') !!}
+                    </h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -55,10 +58,30 @@
                                 </li>
                             @endif
                         @else
+                            @if ( Auth::user()->username === env('ADMIN_USER'))
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name-top-nav" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ (Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}
+                                    <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('reset-password-user') }}">
+                                        {{ __('auth.Reset user password') }}
+                                    </a>
+                                </div>
+                            </li>
+                            @else
+                            <li class="nav-item">
+                                <a class="nav-link user-name-top-nav" href="javascript:void(0);">
+                                    {{ (Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}
+                                </a>
+                            </li>
+                            @endif
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     {{ __('auth.Logout') }}
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

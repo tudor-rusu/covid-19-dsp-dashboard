@@ -66,4 +66,20 @@ p.no-margin-bottom {
 #declaration-view td.legend-top-margin {
     padding: 3rem 0 0.3rem !important;
 }
+.top-brand {
+    height: 3.3rem !important;
+}
+.top-brand-title {
+    float: right;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: rgb(0, 70, 140);
+    margin: 0.4rem 0 0 1rem;
+}
+.user-name-top-nav {
+    cursor: default !important;
+    font-weight: 800;
+    color: rgb(0, 70, 140) !important;
+}
 

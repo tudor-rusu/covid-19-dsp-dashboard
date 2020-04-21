@@ -24,3 +24,4 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/declaratii', 'HomeController@list')->name('declaratii');
 Route::get('/declaratie/{code}', 'HomeController@show')->name('declaratie');
 Route::post('/change-lang', 'HomeController@postChangeLanguage')->name('change-lang');
+Route::get('/resetare-parola-utilizator', 'HomeController@index')->name('reset-password-user');
