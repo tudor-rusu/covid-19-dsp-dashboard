@@ -26,6 +26,9 @@
     <link href="{{ asset('css/project.css') }}" rel="stylesheet">
 </head>
 <body>
+    <div class="ajax-loader">
+        <img src="{{ asset('icons/loading.svg') }}" class="img-responsive" />
+    </div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -73,7 +76,8 @@
                             @else
                             <li class="nav-item">
                                 <a class="nav-link user-name-top-nav" href="javascript:void(0);">
-                                    {{ (Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}
+                                    {{ ucwords(str_replace('-', ' ', trim((Auth::user()->name) ?
+                                            Auth::user()->name : Auth::user()->username))) }}
                                 </a>
                             </li>
                             @endif
