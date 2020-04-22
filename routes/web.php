@@ -24,4 +24,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/declaratii', 'HomeController@list')->name('declaratii');
 Route::get('/declaratie/{code}', 'HomeController@show')->name('declaratie');
 Route::post('/change-lang', 'HomeController@postChangeLanguage')->name('change-lang');
-Route::get('/resetare-parola-utilizator', 'HomeController@index')->name('reset-password-user');
+Route::get('/resetare-parola-utilizator', 'UserController@resetUserPassword')->name('reset-password-user');
+Route::post('/reset-password', 'UserController@postResetPassword')->name('reset-password');
+Route::post('ajax-reset-all-passwords', 'UserController@postResetAllPasswords')->name('reset-all-passwords');

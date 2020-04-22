@@ -48,7 +48,7 @@ nano .env
 ```
 * Modify and add parameters to reflect the specifics of your setup
 ```shell script
-APP_NAME="DSP Declaraţii<br />Coronavirus COVID-19"
+APP_NAME="DSP Declaraţii Coronavirus COVID-19"
 APP_LOCALE=ro
 
 DB_HOST=covid19-dsp-db
