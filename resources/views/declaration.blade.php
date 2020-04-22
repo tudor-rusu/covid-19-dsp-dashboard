@@ -186,7 +186,7 @@
                                 </table>
                             </div>
                             <div class="col-md-6 text-right">
-                                <img src="data:image/png;base64,{{ $declaration['qr_src'] }}">
+                                <img src="{{ $qrCode }}" alt="" title="" />
                             </div>
                         </div>
                         <hr class="sub-section">

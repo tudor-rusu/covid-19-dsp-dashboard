@@ -99,5 +99,8 @@ return [
     'Legend for DSP staff' => '<strong>Legend for DSP staff</strong>:<br />' .
         'Increased risk of infectiousness = "YES" in item 4<br />' .
         'Increased risk of exposure = "YES" in items 1.2 and 3<br />' .
-        'Low risk = "NO" to all questions'
+        'Low risk = "NO" to all questions',
+    'Reset All Passwords' => 'Reset All Passwords',
+    'User' => 'User',
+    'User select' => 'User select'
 ];

@@ -100,5 +100,12 @@ return [
     'Legend for DSP staff' => '<strong>Legendă pentru personalul DSP</strong>:<br />' .
         'Risc crescut de contagiozitate = "DA" la punctul 4<br />' .
         'Risc crescut de expunere = "DA" la punctele 1,2 și 3<br />' .
-        'Risc scăzut = "NU" la toate întrebările'
+        'Risc scăzut = "NU" la toate întrebările',
+    'Reset All Passwords' => 'Resetare toate parolele',
+    'User' => 'Utilizator',
+    'User select' => 'Selectează un utilizator',
+    'There is no user selected.' => 'Nu a fost selectat nici un utilizator.',
+    'There is no user in DB.' => 'Nu exista utilizatorul selectat in baza de date.',
+    'Password for user :username successfully reset.' => 'Parola utilizatorului :username a fost resetată cu succes.',
+    'All passwords were reset.' => 'Toate parolele au fost resetate cu success.'
 ];
