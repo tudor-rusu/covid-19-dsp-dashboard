@@ -76,6 +76,7 @@ p.no-margin-bottom {
     font-weight: 400;
     color: rgb(0, 70, 140);
     margin: 0.4rem 0 0 1rem;
+    max-width: 200px;
 }
 .user-name-top-nav {
     cursor: default !important;
