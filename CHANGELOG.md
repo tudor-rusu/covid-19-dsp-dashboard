@@ -1,3 +1,12 @@
+## [0.9.5] - 2020-04-22
+
+### Added
+- build reset users password mechanisms
+
+### Modify
+- CHANGELOG.md, README.md
+- add small modifications on top nav menu
+
 ## [0.9.4] - 2020-04-21
 
 ### Added
