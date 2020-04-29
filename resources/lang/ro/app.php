@@ -107,5 +107,17 @@ return [
     'There is no user selected.' => 'Nu a fost selectat nici un utilizator.',
     'There is no user in DB.' => 'Nu exista utilizatorul selectat in baza de date.',
     'Password for user :username successfully reset.' => 'Parola utilizatorului :username a fost resetată cu succes.',
-    'All passwords were reset.' => 'Toate parolele au fost resetate cu success.'
+    'All passwords were reset.' => 'Toate parolele au fost resetate cu success.',
+    'Status declaration' => 'Status',
+    'Created at' => 'Creată în aplicație la',
+    'Not validated yet' => 'declarația nu a fost validată in aplicație',
+    'Border status' => 'Status P.T.F.',
+    'Border pass at' => 'a trecut frontiera la',
+    'Border pass on' => 'pe la P.T.F.',
+    'Border not pass yet' => 'nu a trecut încă frontiera',
+    'Dsp status' => 'Status DSP',
+    'Dsp printed at' => 'declarația a fost printată la',
+    'Dsp user' => 'de către',
+    'Dsp not printed yet' => 'declarația nu a fost printată încă',
+    'Refresh declarations list' => 'Reîncărcare listă declarații'
 ];

@@ -103,3 +103,6 @@ p.no-margin-bottom {
 .ajax-msg {
     display: none;
 }
+.status-declaration img {
+    margin-right: 5px;
+}
