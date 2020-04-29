@@ -27,3 +27,4 @@ Route::post('/change-lang', 'HomeController@postChangeLanguage')->name('change-l
 Route::get('/resetare-parola-utilizator', 'UserController@resetUserPassword')->name('reset-password-user');
 Route::post('/reset-password', 'UserController@postResetPassword')->name('reset-password');
 Route::post('ajax-reset-all-passwords', 'UserController@postResetAllPasswords')->name('reset-all-passwords');
+Route::post('refresh-list', 'HomeController@postRefreshList')->name('refresh-list');

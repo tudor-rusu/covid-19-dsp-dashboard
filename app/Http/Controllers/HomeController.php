@@ -6,6 +6,7 @@ use App\Declaration;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use PeterColes\Countries\CountriesFacade;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
@@ -51,7 +52,6 @@ class HomeController extends Controller
         }
 
         $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
-        $formatedResult = ['declaration', 'signature', 'qr_code', 'pdf_data'];
 
         if(!is_array($declaration)) {
             session()->flash('type', 'danger');
@@ -106,6 +106,23 @@ class HomeController extends Controller
         if($request->input('lang')) {
             $request->session()->put('language', $request->input('lang'));
             app()->setLocale($request->input('lang'));
+            return back();
+        }
+
+        return;
+    }
+
+    /**
+     * Refresh list of declarations
+     *
+     * @param Request $request
+     *
+     * @return RedirectResponse|void
+     */
+    public function postRefreshList(Request $request)
+    {
+        if($request->input('refresh')) {
+            Artisan::call('cache:clear');
             return back();
         }
 
