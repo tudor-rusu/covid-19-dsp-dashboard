@@ -1,3 +1,16 @@
+## [0.9.6] - 2020-04-29
+
+### Added
+- new post route for ajax refresh declarations list
+- new icons for status
+
+### Modify
+- CHANGELOG.md
+- translations files
+- refactor Declaration Model in order to reflect last API updates
+- refactor HomeController
+- refactor home and declaration blade templates
+
 ## [0.9.5] - 2020-04-22
 
 ### Added
