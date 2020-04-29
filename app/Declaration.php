@@ -67,26 +67,23 @@ class Declaration
      */
     public static function find(string $url, string $code)
     {
-        return Cache::untilUpdated('declaration-' . $code, env('CACHE_DECLARATIONS_PERSISTENCE'), function() use ($url,
-            $code) {
-            try {
-                $apiRequest = self::connectApi()
-                    ->get($url . DIRECTORY_SEPARATOR . $code);
+        try {
+            $apiRequest = self::connectApi()
+                ->get($url . DIRECTORY_SEPARATOR . $code);
 
-                if (!$apiRequest->successful()) {
-                    throw new Exception(self::returnStatus($apiRequest->status()));
-                }
-
-                if ($apiRequest['status'] === 'success') {
-                    return $apiRequest['declaration'];
-                } else {
-                    return $apiRequest['message'];
-                }
-
-            } catch(Exception $exception) {
-                return $exception->getMessage();
+            if (!$apiRequest->successful()) {
+                throw new Exception(self::returnStatus($apiRequest->status()));
             }
-        });
+
+            if ($apiRequest['status'] === 'success') {
+                return $apiRequest['declaration'];
+            } else {
+                return $apiRequest['message'];
+            }
+
+        } catch(Exception $exception) {
+            return $exception->getMessage();
+        }
     }
 
     /**
@@ -130,9 +127,12 @@ class Declaration
             $formattedDeclarations[$key]['code'] = $declaration['code'];
             $formattedDeclarations[$key]['name'] = $declaration['name'] . ' ' . $declaration['surname'];
             $formattedDeclarations[$key]['country'] = $countries[$declaration['travelling_from_country_code']];
-            $formattedDeclarations[$key]['checkpoint'] = $declaration['border_checkpoint']['name'];
+            $formattedDeclarations[$key]['checkpoint'] = trim(str_replace('P.T.F.', '', $declaration['border_checkpoint']['name']));
             $formattedDeclarations[$key]['auto'] = $declaration['vehicle_registration_no'];
             $formattedDeclarations[$key]['signed'] = $declaration['signed'];
+            $formattedDeclarations[$key]['app_status'] = is_null($declaration['created_at']) ? false : true;
+            $formattedDeclarations[$key]['border_status'] = is_null($declaration['border_validated_at']) ? false : true;
+            $formattedDeclarations[$key]['dsp_status'] = is_null($declaration['dsp_validated_at']) ? false : true;
             $formattedDeclarations[$key]['url'] = '/declaratie/' . $declaration['code'];
             $formattedDeclarations[$key]['phone'] = $declaration['phone'];
             $formattedDeclarations[$key]['travelling_from_date'] = Carbon::createFromFormat('Y-m-d', $declaration['travelling_from_date'])
@@ -145,6 +145,14 @@ class Declaration
                 }
                 $formattedDeclarations[$key]['itinerary_country_list'] = substr(trim($formattedDeclarations[$key]['itinerary_country_list']), 0, -1);
             }
+            $formattedDeclarations[$key]['created_at'] = is_null($declaration['created_at']) ?
+                null : Carbon::parse($declaration['created_at'])->format('d m Y H:i:s');
+            $formattedDeclarations[$key]['border_validated_at'] = is_null($declaration['border_validated_at']) ?
+                null : Carbon::parse($declaration['border_validated_at'])->format('d m Y H:i:s');
+            $formattedDeclarations[$key]['dsp_validated_at'] = is_null($declaration['dsp_validated_at']) ?
+                null : Carbon::parse($declaration['dsp_validated_at'])->format('d m Y H:i:s');
+            $formattedDeclarations[$key]['dsp_user_name'] = is_null($declaration['dsp_validated_at']) ?
+                null : $declaration['dsp_user_name'];
         }
 
         return $formattedDeclarations;
@@ -162,6 +170,7 @@ class Declaration
     public static function getDeclationColectionFormated($declaration, $countries, $locale)
     {
         $formatedResult = ['declaration', 'signature', 'qr_code', 'pdf_data'];
+        $signature = '';
         $addresses = [];
         $visitedCountries = [];
 
@@ -179,13 +188,17 @@ class Declaration
                 session()->flash('message', $signature);
                 $signature = '';
             }
-
-            $formatedResult['signature'] = $signature;
         }
+        $formatedResult['signature'] = $signature;
         $declaration['travelling_from_country'] = $countries[$declaration['travelling_from_country_code']];
         if ($locale === 'ro') {
             $declaration['travelling_from_date'] = Carbon::createFromFormat('Y-m-d', $declaration['travelling_from_date'])
                 ->format('d m Y');
+        }
+        if(!is_null($declaration['border_crossed_at'])) {
+            $declaration['border_validated_at'] = ($locale === 'ro') ?
+                Carbon::parse($declaration['border_validated_at'])->format('d m Y') :
+                Carbon::parse($declaration['border_validated_at'])->format('Y-m-d');
         }
         $declaration['birth_date'] = Carbon::createFromFormat('Y-m-d', $declaration['birth_date'])
             ->format('d/m/Y');
@@ -222,7 +235,7 @@ class Declaration
         }
         $declaration['border'] = '';
         if ($declaration['border_checkpoint'] && $declaration['border_checkpoint']['status'] === 'active') {
-            $declaration['border'] = $declaration['border_checkpoint']['name'];
+            $declaration['border'] = trim(str_replace('P.T.F.', '', $declaration['border_checkpoint']['name']));
         }
         $declaration['current_date'] = ($locale === 'ro') ? Carbon::now()->format('d m Y') :
             Carbon::now()->format('m/d/Y');
@@ -235,7 +248,7 @@ class Declaration
             'idCardSeries' => $declaration['document_series'],
             'idCardNumber' => $declaration['document_number'],
             'birthday' => $declaration['birth_date'],
-            'dateArrival' => $declaration['current_date'],
+            'dateArrival' => $declaration['border_validated_at'],
             'countryLeave' => $declaration['travelling_from_country'],
             'localityLeave' => $declaration['travelling_from_city'],
             'dateLeave' => $declaration['travelling_from_date'],

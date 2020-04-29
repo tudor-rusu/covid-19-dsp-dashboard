@@ -174,14 +174,22 @@
                                     <tr>
                                         <td width="40%">{{ __('app.Date of birth') }}</td>
                                         <td>
-                                            <strong class="text-uppercase">
+                                            <strong>
                                                 {{ $declaration['birth_date'] }}
                                             </strong>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td width="40%">{{ __('app.Date of arrival') }}</td>
+                                        @if (is_null($declaration['border_validated_at']))
                                         <td>___________________</td>
+                                        @else
+                                        <td>
+                                            <strong>
+                                                {{ $declaration['border_validated_at'] }}
+                                            </strong>
+                                        </td>
+                                        @endif
                                     </tr>
                                 </table>
                             </div>

@@ -102,5 +102,17 @@ return [
         'Low risk = "NO" to all questions',
     'Reset All Passwords' => 'Reset All Passwords',
     'User' => 'User',
-    'User select' => 'User select'
+    'User select' => 'User select',
+    'Status declaration' => 'Status declaration',
+    'Created at' => 'Created at',
+    'Not validated yet' => 'Not validated yet',
+    'Border status' => 'Border status',
+    'Border pass at' => 'Border pass at',
+    'Border pass on' => 'Border pass on',
+    'Border not pass yet' => 'Border not pass yet',
+    'Dsp status' => 'Dsp status',
+    'Dsp printed at' => 'Dsp printed at',
+    'Dsp user' => 'Dsp user',
+    'Dsp not printed yet' => 'Dsp not printed yet',
+    'Refresh declarations list' => 'Refresh declarations list'
 ];
