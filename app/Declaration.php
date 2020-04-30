@@ -5,6 +5,7 @@ namespace App;
 use App\Traits\ApiTrait;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use PeterColes\Countries\CountriesFacade;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -33,28 +34,31 @@ class Declaration
      */
     public static function all(string $url, array $params, string $format = null)
     {
-        return Cache::untilUpdated('declarations', env('CACHE_DECLARATIONS_PERSISTENCE'), function() use ($url, $params, $format) {
-            try {
-                $apiRequest = self::connectApi()
-                    ->get($url, $params);
+        $user = (Auth::user()->username !== env('ADMIN_USER')) ?? Auth::user()->username;
+        return Cache::untilUpdated('declarations', env('CACHE_DECLARATIONS_PERSISTENCE'),
+            function() use ($url, $params, $format, $user) {
+                try {
+                    $apiRequest = self::connectApi()
+                        ->get($url, $params);
 
-                if (!$apiRequest->successful()) {
-                    throw new Exception(self::returnStatus($apiRequest->status()));
-                }
-
-                if ($apiRequest['data']) {
-                    if ($format === 'datatables') {
-                        return self::dataTablesFormat($apiRequest['data']);
+                    if (!$apiRequest->successful()) {
+                        throw new Exception(self::returnStatus($apiRequest->status()));
                     }
-                    return $apiRequest['data'];
-                } else {
-                    return $apiRequest['message'];
-                }
 
-            } catch(Exception $exception) {
-                return $exception->getMessage();
+                    if ($apiRequest['data']) {
+                        if ($format === 'datatables') {
+                            return self::dataTablesFormat($apiRequest['data'], $user);
+                        }
+                        return $apiRequest['data'];
+                    } else {
+                        return $apiRequest['message'];
+                    }
+
+                } catch(Exception $exception) {
+                    return $exception->getMessage();
+                }
             }
-        });
+        );
     }
 
     /**
@@ -114,16 +118,21 @@ class Declaration
     /**
      * Format declarations collection for datatables
      *
-     * @param array $data
+     * @param array  $data
+     * @param string $user
      *
      * @return array
      */
-    private static function dataTablesFormat(array $data) : array
+    private static function dataTablesFormat(array $data, string $user = null) : array
     {
         $countries = CountriesFacade::lookup('ro_RO');
         $formattedDeclarations = [];
 
         foreach ($data as $key => $declaration) {
+            if($user && $declaration['dsp_user_name'] !== $user) {
+                continue;
+            }
+
             $formattedDeclarations[$key]['code'] = $declaration['code'];
             $formattedDeclarations[$key]['name'] = $declaration['name'] . ' ' . $declaration['surname'];
             $formattedDeclarations[$key]['country'] = $countries[$declaration['travelling_from_country_code']];

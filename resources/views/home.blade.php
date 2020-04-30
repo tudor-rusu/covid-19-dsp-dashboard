@@ -15,6 +15,9 @@
             <div class="card">
                 <div class="card-header">
                     {{ __('app.Dashboard') }}
+                    @if (Auth::user()->username !== 'admin_dsp')
+                        search form
+                    @endif
                     <div class="float-right">
                         <a href="javascript:void(0);" id="refresh-list" class="btn btn-secondary btn-sm" role="button"
                            aria-pressed="true">

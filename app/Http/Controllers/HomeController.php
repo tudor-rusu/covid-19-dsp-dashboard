@@ -7,6 +7,7 @@ use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 use PeterColes\Countries\CountriesFacade;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
