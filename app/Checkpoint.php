@@ -37,7 +37,14 @@ class Checkpoint
             }
 
             if ($apiRequest['status'] === 'success') {
-                return $apiRequest['data'];
+
+                $bordersArray = $apiRequest['data'];
+                usort($bordersArray, function($a, $b) {
+                    return strcmp($a['name'], $b['name']);
+                });
+                $bordersArray = self::super_unique($bordersArray,'name');
+print_r(json_encode($bordersArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));die;
+                return $bordersArray;
             } else {
                 return $apiRequest['message'];
             }
@@ -74,5 +81,25 @@ class Checkpoint
         } catch(Exception $exception) {
             return $exception->getMessage();
         }
+    }
+
+    /**
+     * Remove duplicates in multiarray
+     *
+     * @param array  $array
+     * @param string $key
+     *
+     * @return array
+     */
+    private static function super_unique(array $array, string $key) :array
+    {
+        $temp_array = [];
+        foreach ($array as &$v) {
+            if (!isset($temp_array[$v[$key]]))
+                $temp_array[$v[$key]] =& $v;
+        }
+        $array = array_values($temp_array);
+        return $array;
+
     }
 }

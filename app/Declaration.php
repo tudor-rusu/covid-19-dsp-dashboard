@@ -35,7 +35,7 @@ class Declaration
     public static function all(string $url, array $params, string $format = null)
     {
         $user = (Auth::user()->username !== env('ADMIN_USER')) ?? Auth::user()->username;
-        return Cache::untilUpdated('declarations', env('CACHE_DECLARATIONS_PERSISTENCE'),
+        return Cache::untilUpdated('declarations-' . Auth::user()->username, env('CACHE_DECLARATIONS_PERSISTENCE'),
             function() use ($url, $params, $format, $user) {
                 try {
                     $apiRequest = self::connectApi()
@@ -129,9 +129,9 @@ class Declaration
         $formattedDeclarations = [];
 
         foreach ($data as $key => $declaration) {
-            if($user && $declaration['dsp_user_name'] !== $user) {
-                continue;
-            }
+//            if($user && $declaration['dsp_user_name'] !== $user) {
+//                continue;
+//            }
 
             $formattedDeclarations[$key]['code'] = $declaration['code'];
             $formattedDeclarations[$key]['name'] = $declaration['name'] . ' ' . $declaration['surname'];

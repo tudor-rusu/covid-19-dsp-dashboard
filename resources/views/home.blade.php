@@ -5,25 +5,47 @@
     @if (session('message'))
     <div class="alert alert-{{ session('type') }} alert-dismissible fade show" role="alert">
         {{ session('message') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     @endif
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="card alert ajax-msg alert-dismissible fade show">
+                <span id="ajax-text-message"></span>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     {{ __('app.Dashboard') }}
-                    @if (Auth::user()->username !== 'admin_dsp')
-                        search form
-                    @endif
                     <div class="float-right">
                         <a href="javascript:void(0);" id="refresh-list" class="btn btn-secondary btn-sm" role="button"
                            aria-pressed="true">
                             {{ __('app.Refresh declarations list') }}
                         </a>
                     </div>
+                    @if (Auth::user()->username !== env('ADMIN_USER'))
+                    <div class="float-right">
+                        <form>
+                            @csrf
+                            <div class="input-group input-group-sm" id="search-declaration">
+                                <input id="code" name="code" type="text" class="form-control"
+                                       placeholder="{{ __('app.Declaration Code') }}" aria-label="Declaration code" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-dark btn-top" type="button">
+                                        {{ __('app.Search') }}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @endif
                 </div>
 
                 <div class="card-body">
@@ -38,8 +60,10 @@
                             <th class="text-center">{{ __('app.Code') }}</th>
                             <th class="text-center">{{ __('app.Name') }}</th>
                             <th class="text-center">{{ __('app.Auto') }}</th>
+                            @if (Auth::user()->username === env('ADMIN_USER'))
                             <th class="text-center">{{ __('app.Border') }}</th>
                             <th class="text-center">{{ __('app.Status declaration') }}</th>
+                            @endif
                             <th></th>
                         </tr>
                         </thead>
@@ -92,11 +116,67 @@
                                 return formatHtml;
                         }
                         $(document).ready( function () {
-                            let table = $('#declaratii').DataTable({
-                                processing: true,
-                                serverSide: true,
-                                ajax: "{{ url('declaratii') }}",
-                                columns: [
+                            let userName = '{{ Auth::user()->username }}';
+                            let dataColumns = [
+                                {
+                                    data:       'code',
+                                    name:       'code',
+                                    className:  'code-control',
+                                },
+                                { data: 'name', name: 'name' },
+                                { data: 'auto', name: 'auto' },
+                                { data: 'checkpoint', name: 'checkpoint' },
+                                {
+                                    data:           null,
+                                    className:      'text-center status-declaration',
+                                    orderable:      false,
+                                    defaultContent: ''
+                                },
+                                {
+                                    data:           null,
+                                    className:      'text-center details-control',
+                                    orderable:      false,
+                                    defaultContent: ''
+                                }
+                            ];
+                            let dataColumnDefs = [
+                                {
+                                    render: function (data, type, row) {
+                                        let appStat = (row['app_status'] == 1) ?
+                                            '<img src="/icons/app_ok.svg" ' + 'alt="' +
+                                            row['created_at'] + '" ' +
+                                            'width="20px" height="20px">' :
+                                            '<img src="/icons/app_no.svg" ' +
+                                            'alt="" width="20px" height="20px">';
+                                        let borderStat = (row['border_status'] == 1) ?
+                                            '<img src="/icons/border_ok.svg" ' + 'alt="' +
+                                            row['border_validated_at'] + '" ' +
+                                            'width="20px" height="20px">' :
+                                            '<img src="/icons/border_no.svg" ' +
+                                            'alt="" width="20px" height="20px">';
+                                        let dspStat = (row['dsp_status'] == 1) ?
+                                            '<img src="/icons/printer_ok.svg" ' + 'alt="' +
+                                            row['dsp_validated_at'] + '" ' +
+                                            'width="20px" height="20px">' :
+                                            '<img src="/icons/printer_no.svg" ' +
+                                            'alt="" width="20px" height="20px">';
+                                        return appStat + borderStat + dspStat;
+                                    },
+                                    'width': 90,
+                                    'targets': 4,
+                                },
+                                {
+                                    render: function (data, type, row) {
+                                        let signed = (row['signed'] == 1) ? '<img src="/icons/check.svg" alt="" ' +
+                                            'width="14px" height="14px">' : '<img src="/icons/attention.svg" ' +
+                                            'alt="" width="14px" height="14px">';
+                                        return row['code'] + '  ' + signed + '<span class="d-none">'+row['url']+'</span>';
+                                    },
+                                    'targets': 0,
+                                },
+                            ];
+                            if(userName !== '{{ env('ADMIN_USER') }}') {
+                                dataColumns = [
                                     {
                                         data:       'code',
                                         name:       'code',
@@ -104,46 +184,14 @@
                                     },
                                     { data: 'name', name: 'name' },
                                     { data: 'auto', name: 'auto' },
-                                    { data: 'checkpoint', name: 'checkpoint' },
-                                    {
-                                        data:           null,
-                                        className:      'text-center status-declaration',
-                                        orderable:      false,
-                                        defaultContent: ''
-                                    },
                                     {
                                         data:           null,
                                         className:      'text-center details-control',
                                         orderable:      false,
                                         defaultContent: ''
                                     }
-                                ],
-                                columnDefs: [
-                                    {
-                                        render: function (data, type, row) {
-                                            let appStat = (row['app_status'] == 1) ?
-                                                '<img src="/icons/app_ok.svg" ' + 'alt="' +
-                                                row['created_at'] + '" ' +
-                                                'width="20px" height="20px">' :
-                                                '<img src="/icons/app_no.svg" ' +
-                                                'alt="" width="20px" height="20px">';
-                                            let borderStat = (row['border_status'] == 1) ?
-                                                '<img src="/icons/border_ok.svg" ' + 'alt="' +
-                                                row['border_validated_at'] + '" ' +
-                                                'width="20px" height="20px">' :
-                                                '<img src="/icons/border_no.svg" ' +
-                                                'alt="" width="20px" height="20px">';
-                                            let dspStat = (row['dsp_status'] == 1) ?
-                                                '<img src="/icons/printer_ok.svg" ' + 'alt="' +
-                                                row['dsp_validated_at'] + '" ' +
-                                                'width="20px" height="20px">' :
-                                                '<img src="/icons/printer_no.svg" ' +
-                                                'alt="" width="20px" height="20px">';
-                                            return appStat + borderStat + dspStat;
-                                        },
-                                        'width': 90,
-                                        'targets': 4,
-                                    },
+                                ];
+                                dataColumnDefs = [
                                     {
                                         render: function (data, type, row) {
                                             let signed = (row['signed'] == 1) ? '<img src="/icons/check.svg" alt="" ' +
@@ -153,7 +201,14 @@
                                         },
                                         'targets': 0,
                                     },
-                                ],
+                                ];
+                            }
+                            let table = $('#declaratii').DataTable({
+                                processing: true,
+                                serverSide: true,
+                                ajax: "{{ url('declaratii') }}",
+                                columns: dataColumns,
+                                columnDefs: dataColumnDefs,
                                 order: [[0, 'asc']],
                                 pageLength: 10,
                                 language: {
@@ -194,6 +249,42 @@
                                     location.reload();
                                 }
                             });
+                        });
+
+                        $('#search-declaration button').click(function(e){
+                            e.preventDefault();
+                            let code = $('#code').val();
+                            $.ajax({
+                                type:'POST',
+                                url:"{{ route('search-declaration') }}",
+                                data:{code:code},
+                                success:function(data){
+                                    if($.isEmptyObject(data.error)){
+                                        window.location.href = "/declaratie/" + data.success;
+                                    }else{
+                                        printAlertMsg(data.error, 'danger');
+
+                                        setTimeout(function () {
+                                            $('.ajax-msg').removeClass('alert-danger alert-success');
+                                            if ($('.ajax-msg').is(':visible')){
+                                                $('.ajax-msg').fadeOut();
+                                            }
+                                        }, 5000)
+                                    }
+                                }
+                            });
+                        });
+
+                        function printAlertMsg (msg, type) {
+                            $('.ajax-msg').find('span#ajax-text-message').html(msg);
+                            $('.ajax-msg').addClass('alert-'+type);
+                            $('.ajax-msg').show();
+                        }
+
+                        $('.alert button').click(function(e){
+                            e.preventDefault();
+                            $(this).parent().hide().removeClass('alert-danger alert-success');
+                            return false;
                         });
                     </script>
                 </div>
