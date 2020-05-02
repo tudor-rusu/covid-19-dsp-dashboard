@@ -20,6 +20,16 @@
     @endif
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="card alert ajax-msg alert-dismissible fade show">
+                <span id="ajax-text-message"></span>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h5 class="top-title float-left">
@@ -520,14 +530,50 @@
                     </section>
                     <script type="text/javascript">
                         $(document).ready( function () {
-                            $('#print-declaration').click( function () {
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
+
+                            $('#print-declaration').click( function (e) {
+                                let declarationCode = "{{ $declaration['code'] }}";
                                 let signature = '{{ $signature }}';
                                 let qrcode = '{{ $qrCode }}';
-                                let data = {!! $pdfData !!};
-
+                                let dataPdf = {!! $pdfData !!};
                                 let doc = new Document();
 
-                                doc.download(data, signature, qrcode);
+                                e.preventDefault();
+                                $.ajax({
+                                    type:'POST',
+                                    url:"{{ route('register-declaration') }}",
+                                    data:{code:declarationCode},
+                                    success:function(data){
+                                        if($.isEmptyObject(data.error)){
+                                            doc.download(dataPdf, signature, qrcode);
+                                        }else{
+                                            printAlertMsg(data.error, 'danger');
+                                        }
+                                        setTimeout(function () {
+                                            $('.ajax-msg').removeClass('alert-danger alert-success');
+                                            if ($('.ajax-msg').is(':visible')){
+                                                $('.ajax-msg').fadeOut();
+                                            }
+                                        }, 5000)
+                                    }
+                                });
+                            });
+
+                            function printAlertMsg (msg, type) {
+                                $('.ajax-msg').find('span#ajax-text-message').html(msg);
+                                $('.ajax-msg').addClass('alert-'+type);
+                                $('.ajax-msg').show();
+                            }
+
+                            $('.alert button').click(function(e){
+                                e.preventDefault();
+                                $(this).parent().hide().removeClass('alert-danger alert-success');
+                                return false;
                             });
                         });
                     </script>

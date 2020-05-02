@@ -116,6 +116,39 @@ class Declaration
     }
 
     /**
+     * Register a declaration with a specific DSP user
+     *
+     * @param string $url
+     * @param string $code
+     * @param string $username
+     *
+     * @return mixed|string
+     */
+    public static function registerDeclaration(string $url, string $code, string $username)
+    {
+        try {
+            $apiRequest = self::connectApi()
+                ->put(
+                    $url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'dsp',
+                    ['dsp_user_name' => $username ]
+                );
+
+            if (!$apiRequest->successful()) {
+                throw new Exception(self::returnStatus($apiRequest->status()));
+            }
+
+            if ($apiRequest['status'] === 'success') {
+                return 'success';
+            } else {
+                return $apiRequest['message'];
+            }
+
+        } catch(Exception $exception) {
+            return $exception->getMessage();
+        }
+    }
+
+    /**
      * Format declarations collection for datatables
      *
      * @param array  $data
@@ -178,7 +211,7 @@ class Declaration
      */
     public static function getDeclationColectionFormated($declaration, $countries, $locale)
     {
-        $formatedResult = ['declaration', 'signature', 'qr_code', 'pdf_data'];
+        $formatedResult = [];
         $signature = '';
         $addresses = [];
         $visitedCountries = [];

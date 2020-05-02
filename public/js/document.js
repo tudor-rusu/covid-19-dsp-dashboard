@@ -81,7 +81,7 @@ Document.prototype.draw = function () {
     this.doc.setFontStyle('bold');
     this.doc.setFontSize(12);
     this.doc.text(this.__('declaration'), 105, 16, { align: 'center' });
-    
+
     this.reset();
 
     // left column
@@ -272,8 +272,9 @@ Document.prototype.fill = function (data) {
 };
 
 Document.prototype.addSignature = function (signature) {
-
-    this.doc.addImage(signature, 'PNG', 155, 260, 40, 30);
+    if(signature.length > 0) {
+        this.doc.addImage(signature, 'PNG', 155, 260, 40, 30);
+    }
 };
 
 Document.prototype.addQrCode = function (qrcode) {

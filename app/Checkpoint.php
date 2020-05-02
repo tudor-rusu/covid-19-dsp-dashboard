@@ -43,7 +43,7 @@ class Checkpoint
                     return strcmp($a['name'], $b['name']);
                 });
                 $bordersArray = self::super_unique($bordersArray,'name');
-print_r(json_encode($bordersArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));die;
+//print_r(json_encode($bordersArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));die;
                 return $bordersArray;
             } else {
                 return $apiRequest['message'];

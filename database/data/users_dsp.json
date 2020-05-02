@@ -1,991 +1,991 @@
 {
     "1": {
         "username": "aero-arad-1",
-        "password": "f6pvdtrm",
+        "password": "pcxd8sb9",
         "checkpoint-name": "P.T.F. Aeroport Arad",
         "checkpoint-id": 72
     },
     "2": {
         "username": "aero-arad-2",
-        "password": "hfgcse3b",
+        "password": "rcdthunb",
         "checkpoint-name": "P.T.F. Aeroport Arad",
         "checkpoint-id": 72
     },
     "3": {
         "username": "aero-arad-3",
-        "password": "rt4m6f7b",
+        "password": "ta7updm3",
         "checkpoint-name": "P.T.F. Aeroport Arad",
         "checkpoint-id": 72
     },
     "4": {
         "username": "aero-bacau-1",
-        "password": "zp2hrmnc",
+        "password": "c5p7kxsf",
         "checkpoint-name": "P.T.F. Aeroport Bacau",
         "checkpoint-id": 66
     },
     "5": {
         "username": "aero-bacau-2",
-        "password": "5kchprxm",
+        "password": "8pkxfz96",
         "checkpoint-name": "P.T.F. Aeroport Bacau",
         "checkpoint-id": 66
     },
     "6": {
         "username": "aero-bacau-3",
-        "password": "2gavs39e",
+        "password": "4fhtrc5a",
         "checkpoint-name": "P.T.F. Aeroport Bacau",
         "checkpoint-id": 66
     },
     "7": {
         "username": "aero-baneasa-1",
-        "password": "fuzs7ke4",
+        "password": "h9fcnea4",
         "checkpoint-name": "P.T.F. Aeroport Baneasa",
-        "checkpoint-id": 23
+        "checkpoint-id": 70
     },
     "8": {
         "username": "aero-baneasa-2",
-        "password": "x8dretbp",
+        "password": "d6uahepk",
         "checkpoint-name": "P.T.F. Aeroport Baneasa",
-        "checkpoint-id": 23
+        "checkpoint-id": 70
     },
     "9": {
         "username": "aero-baneasa-3",
-        "password": "9e82rmg4",
+        "password": "dfc4haup",
         "checkpoint-name": "P.T.F. Aeroport Baneasa",
-        "checkpoint-id": 23
+        "checkpoint-id": 70
     },
     "10": {
         "username": "aero-cluj-napoca-1",
-        "password": "kx32baum",
+        "password": "7eukg9nd",
         "checkpoint-name": "P.T.F. Aeroport Cluj-Napoca",
-        "checkpoint-id": 4
+        "checkpoint-id": 51
     },
     "11": {
         "username": "aero-cluj-napoca-2",
-        "password": "4kn9agt3",
+        "password": "gesfnktv",
         "checkpoint-name": "P.T.F. Aeroport Cluj-Napoca",
-        "checkpoint-id": 4
+        "checkpoint-id": 51
     },
     "12": {
         "username": "aero-cluj-napoca-3",
-        "password": "34pd8uvs",
+        "password": "crg6tnbd",
         "checkpoint-name": "P.T.F. Aeroport Cluj-Napoca",
-        "checkpoint-id": 4
+        "checkpoint-id": 51
     },
     "13": {
         "username": "aero-constanta-1",
-        "password": "kusep5g8",
+        "password": "24e9fan7",
         "checkpoint-name": "P.T.F. Aeroport Constanta",
-        "checkpoint-id": 22
+        "checkpoint-id": 69
     },
     "14": {
         "username": "aero-constanta-2",
-        "password": "7p9ae8mu",
+        "password": "nckr548m",
         "checkpoint-name": "P.T.F. Aeroport Constanta",
-        "checkpoint-id": 22
+        "checkpoint-id": 69
     },
     "15": {
         "username": "aero-constanta-3",
-        "password": "urz9n24t",
+        "password": "kvs58m6x",
         "checkpoint-name": "P.T.F. Aeroport Constanta",
-        "checkpoint-id": 22
+        "checkpoint-id": 69
     },
     "16": {
         "username": "aero-craiova-1",
-        "password": "tz842xck",
+        "password": "kmxp6fne",
         "checkpoint-name": "P.T.F. Aeroport Craiova",
-        "checkpoint-id": 15
+        "checkpoint-id": 62
     },
     "17": {
         "username": "aero-craiova-2",
-        "password": "gda52mtf",
+        "password": "9pnta6hd",
         "checkpoint-name": "P.T.F. Aeroport Craiova",
-        "checkpoint-id": 15
+        "checkpoint-id": 62
     },
     "18": {
         "username": "aero-craiova-3",
-        "password": "a9etun54",
+        "password": "2k687d5r",
         "checkpoint-name": "P.T.F. Aeroport Craiova",
-        "checkpoint-id": 15
+        "checkpoint-id": 62
     },
     "19": {
         "username": "aero-1asi-1",
-        "password": "etgf2nkx",
+        "password": "8mu4279h",
         "checkpoint-name": "P.T.F. Aeroport Iasi",
-        "checkpoint-id": 8
+        "checkpoint-id": 55
     },
     "20": {
         "username": "aero-1asi-2",
-        "password": "k45bae72",
+        "password": "bazcp34u",
         "checkpoint-name": "P.T.F. Aeroport Iasi",
-        "checkpoint-id": 8
+        "checkpoint-id": 55
     },
     "21": {
         "username": "aero-1asi-3",
-        "password": "72gfc4as",
+        "password": "kr2m5agn",
         "checkpoint-name": "P.T.F. Aeroport Iasi",
-        "checkpoint-id": 8
+        "checkpoint-id": 55
     },
     "22": {
         "username": "aero-otopeni-1",
-        "password": "e7ax38d6",
+        "password": "h8nev7fp",
         "checkpoint-name": "P.T.F. Aeroport Otopeni",
         "checkpoint-id": 52
     },
     "23": {
         "username": "aero-otopeni-2",
-        "password": "pn67kzcg",
+        "password": "pedhcx9z",
         "checkpoint-name": "P.T.F. Aeroport Otopeni",
         "checkpoint-id": 52
     },
     "24": {
         "username": "aero-otopeni-3",
-        "password": "dmct5zfh",
+        "password": "7avp9zt4",
         "checkpoint-name": "P.T.F. Aeroport Otopeni",
         "checkpoint-id": 52
     },
     "25": {
         "username": "aero-sibiu-1",
-        "password": "7rsbmct2",
+        "password": "has7kxt4",
         "checkpoint-name": "P.T.F. Aeroport Sibiu",
-        "checkpoint-id": 21
+        "checkpoint-id": 68
     },
     "26": {
         "username": "aero-sibiu-2",
-        "password": "zvrs32g5",
+        "password": "4k3u928b",
         "checkpoint-name": "P.T.F. Aeroport Sibiu",
-        "checkpoint-id": 21
+        "checkpoint-id": 68
     },
     "27": {
         "username": "aero-sibiu-3",
-        "password": "fmd8z3ch",
+        "password": "56em4ha3",
         "checkpoint-name": "P.T.F. Aeroport Sibiu",
-        "checkpoint-id": 21
+        "checkpoint-id": 68
     },
     "28": {
         "username": "aero-suceava-1",
-        "password": "4d5vxgse",
+        "password": "bsmt9hdu",
         "checkpoint-name": "P.T.F. Aeroport Suceava",
         "checkpoint-id": 61
     },
     "29": {
         "username": "aero-suceava-2",
-        "password": "d6g473zb",
+        "password": "4r78agbv",
         "checkpoint-name": "P.T.F. Aeroport Suceava",
         "checkpoint-id": 61
     },
     "30": {
         "username": "aero-suceava-3",
-        "password": "gs9u4536",
+        "password": "tup6fa7k",
         "checkpoint-name": "P.T.F. Aeroport Suceava",
         "checkpoint-id": 61
     },
     "31": {
         "username": "aero-targu-mures-1",
-        "password": "ugm4bzs8",
+        "password": "vz8ehs7g",
         "checkpoint-name": "P.T.F. Aeroport Targu Mures",
-        "checkpoint-id": 18
+        "checkpoint-id": 65
     },
     "32": {
         "username": "aero-targu-mures-2",
-        "password": "h6rt87ce",
+        "password": "m8ng4brp",
         "checkpoint-name": "P.T.F. Aeroport Targu Mures",
-        "checkpoint-id": 18
+        "checkpoint-id": 65
     },
     "33": {
         "username": "aero-targu-mures-3",
-        "password": "ns53vcpr",
+        "password": "sb6p5cre",
         "checkpoint-name": "P.T.F. Aeroport Targu Mures",
-        "checkpoint-id": 18
+        "checkpoint-id": 65
     },
     "34": {
         "username": "aero-timisoara-1",
-        "password": "4cs6x3fr",
+        "password": "5v3uhx6d",
         "checkpoint-name": "P.T.F. Aeroport Timisoara",
         "checkpoint-id": 53
     },
     "35": {
         "username": "aero-timisoara-2",
-        "password": "358z2fun",
+        "password": "dbfmugxr",
         "checkpoint-name": "P.T.F. Aeroport Timisoara",
         "checkpoint-id": 53
     },
     "36": {
         "username": "aero-timisoara-3",
-        "password": "sf93th26",
+        "password": "vtd3r2ab",
         "checkpoint-name": "P.T.F. Aeroport Timisoara",
         "checkpoint-id": 53
     },
     "37": {
         "username": "albita-1",
-        "password": "325cnkpa",
+        "password": "a5nu8p4e",
         "checkpoint-name": "P.T.F. Albita",
         "checkpoint-id": 74
     },
     "38": {
         "username": "albita-2",
-        "password": "e825mfxg",
+        "password": "g2trfa96",
         "checkpoint-name": "P.T.F. Albita",
         "checkpoint-id": 74
     },
     "39": {
         "username": "albita-3",
-        "password": "nktsxa89",
+        "password": "435ur2n8",
         "checkpoint-name": "P.T.F. Albita",
         "checkpoint-id": 74
     },
     "40": {
         "username": "bechet-1",
-        "password": "nsut4pbk",
+        "password": "2d4mertz",
         "checkpoint-name": "P.T.F. Bechet",
-        "checkpoint-id": 20
+        "checkpoint-id": 67
     },
     "41": {
         "username": "bechet-2",
-        "password": "82e9k5sh",
+        "password": "8b79aspc",
         "checkpoint-name": "P.T.F. Bechet",
-        "checkpoint-id": 20
+        "checkpoint-id": 67
     },
     "42": {
         "username": "bechet-3",
-        "password": "vnd9eg67",
+        "password": "2z94mex7",
         "checkpoint-name": "P.T.F. Bechet",
-        "checkpoint-id": 20
+        "checkpoint-id": 67
     },
     "43": {
         "username": "bors-1",
-        "password": "z5f7h6u8",
+        "password": "n62b9xzr",
         "checkpoint-name": "P.T.F. Bors",
         "checkpoint-id": 56
     },
     "44": {
         "username": "bors-2",
-        "password": "m9458hkf",
+        "password": "9dtapszx",
         "checkpoint-name": "P.T.F. Bors",
         "checkpoint-id": 56
     },
     "45": {
         "username": "bors-3",
-        "password": "vhc8ms3t",
+        "password": "actzxhbe",
         "checkpoint-name": "P.T.F. Bors",
         "checkpoint-id": 56
     },
     "46": {
         "username": "braila-1",
-        "password": "s8xhntca",
+        "password": "ptfehs9d",
         "checkpoint-name": "P.T.F. Braila",
         "checkpoint-id": 85
     },
     "47": {
         "username": "braila-2",
-        "password": "x52ca6g4",
+        "password": "dfev23u4",
         "checkpoint-name": "P.T.F. Braila",
         "checkpoint-id": 85
     },
     "48": {
         "username": "braila-3",
-        "password": "v65xu3tc",
+        "password": "spnkuxhr",
         "checkpoint-name": "P.T.F. Braila",
         "checkpoint-id": 85
     },
     "49": {
         "username": "calafat-1",
-        "password": "xtc6ezmn",
+        "password": "8cb76s5t",
         "checkpoint-name": "P.T.F. Calafat",
         "checkpoint-id": 63
     },
     "50": {
         "username": "calafat-2",
-        "password": "9238cxph",
+        "password": "d25cbg9k",
         "checkpoint-name": "P.T.F. Calafat",
         "checkpoint-id": 63
     },
     "51": {
         "username": "calafat-3",
-        "password": "tnbdhgmv",
+        "password": "7pzga6h4",
         "checkpoint-name": "P.T.F. Calafat",
         "checkpoint-id": 63
     },
     "52": {
         "username": "calarasi-1",
-        "password": "5bknmzxe",
+        "password": "fe6tpaus",
         "checkpoint-name": "P.T.F. Calarasi",
         "checkpoint-id": 81
     },
     "53": {
         "username": "calarasi-2",
-        "password": "a2e4tzg6",
+        "password": "6pnzm9sv",
         "checkpoint-name": "P.T.F. Calarasi",
         "checkpoint-id": 81
     },
     "54": {
         "username": "calarasi-3",
-        "password": "t7rg5zbe",
+        "password": "a2pkxg4b",
         "checkpoint-name": "P.T.F. Calarasi",
         "checkpoint-id": 81
     },
     "55": {
         "username": "cenad-1",
-        "password": "kah4npfb",
+        "password": "cnbsep2r",
         "checkpoint-name": "P.T.F. Cenad",
-        "checkpoint-id": 2
+        "checkpoint-id": 49
     },
     "56": {
         "username": "cenad-2",
-        "password": "matfp34b",
+        "password": "gmb3478c",
         "checkpoint-name": "P.T.F. Cenad",
-        "checkpoint-id": 2
+        "checkpoint-id": 49
     },
     "57": {
         "username": "cenad-3",
-        "password": "zvfcnmb6",
+        "password": "4mdfnr8x",
         "checkpoint-name": "P.T.F. Cenad",
-        "checkpoint-id": 2
+        "checkpoint-id": 49
     },
     "58": {
         "username": "cernavoda-1",
-        "password": "ht5ep47f",
+        "password": "r524p9hb",
         "checkpoint-name": "P.T.F. Cernavoda",
         "checkpoint-id": 46
     },
     "59": {
         "username": "cernavoda-2",
-        "password": "e25c7nth",
+        "password": "2u8pmx7b",
         "checkpoint-name": "P.T.F. Cernavoda",
         "checkpoint-id": 46
     },
     "60": {
         "username": "cernavoda-3",
-        "password": "z32k7u4b",
+        "password": "b9v4mczd",
         "checkpoint-name": "P.T.F. Cernavoda",
         "checkpoint-id": 46
     },
     "61": {
         "username": "constanta-1",
-        "password": "2e6drsza",
+        "password": "75bxzas6",
         "checkpoint-name": "P.T.F. Constanta",
         "checkpoint-id": 40
     },
     "62": {
         "username": "constanta-2",
-        "password": "fsdnxrze",
+        "password": "fapus94m",
         "checkpoint-name": "P.T.F. Constanta",
         "checkpoint-id": 40
     },
     "63": {
         "username": "constanta-3",
-        "password": "pnr3kt6s",
+        "password": "tsczgfem",
         "checkpoint-name": "P.T.F. Constanta",
         "checkpoint-id": 40
     },
     "64": {
         "username": "constanta-sud-agigea-1",
-        "password": "gx5csuz4",
+        "password": "drgs3eza",
         "checkpoint-name": "P.T.F. Constanta-Sud-Agigea",
         "checkpoint-id": 38
     },
     "65": {
         "username": "constanta-sud-agigea-2",
-        "password": "usmkn9t8",
+        "password": "pkm7x6zh",
         "checkpoint-name": "P.T.F. Constanta-Sud-Agigea",
         "checkpoint-id": 38
     },
     "66": {
         "username": "constanta-sud-agigea-3",
-        "password": "n8bdcr95",
+        "password": "g3r8nv52",
         "checkpoint-name": "P.T.F. Constanta-Sud-Agigea",
         "checkpoint-id": 38
     },
     "67": {
         "username": "curtici-1",
-        "password": "3d5mpx9z",
+        "password": "9s43v7dk",
         "checkpoint-name": "P.T.F. Curtici",
         "checkpoint-id": 86
     },
     "68": {
         "username": "curtici-2",
-        "password": "b2nxuatk",
+        "password": "x7vtm29b",
         "checkpoint-name": "P.T.F. Curtici",
         "checkpoint-id": 86
     },
     "69": {
         "username": "curtici-3",
-        "password": "xknuvr3s",
+        "password": "3ctk485z",
         "checkpoint-name": "P.T.F. Curtici",
         "checkpoint-id": 86
     },
     "70": {
         "username": "drobeta-turnu-severin-1",
-        "password": "m4zbe65r",
+        "password": "vha2e6dz",
         "checkpoint-name": "P.T.F. Drobeta-Turnu Severin",
         "checkpoint-id": 78
     },
     "71": {
         "username": "drobeta-turnu-severin-2",
-        "password": "f6xscad9",
+        "password": "m7e24t9n",
         "checkpoint-name": "P.T.F. Drobeta-Turnu Severin",
         "checkpoint-id": 78
     },
     "72": {
         "username": "drobeta-turnu-severin-3",
-        "password": "25f89bhx",
+        "password": "6gudbrse",
         "checkpoint-name": "P.T.F. Drobeta-Turnu Severin",
         "checkpoint-id": 78
     },
     "73": {
         "username": "galati-ferov-1",
-        "password": "hrsz4m2t",
+        "password": "fgxcbh9v",
         "checkpoint-name": "P.T.F. Galati (feroviar)",
         "checkpoint-id": 36
     },
     "74": {
         "username": "galati-ferov-2",
-        "password": "rabz3cx5",
+        "password": "4sv8hk97",
         "checkpoint-name": "P.T.F. Galati (feroviar)",
         "checkpoint-id": 36
     },
     "75": {
         "username": "galati-ferov-3",
-        "password": "k8m7pfb3",
+        "password": "4h3p6cdg",
         "checkpoint-name": "P.T.F. Galati (feroviar)",
         "checkpoint-id": 36
     },
     "76": {
         "username": "galati-port-1",
-        "password": "7gmsrx92",
+        "password": "pkhag6u7",
         "checkpoint-name": "P.T.F. Galati (portuar)",
         "checkpoint-id": 37
     },
     "77": {
         "username": "galati-port-2",
-        "password": "6rvhue95",
+        "password": "unr7d9v6",
         "checkpoint-name": "P.T.F. Galati (portuar)",
         "checkpoint-id": 37
     },
     "78": {
         "username": "galati-port-3",
-        "password": "mp32sc5h",
+        "password": "3xkmce48",
         "checkpoint-name": "P.T.F. Galati (portuar)",
         "checkpoint-id": 37
     },
     "79": {
         "username": "galati-rutier-1",
-        "password": "86aunsz7",
+        "password": "hkz2uasd",
         "checkpoint-name": "P.T.F. Galati (rutier)",
         "checkpoint-id": 35
     },
     "80": {
         "username": "galati-rutier-2",
-        "password": "tpkcer7z",
+        "password": "ht8esmrp",
         "checkpoint-name": "P.T.F. Galati (rutier)",
         "checkpoint-id": 35
     },
     "81": {
         "username": "galati-rutier-3",
-        "password": "thv5n276",
+        "password": "zt6b5x4u",
         "checkpoint-name": "P.T.F. Galati (rutier)",
         "checkpoint-id": 35
     },
     "82": {
         "username": "giurgiu-ferov-1",
-        "password": "br6k3mxc",
+        "password": "zxsp2vc4",
         "checkpoint-name": "P.T.F. Giurgiu (feroviar)",
         "checkpoint-id": 42
     },
     "83": {
         "username": "giurgiu-ferov-2",
-        "password": "ndkhr954",
+        "password": "4x82dehr",
         "checkpoint-name": "P.T.F. Giurgiu (feroviar)",
         "checkpoint-id": 42
     },
     "84": {
         "username": "giurgiu-ferov-3",
-        "password": "9vpk3smr",
+        "password": "gxm5t2n3",
         "checkpoint-name": "P.T.F. Giurgiu (feroviar)",
         "checkpoint-id": 42
     },
     "85": {
         "username": "giurgiu-port-1",
-        "password": "hpta3k8u",
+        "password": "urk7tmfd",
         "checkpoint-name": "P.T.F. Giurgiu (portuar)",
         "checkpoint-id": 41
     },
     "86": {
         "username": "giurgiu-port-2",
-        "password": "a96re8vx",
+        "password": "n4sm8d2g",
         "checkpoint-name": "P.T.F. Giurgiu (portuar)",
         "checkpoint-id": 41
     },
     "87": {
         "username": "giurgiu-port-3",
-        "password": "dz59tan6",
+        "password": "z8cg4u7h",
         "checkpoint-name": "P.T.F. Giurgiu (portuar)",
         "checkpoint-id": 41
     },
     "88": {
         "username": "giurgiu-rutier-1",
-        "password": "bt7ghcrv",
+        "password": "9mc7r36e",
         "checkpoint-name": "P.T.F. Giurgiu (rutier)",
         "checkpoint-id": 50
     },
     "89": {
         "username": "giurgiu-rutier-2",
-        "password": "vax2p4u8",
+        "password": "nrbvpdae",
         "checkpoint-name": "P.T.F. Giurgiu (rutier)",
         "checkpoint-id": 50
     },
     "90": {
         "username": "giurgiu-rutier-3",
-        "password": "f362k7tx",
+        "password": "e9zrdx7u",
         "checkpoint-name": "P.T.F. Giurgiu (rutier)",
         "checkpoint-id": 50
     },
     "91": {
         "username": "halmeu-ferov-1",
-        "password": "5z76htsu",
+        "password": "z8uh3fn4",
         "checkpoint-name": "P.T.F. Halmeu (feroviar)",
         "checkpoint-id": 45
     },
     "92": {
         "username": "halmeu-ferov-2",
-        "password": "9gxcp6a3",
+        "password": "xevfgkt5",
         "checkpoint-name": "P.T.F. Halmeu (feroviar)",
         "checkpoint-id": 45
     },
     "93": {
         "username": "halmeu-ferov-3",
-        "password": "b7g4avr3",
+        "password": "7n82kvdp",
         "checkpoint-name": "P.T.F. Halmeu (feroviar)",
         "checkpoint-id": 45
     },
     "94": {
         "username": "halmeu-rutier-1",
-        "password": "ngubhr2e",
+        "password": "hf2ru9m3",
         "checkpoint-name": "P.T.F. Halmeu (rutier)",
         "checkpoint-id": 33
     },
     "95": {
         "username": "halmeu-rutier-2",
-        "password": "2thvpk9s",
+        "password": "8fdnkcx9",
         "checkpoint-name": "P.T.F. Halmeu (rutier)",
         "checkpoint-id": 33
     },
     "96": {
         "username": "halmeu-rutier-3",
-        "password": "eu9gnbc7",
+        "password": "7zxd9hgn",
         "checkpoint-name": "P.T.F. Halmeu (rutier)",
         "checkpoint-id": 33
     },
     "97": {
         "username": "iasi-1",
-        "password": "t7nfpb8v",
+        "password": "8fv9nhkr",
         "checkpoint-name": "P.T.F. Iasi",
         "checkpoint-id": 43
     },
     "98": {
         "username": "iasi-2",
-        "password": "7szhnbed",
+        "password": "skmae85b",
         "checkpoint-name": "P.T.F. Iasi",
         "checkpoint-id": 43
     },
     "99": {
         "username": "iasi-3",
-        "password": "mrx5gne9",
+        "password": "sbx3hgke",
         "checkpoint-name": "P.T.F. Iasi",
         "checkpoint-id": 43
     },
     "100": {
         "username": "jimbolia-ferov-1",
-        "password": "rp3xv42a",
+        "password": "6sm5fza3",
         "checkpoint-name": "P.T.F. Jimbolia (feroviar)",
         "checkpoint-id": 84
     },
     "101": {
         "username": "jimbolia-ferov-2",
-        "password": "du2s6f4p",
+        "password": "xd3regzp",
         "checkpoint-name": "P.T.F. Jimbolia (feroviar)",
         "checkpoint-id": 84
     },
     "102": {
         "username": "jimbolia-ferov-3",
-        "password": "ut7fxns6",
+        "password": "a4vztd28",
         "checkpoint-name": "P.T.F. Jimbolia (feroviar)",
         "checkpoint-id": 84
     },
     "103": {
         "username": "jimbolia-rutier-1",
-        "password": "2ecv4dsr",
+        "password": "b8vau4e9",
         "checkpoint-name": "P.T.F. Jimbolia (rutier)",
         "checkpoint-id": 34
     },
     "104": {
         "username": "jimbolia-rutier-2",
-        "password": "xgfks4mu",
+        "password": "6kpdf7rt",
         "checkpoint-name": "P.T.F. Jimbolia (rutier)",
         "checkpoint-id": 34
     },
     "105": {
         "username": "jimbolia-rutier-3",
-        "password": "rnu2g48p",
+        "password": "pr4nu8vt",
         "checkpoint-name": "P.T.F. Jimbolia (rutier)",
         "checkpoint-id": 34
     },
     "106": {
         "username": "mangalia-1",
-        "password": "e3b9a6r4",
+        "password": "fpug4d8n",
         "checkpoint-name": "P.T.F. Mangalia",
         "checkpoint-id": 80
     },
     "107": {
         "username": "mangalia-2",
-        "password": "sf9rndgk",
+        "password": "n6uh8v54",
         "checkpoint-name": "P.T.F. Mangalia",
         "checkpoint-id": 80
     },
     "108": {
         "username": "mangalia-3",
-        "password": "c5ra7uh8",
+        "password": "vmz4sb8g",
         "checkpoint-name": "P.T.F. Mangalia",
         "checkpoint-id": 80
     },
     "109": {
         "username": "midia-1",
-        "password": "tucdx8pn",
+        "password": "d4sxmn2p",
         "checkpoint-name": "P.T.F. Midia",
         "checkpoint-id": 47
     },
     "110": {
         "username": "midia-2",
-        "password": "8g9k7d4a",
+        "password": "m2e58kd3",
         "checkpoint-name": "P.T.F. Midia",
         "checkpoint-id": 47
     },
     "111": {
         "username": "midia-3",
-        "password": "e7m6zv84",
+        "password": "ntgucd7h",
         "checkpoint-name": "P.T.F. Midia",
         "checkpoint-id": 47
     },
     "112": {
         "username": "nadlac-1",
-        "password": "8a2sn43r",
+        "password": "95enz48a",
         "checkpoint-name": "P.T.F. Nadlac",
-        "checkpoint-id": 7
+        "checkpoint-id": 54
     },
     "113": {
         "username": "nadlac-2",
-        "password": "nb3zuhxk",
+        "password": "kra8usg4",
         "checkpoint-name": "P.T.F. Nadlac",
-        "checkpoint-id": 7
+        "checkpoint-id": 54
     },
     "114": {
         "username": "nadlac-3",
-        "password": "xmn25udb",
+        "password": "darfzevc",
         "checkpoint-name": "P.T.F. Nadlac",
-        "checkpoint-id": 7
+        "checkpoint-id": 54
     },
     "115": {
         "username": "nadlac-2-1",
-        "password": "ftn69mr8",
+        "password": "st87z39r",
         "checkpoint-name": "P.T.F. Nadlac II",
-        "checkpoint-id": 1
+        "checkpoint-id": 48
     },
     "116": {
         "username": "nadlac-2-2",
-        "password": "g3cmd2s9",
+        "password": "7gd456fx",
         "checkpoint-name": "P.T.F. Nadlac II",
-        "checkpoint-id": 1
+        "checkpoint-id": 48
     },
     "117": {
         "username": "nadlac-2-3",
-        "password": "2rase6xu",
+        "password": "kr7zasbp",
         "checkpoint-name": "P.T.F. Nadlac II",
-        "checkpoint-id": 1
+        "checkpoint-id": 48
     },
     "118": {
         "username": "ostrov-1",
-        "password": "8m56d9vh",
+        "password": "8afump56",
         "checkpoint-name": "P.T.F. Ostrov",
         "checkpoint-id": 58
     },
     "119": {
         "username": "ostrov-2",
-        "password": "pehv5mnd",
+        "password": "k5b6nm8p",
         "checkpoint-name": "P.T.F. Ostrov",
         "checkpoint-id": 58
     },
     "120": {
         "username": "ostrov-3",
-        "password": "fka3secd",
+        "password": "gv3dmc8f",
         "checkpoint-name": "P.T.F. Ostrov",
         "checkpoint-id": 58
     },
     "121": {
         "username": "petea-1",
-        "password": "mu8ebs6c",
+        "password": "pxu537dt",
         "checkpoint-name": "P.T.F. Petea",
-        "checkpoint-id": 12
+        "checkpoint-id": 59
     },
     "122": {
         "username": "petea-2",
-        "password": "xnt4dsav",
+        "password": "b2psuzav",
         "checkpoint-name": "P.T.F. Petea",
-        "checkpoint-id": 12
+        "checkpoint-id": 59
     },
     "123": {
         "username": "petea-3",
-        "password": "z8umr42t",
+        "password": "9mdcf83s",
         "checkpoint-name": "P.T.F. Petea",
-        "checkpoint-id": 12
+        "checkpoint-id": 59
     },
     "124": {
         "username": "portile-de-fier-1-1",
-        "password": "r4d6mca8",
+        "password": "5rzg26us",
         "checkpoint-name": "P.T.F. Portile de Fier I",
         "checkpoint-id": 73
     },
     "125": {
         "username": "portile-de-fier-1-2",
-        "password": "5ct9xkfd",
+        "password": "7xhb9atg",
         "checkpoint-name": "P.T.F. Portile de Fier I",
         "checkpoint-id": 73
     },
     "126": {
         "username": "portile-de-fier-1-3",
-        "password": "25tgna46",
+        "password": "tacghusp",
         "checkpoint-name": "P.T.F. Portile de Fier I",
         "checkpoint-id": 73
     },
     "127": {
         "username": "sacuieni-1",
-        "password": "vsf7udka",
+        "password": "td6xcahk",
         "checkpoint-name": "P.T.F. Sacuieni",
         "checkpoint-id": 77
     },
     "128": {
         "username": "sacuieni-2",
-        "password": "2e6a9tgc",
+        "password": "zd7vp586",
         "checkpoint-name": "P.T.F. Sacuieni",
         "checkpoint-id": 77
     },
     "129": {
         "username": "sacuieni-3",
-        "password": "vntdpc6x",
+        "password": "f84p6nh3",
         "checkpoint-name": "P.T.F. Sacuieni",
         "checkpoint-id": 77
     },
     "130": {
         "username": "salonta-rutier-1",
-        "password": "2b4fx6nt",
+        "password": "x4uanh8b",
         "checkpoint-name": "P.T.F. Salonta (rutier)",
         "checkpoint-id": 44
     },
     "131": {
         "username": "salonta-rutier-2",
-        "password": "bch8zgeu",
+        "password": "u968f7xh",
         "checkpoint-name": "P.T.F. Salonta (rutier)",
         "checkpoint-id": 44
     },
     "132": {
         "username": "salonta-rutier-3",
-        "password": "v8c7rhxd",
+        "password": "sc24btdm",
         "checkpoint-name": "P.T.F. Salonta (rutier)",
         "checkpoint-id": 44
     },
     "133": {
         "username": "sculeni-1",
-        "password": "xmrp48kt",
+        "password": "z584mbfd",
         "checkpoint-name": "P.T.F. Sculeni",
-        "checkpoint-id": 29
+        "checkpoint-id": 76
     },
     "134": {
         "username": "sculeni-2",
-        "password": "tf8pz52c",
+        "password": "62v9csz4",
         "checkpoint-name": "P.T.F. Sculeni",
-        "checkpoint-id": 29
+        "checkpoint-id": 76
     },
     "135": {
         "username": "sculeni-3",
-        "password": "4kab9cvm",
+        "password": "brev5k6s",
         "checkpoint-name": "P.T.F. Sculeni",
-        "checkpoint-id": 29
+        "checkpoint-id": 76
     },
     "136": {
         "username": "siret-1",
-        "password": "48kfcn6p",
+        "password": "9fsar2zd",
         "checkpoint-name": "P.T.F. Siret",
-        "checkpoint-id": 17
+        "checkpoint-id": 64
     },
     "137": {
         "username": "siret-2",
-        "password": "fb26dv5n",
+        "password": "pkr7bez4",
         "checkpoint-name": "P.T.F. Siret",
-        "checkpoint-id": 17
+        "checkpoint-id": 64
     },
     "138": {
         "username": "siret-3",
-        "password": "3tzed92c",
+        "password": "e53b46fg",
         "checkpoint-name": "P.T.F. Siret",
-        "checkpoint-id": 17
+        "checkpoint-id": 64
     },
     "139": {
         "username": "stamora-moravita-ferov-1",
-        "password": "nprh4eud",
+        "password": "d75nzkx4",
         "checkpoint-name": "P.T.F. Stamora-Moravita (feroviar)",
         "checkpoint-id": 82
     },
     "140": {
         "username": "stamora-moravita-ferov-2",
-        "password": "3scr9nd5",
+        "password": "d586ntpe",
         "checkpoint-name": "P.T.F. Stamora-Moravita (feroviar)",
         "checkpoint-id": 82
     },
     "141": {
         "username": "stamora-moravita-ferov-3",
-        "password": "z2a5f6cu",
+        "password": "c6hvsbum",
         "checkpoint-name": "P.T.F. Stamora-Moravita (feroviar)",
         "checkpoint-id": 82
     },
     "142": {
         "username": "stamora-moravita-rutier-1",
-        "password": "rx9sukpm",
+        "password": "95hutkms",
         "checkpoint-name": "P.T.F. Stamora-Moravita (rutier)",
-        "checkpoint-id": 28
+        "checkpoint-id": 75
     },
     "143": {
         "username": "stamora-moravita-rutier-2",
-        "password": "uxrae4tv",
+        "password": "9d3g2act",
         "checkpoint-name": "P.T.F. Stamora-Moravita (rutier)",
-        "checkpoint-id": 28
+        "checkpoint-id": 75
     },
     "144": {
         "username": "stamora-moravita-rutier-3",
-        "password": "u8tk9ha3",
+        "password": "a98dftkg",
         "checkpoint-name": "P.T.F. Stamora-Moravita (rutier)",
-        "checkpoint-id": 28
+        "checkpoint-id": 75
     },
     "145": {
         "username": "stanca-1",
-        "password": "4pkznmhe",
+        "password": "3etbgsnu",
         "checkpoint-name": "P.T.F. Stanca",
         "checkpoint-id": 32
     },
     "146": {
         "username": "stanca-2",
-        "password": "69gkbhm5",
+        "password": "u6nxzh5k",
         "checkpoint-name": "P.T.F. Stanca",
         "checkpoint-id": 32
     },
     "147": {
         "username": "stanca-3",
-        "password": "b9ngxs6z",
+        "password": "udfk8754",
         "checkpoint-name": "P.T.F. Stanca",
         "checkpoint-id": 32
     },
     "148": {
         "username": "sulina-1",
-        "password": "e96kahpu",
+        "password": "mp9xf6za",
         "checkpoint-name": "P.T.F. Sulina",
         "checkpoint-id": 79
     },
     "149": {
         "username": "sulina-2",
-        "password": "9bxtmekd",
+        "password": "t65vx94h",
         "checkpoint-name": "P.T.F. Sulina",
         "checkpoint-id": 79
     },
     "150": {
         "username": "sulina-3",
-        "password": "x9d3pgka",
+        "password": "er3gzm89",
         "checkpoint-name": "P.T.F. Sulina",
         "checkpoint-id": 79
     },
     "151": {
         "username": "tulcea-1",
-        "password": "uvzgn5d2",
+        "password": "2meac4hd",
         "checkpoint-name": "P.T.F. Tulcea",
         "checkpoint-id": 83
     },
     "152": {
         "username": "tulcea-2",
-        "password": "bfz458mk",
+        "password": "bsrmna8c",
         "checkpoint-name": "P.T.F. Tulcea",
         "checkpoint-id": 83
     },
     "153": {
         "username": "tulcea-3",
-        "password": "b5udn9e3",
+        "password": "krf794t3",
         "checkpoint-name": "P.T.F. Tulcea",
         "checkpoint-id": 83
     },
     "154": {
         "username": "urziceni-1",
-        "password": "enasbrhu",
+        "password": "rma8gz5n",
         "checkpoint-name": "P.T.F. Urziceni",
         "checkpoint-id": 71
     },
     "155": {
         "username": "urziceni-2",
-        "password": "34fndkx7",
+        "password": "3dusx2rb",
         "checkpoint-name": "P.T.F. Urziceni",
         "checkpoint-id": 71
     },
     "156": {
         "username": "urziceni-3",
-        "password": "ase8pr9d",
+        "password": "r269d8ze",
         "checkpoint-name": "P.T.F. Urziceni",
         "checkpoint-id": 71
     },
     "157": {
         "username": "vama-veche-1",
-        "password": "vmph3td9",
+        "password": "rg2kxs73",
         "checkpoint-name": "P.T.F. Vama Veche",
-        "checkpoint-id": 13
+        "checkpoint-id": 60
     },
     "158": {
         "username": "vama-veche-2",
-        "password": "mu7543as",
+        "password": "vnr4ag2p",
         "checkpoint-name": "P.T.F. Vama Veche",
-        "checkpoint-id": 13
+        "checkpoint-id": 60
     },
     "159": {
         "username": "vama-veche-3",
-        "password": "8vandmp9",
+        "password": "kbugnth8",
         "checkpoint-name": "P.T.F. Vama Veche",
-        "checkpoint-id": 13
+        "checkpoint-id": 60
     },
     "160": {
         "username": "varsand-1",
-        "password": "hz6bm95n",
+        "password": "uzc7he53",
         "checkpoint-name": "P.T.F. Varsand",
         "checkpoint-id": 57
     },
     "161": {
         "username": "varsand-2",
-        "password": "chds8k2p",
+        "password": "4rx9cz2v",
         "checkpoint-name": "P.T.F. Varsand",
         "checkpoint-id": 57
     },
     "162": {
         "username": "varsand-3",
-        "password": "bcfz3m8t",
+        "password": "fg45hxb9",
         "checkpoint-name": "P.T.F. Varsand",
         "checkpoint-id": 57
     },
     "163": {
         "username": "vicsani-1",
-        "password": "4z8afrdc",
+        "password": "52tc3sek",
         "checkpoint-name": "P.T.F. Vicsani",
         "checkpoint-id": 39
     },
     "164": {
         "username": "vicsani-2",
-        "password": "8m3prgbt",
+        "password": "2heafzbv",
         "checkpoint-name": "P.T.F. Vicsani",
         "checkpoint-id": 39
     },
     "165": {
         "username": "vicsani-3",
-        "password": "n54k9ave",
+        "password": "pne36km4",
         "checkpoint-name": "P.T.F. Vicsani",
         "checkpoint-id": 39
     }

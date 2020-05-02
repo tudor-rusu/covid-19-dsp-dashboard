@@ -189,13 +189,54 @@ class HomeController extends Controller
             ]);
         }
     }
+
+    /**
+     * Register declaration to the authenticated user
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function postRegisterDeclaration(Request $request)
+    {
+        try {
+            if($request->input('code')) {
+                $code = $request->input('code');
+                $userName = Auth::user()->username;
+                $errorsMessage = '';
+
+                $registerDeclaration = Declaration::registerDeclaration(
+                    Declaration::API_DECLARATION_URL(), $code, $userName);
+
+                if ($registerDeclaration !== 'success') {
+                    $errorsMessage .= $registerDeclaration;
+                }
+
+                if (strlen($errorsMessage) < 1) {
+                    return response()->json([
+                        'success' => $registerDeclaration
+                    ]);
+                } else {
+                    throw new Exception(trim($errorsMessage));
+                }
+            } else {
+                throw new Exception(__('app.There is no code sent.'));
+            }
+        } catch (Exception $exception) {
+            return response()->json([
+                'error' => $exception->getMessage()
+            ]);
+        }
+    }
 }
 
-//GRFWP8	Brown Peter	f9b6aOjF	Nadlac	27 04 2020 05:35:3920 04 2020 14:58:3323 04 2020 11:15:18
-//GYHNP0	Kling Dillan	xK7IXuTN	Nadlac	27 04 2020 05:35:5321 04 2020 20:45:5323 04 2020 03:47:36
-//NHGMB8	Gislason Larissa	mPPUGNRM	Nadlac	27 04 2020 05:35:4620 04 2020 21:33:2523 04 2020 16:23:20
-//*****//O4D4KV	Hudson Erica	8czrEPTZ	Nadlac	27 04 2020 05:35:2524 04 2020 04:27:52
-//0W7K02	White Aron	7SqXv9MA	Nadlac	27 04 2020 05:36:0422 04 2020 00:59:3325 04 2020 04:37:50
-//XAILJV	Cruickshank Arlie	0IRAcKmp	Nadlac	27 04 2020 05:35:17
-//BTEXJW	Hodkiewicz Leslie	nzXp79Zk	Nadlac	27 04 2020 05:36:0223 04 2020 05:31:3323 04 2020 09:55:48
-//WROBGI
+//ACDX0N	Wiegand Rashad	NkSdSRUw	Nadlac	02 05 2020 05:52:4625 04 2020 10:29:2625 04 2020 12:34:45
+//0O8XB6	Hane Nolan	XSBurXDQ	Nadlac	02 05 2020 05:52:3025 04 2020 15:25:1528 04 2020 02:35:01
+//**//FJHMGU	Towne Bertha	vXWJgOPb	Nadlac	02 05 2020 05:51:0127 04 2020 12:48:19
+//**//CNMZX5	Powlowski Abagail	2CHwl69s	Nadlac	02 05 2020 05:51:1130 04 2020 17:44:31
+//4E0ZCH	Christiansen Juanita	5bILUAGU	Nadlac	02 05 2020 05:51:22
+//IWAFCE	Homenick Julien	4zKlbOIf	Nadlac	02 05 2020 05:52:3730 04 2020 07:03:3325 04 2020 13:49:48
+//SKKML0	Becker Triston	RsdRT1DQ	Nadlac	02 05 2020 05:51:0029 04 2020 08:41:00
+//CARPOR	Murazik Vernie	CKKq2DRF	Nadlac	02 05 2020 05:51:1527 04 2020 00:24:1930 04 2020 01:59:55
+//I9NO8G	Leannon Randall	AniDJcUx	Nadlac	02 05 2020 05:51:0827 04 2020 12:43:0727 04 2020 09:37:11
+//GVJFXW
