@@ -28,3 +28,5 @@ Route::get('/resetare-parola-utilizator', 'UserController@resetUserPassword')->n
 Route::post('/reset-password', 'UserController@postResetPassword')->name('reset-password');
 Route::post('ajax-reset-all-passwords', 'UserController@postResetAllPasswords')->name('reset-all-passwords');
 Route::post('refresh-list', 'HomeController@postRefreshList')->name('refresh-list');
+Route::post('search-declaration', 'HomeController@postSearchDeclaration')->name('search-declaration');
+Route::post('register-declaration', 'HomeController@postRegisterDeclaration')->name('register-declaration');

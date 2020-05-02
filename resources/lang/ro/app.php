@@ -119,5 +119,16 @@ return [
     'Dsp printed at' => 'declarația a fost printată la',
     'Dsp user' => 'de către',
     'Dsp not printed yet' => 'declarația nu a fost printată încă',
-    'Refresh declarations list' => 'Reîncărcare listă declarații'
+    'Refresh declarations list' => 'Reîncărcare listă declarații',
+    'Declaration Code' => 'Codul declarației',
+    'Search' => 'Caută',
+    'There is no code sent.' => 'Pentru căutare trebuie introdus codul declarației.',
+    'The person chose another border checkpoint.' => 'Persoana a ales alt P.T.F. în aplicația mobilă.',
+    'The person crossed border checkpoint at :crossedAt but was not validated yet.' =>
+        'Persoana a trecut P.T.F. la :crossedAt dar nu a fost validată încă.',
+    'The person crossed border at :validatedAt but was not validated yet by DSP.' =>
+        'Persoana a trecut P.T.F. la :validatedAt dar nu a fost validată încă de către DSP.',
+    'The declaration was validated at :dspValidatedAt by another DSP user [:userName].' =>
+        'Declarația a fost validată la :dspValidatedAt de către alt utilizator DSP [:userName].',
+    'The person did not arrived at any border checkpoint.' => 'Persoana nu s-a prezentat înca la nici un P.T.F.'
 ];

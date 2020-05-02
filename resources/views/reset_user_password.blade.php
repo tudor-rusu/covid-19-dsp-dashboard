@@ -108,7 +108,7 @@
                     if ($('.ajax-msg').is(':visible')){
                         $('.ajax-msg').fadeOut();
                     }
-                }, 5000)
+                }, 10000)
             }
         });
 

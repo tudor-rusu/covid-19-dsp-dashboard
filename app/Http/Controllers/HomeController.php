@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Declaration;
+use Carbon\Carbon;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use PeterColes\Countries\CountriesFacade;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\View\Factory;
@@ -58,8 +61,7 @@ class HomeController extends Controller
             session()->flash('message', $declaration);
             $formatedDeclaration['declaration'] = [];
         } else {
-            $formatedDeclaration = Declaration::getDeclationColectionFormated($declaration, $countries, app()->getLocale
-            ());
+            $formatedDeclaration = Declaration::getDeclationColectionFormated($declaration, $countries, app()->getLocale());
         }
 
         return view('declaration', [
@@ -73,11 +75,17 @@ class HomeController extends Controller
     /**
      * Return the formated declarations list
      *
+     * @param Request $request
+     *
      * @return mixed
      * @throws Exception
      */
-    public function list()
+    public function list(Request $request)
     {
+        if (!$request->ajax()) {
+            abort(403);
+        }
+
         $declarations = Declaration::all(
             Declaration::API_DECLARATION_URL(),
             ['page' => 1, 'per_page' => 1000000],
@@ -122,10 +130,108 @@ class HomeController extends Controller
     public function postRefreshList(Request $request)
     {
         if($request->input('refresh')) {
-            Artisan::call('cache:clear');
+            Cache::forget('declarations-' . Auth::user()->username);
             return back();
         }
 
         return;
+    }
+
+    /**
+     * Search and return a declaration
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function postSearchDeclaration(Request $request)
+    {
+        try {
+            if($request->input('code')) {
+                $code = $request->input('code');
+                $declaration = Declaration::find(Declaration::API_DECLARATION_URL(), $code);
+                $errorsMessage = '';
+
+                if(!is_array($declaration)) {
+                    throw new Exception($declaration);
+                }
+
+                if (Auth::user()->checkpoint != $declaration['border_checkpoint']['id']) {
+                    $errorsMessage .= __('app.The person chose another border checkpoint.') . ' ';
+                }
+
+                if (!$declaration['border_crossed_at']) {
+                    $errorsMessage .= __('app.The person did not arrived at any border checkpoint.') . ' ';
+                }
+
+                if ($declaration['border_crossed_at'] && !$declaration['border_validated_at']) {
+                    $crossedAt = Carbon::parse($declaration['border_crossed_at'])->format('d m Y H:i:s');
+                    $errorsMessage .= __('app.The person crossed border checkpoint at :crossedAt but was not validated yet.',
+                            ['crossedAt' => $crossedAt]) . ' ';
+                }
+
+                if ($declaration['dsp_validated_at'] && $declaration['dsp_user_name'] !== Auth::user()->username) {
+                    $dspValidatedAt = Carbon::parse($declaration['border_validated_at'])->format('d m Y H:i:s');
+                    $errorsMessage .= __('app.The declaration was validated at :dspValidatedAt by another DSP user [:userName].',
+                            [
+                                'dspValidatedAt' => $dspValidatedAt,
+                                'userName' => $declaration['dsp_user_name']
+                            ]) . ' ';
+                }
+
+                if (strlen($errorsMessage) < 1) {
+                    return response()->json([
+                        'success' => $code
+                    ]);
+                } else {
+                    throw new Exception(trim($errorsMessage));
+                }
+            } else {
+                throw new Exception(__('app.There is no code sent.'));
+            }
+        } catch (Exception $exception) {
+            return response()->json([
+                'error' => $exception->getMessage()
+            ]);
+        }
+    }
+
+    /**
+     * Register declaration to the authenticated user
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function postRegisterDeclaration(Request $request)
+    {
+        try {
+            if($request->input('code')) {
+                $code = $request->input('code');
+                $userName = Auth::user()->username;
+                $errorsMessage = '';
+
+                $registerDeclaration = Declaration::registerDeclaration(
+                    Declaration::API_DECLARATION_URL(), $code, $userName);
+
+                if ($registerDeclaration !== 'success') {
+                    $errorsMessage .= $registerDeclaration;
+                }
+
+                if (strlen($errorsMessage) < 1) {
+                    return response()->json([
+                        'success' => $registerDeclaration
+                    ]);
+                } else {
+                    throw new Exception(trim($errorsMessage));
+                }
+            } else {
+                throw new Exception(__('app.There is no code sent.'));
+            }
+        } catch (Exception $exception) {
+            return response()->json([
+                'error' => $exception->getMessage()
+            ]);
+        }
     }
 }

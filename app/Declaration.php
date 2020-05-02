@@ -5,6 +5,7 @@ namespace App;
 use App\Traits\ApiTrait;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use PeterColes\Countries\CountriesFacade;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -33,28 +34,31 @@ class Declaration
      */
     public static function all(string $url, array $params, string $format = null)
     {
-        return Cache::untilUpdated('declarations', env('CACHE_DECLARATIONS_PERSISTENCE'), function() use ($url, $params, $format) {
-            try {
-                $apiRequest = self::connectApi()
-                    ->get($url, $params);
+        $user = (Auth::user()->username !== env('ADMIN_USER')) ? Auth::user()->username : null ;
+        return Cache::untilUpdated('declarations-' . Auth::user()->username, env('CACHE_DECLARATIONS_PERSISTENCE'),
+            function() use ($url, $params, $format, $user) {
+                try {
+                    $apiRequest = self::connectApi()
+                        ->get($url, $params);
 
-                if (!$apiRequest->successful()) {
-                    throw new Exception(self::returnStatus($apiRequest->status()));
-                }
-
-                if ($apiRequest['data']) {
-                    if ($format === 'datatables') {
-                        return self::dataTablesFormat($apiRequest['data']);
+                    if (!$apiRequest->successful()) {
+                        throw new Exception(self::returnStatus($apiRequest->status()));
                     }
-                    return $apiRequest['data'];
-                } else {
-                    return $apiRequest['message'];
-                }
 
-            } catch(Exception $exception) {
-                return $exception->getMessage();
+                    if ($apiRequest['data']) {
+                        if ($format === 'datatables') {
+                            return self::dataTablesFormat($apiRequest['data'], $user);
+                        }
+                        return $apiRequest['data'];
+                    } else {
+                        return $apiRequest['message'];
+                    }
+
+                } catch(Exception $exception) {
+                    return $exception->getMessage();
+                }
             }
-        });
+        );
     }
 
     /**
@@ -112,18 +116,56 @@ class Declaration
     }
 
     /**
+     * Register a declaration with a specific DSP user
+     *
+     * @param string $url
+     * @param string $code
+     * @param string $username
+     *
+     * @return mixed|string
+     */
+    public static function registerDeclaration(string $url, string $code, string $username)
+    {
+        try {
+            $apiRequest = self::connectApi()
+                ->put(
+                    $url . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'dsp',
+                    ['dsp_user_name' => $username ]
+                );
+
+            if (!$apiRequest->successful()) {
+                throw new Exception(self::returnStatus($apiRequest->status()));
+            }
+
+            if ($apiRequest['status'] === 'success') {
+                return 'success';
+            } else {
+                return $apiRequest['message'];
+            }
+
+        } catch(Exception $exception) {
+            return $exception->getMessage();
+        }
+    }
+
+    /**
      * Format declarations collection for datatables
      *
-     * @param array $data
+     * @param array  $data
+     * @param string $user
      *
      * @return array
      */
-    private static function dataTablesFormat(array $data) : array
+    private static function dataTablesFormat(array $data, string $user = null) : array
     {
         $countries = CountriesFacade::lookup('ro_RO');
         $formattedDeclarations = [];
 
         foreach ($data as $key => $declaration) {
+            if($user && $declaration['dsp_user_name'] !== $user) {
+                continue;
+            }
+
             $formattedDeclarations[$key]['code'] = $declaration['code'];
             $formattedDeclarations[$key]['name'] = $declaration['name'] . ' ' . $declaration['surname'];
             $formattedDeclarations[$key]['country'] = $countries[$declaration['travelling_from_country_code']];
@@ -169,7 +211,7 @@ class Declaration
      */
     public static function getDeclationColectionFormated($declaration, $countries, $locale)
     {
-        $formatedResult = ['declaration', 'signature', 'qr_code', 'pdf_data'];
+        $formatedResult = [];
         $signature = '';
         $addresses = [];
         $visitedCountries = [];

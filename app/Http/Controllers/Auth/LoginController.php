@@ -7,6 +7,9 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -58,6 +61,7 @@ class LoginController extends Controller
         ]);
 
         if(auth()->attempt(array('username' => $input['username'], 'password' => $input['password']))) {
+            Cache::forget('declarations-' . Auth::user()->username);
             return redirect()->route('home');
         } else {
             session()->flash('type', 'danger');

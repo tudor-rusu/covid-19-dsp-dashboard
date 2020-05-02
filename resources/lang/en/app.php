@@ -114,5 +114,16 @@ return [
     'Dsp printed at' => 'Dsp printed at',
     'Dsp user' => 'Dsp user',
     'Dsp not printed yet' => 'Dsp not printed yet',
-    'Refresh declarations list' => 'Refresh declarations list'
+    'Refresh declarations list' => 'Refresh declarations list',
+    'Declaration Code' => 'Declaration Code',
+    'Search' => 'Search',
+    'There is no code sent.' => 'There is no code sent.',
+    'The person chose another border checkpoint.' => 'The person chose another border checkpoint.',
+    'The person crossed border checkpoint at :crossedAt but was not validated yet.' =>
+        'The person crossed border checkpoint at :crossedAt but was not validated yet.',
+    'The person crossed border at :validatedAt but was not validated yet by DSP.' =>
+        'The person crossed border at :validatedAt but was not validated yet by DSP.',
+    'The declaration was validated at :dspValidatedAt by another DSP user [:userName].' =>
+        'The declaration was validated at :dspValidatedAt by another DSP user [:userName].',
+    'The person did not arrived at any border checkpoint.' => 'The person did not arrived at any border checkpoint.'
 ];
