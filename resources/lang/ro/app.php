@@ -129,5 +129,6 @@ return [
     'The person crossed border at :validatedAt but was not validated yet by DSP.' =>
         'Persoana a trecut P.T.F. la :validatedAt dar nu a fost validată încă de către DSP.',
     'The declaration was validated at :dspValidatedAt by another DSP user [:userName].' =>
-        'Declarația a fost validată la :dspValidatedAt de către alt utilizator DSP [:userName].'
+        'Declarația a fost validată la :dspValidatedAt de către alt utilizator DSP [:userName].',
+    'The person did not arrived at any border checkpoint.' => 'Persoana nu s-a prezentat înca la nici un P.T.F.'
 ];

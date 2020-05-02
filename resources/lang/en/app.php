@@ -124,5 +124,6 @@ return [
     'The person crossed border at :validatedAt but was not validated yet by DSP.' =>
         'The person crossed border at :validatedAt but was not validated yet by DSP.',
     'The declaration was validated at :dspValidatedAt by another DSP user [:userName].' =>
-        'The declaration was validated at :dspValidatedAt by another DSP user [:userName].'
+        'The declaration was validated at :dspValidatedAt by another DSP user [:userName].',
+    'The person did not arrived at any border checkpoint.' => 'The person did not arrived at any border checkpoint.'
 ];

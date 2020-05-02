@@ -550,7 +550,14 @@
                                     data:{code:declarationCode},
                                     success:function(data){
                                         if($.isEmptyObject(data.error)){
-                                            doc.download(dataPdf, signature, qrcode);
+                                            $.ajax({
+                                                type:'POST',
+                                                url:"{{ route('refresh-list') }}",
+                                                data:{refresh:true},
+                                                success:function(data){
+                                                    doc.download(dataPdf, signature, qrcode);
+                                                }
+                                            });
                                         }else{
                                             printAlertMsg(data.error, 'danger');
                                         }

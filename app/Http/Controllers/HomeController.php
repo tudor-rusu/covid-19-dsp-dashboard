@@ -75,14 +75,16 @@ class HomeController extends Controller
     /**
      * Return the formated declarations list
      *
+     * @param Request $request
+     *
      * @return mixed
      * @throws Exception
      */
     public function list(Request $request)
     {
-//        if (!$request->ajax()) {
-//            abort(403);
-//        }
+        if (!$request->ajax()) {
+            abort(403);
+        }
 
         $declarations = Declaration::all(
             Declaration::API_DECLARATION_URL(),
@@ -158,6 +160,10 @@ class HomeController extends Controller
                     $errorsMessage .= __('app.The person chose another border checkpoint.') . ' ';
                 }
 
+                if (!$declaration['border_crossed_at']) {
+                    $errorsMessage .= __('app.The person did not arrived at any border checkpoint.') . ' ';
+                }
+
                 if ($declaration['border_crossed_at'] && !$declaration['border_validated_at']) {
                     $crossedAt = Carbon::parse($declaration['border_crossed_at'])->format('d m Y H:i:s');
                     $errorsMessage .= __('app.The person crossed border checkpoint at :crossedAt but was not validated yet.',
@@ -229,14 +235,3 @@ class HomeController extends Controller
         }
     }
 }
-
-//ACDX0N	Wiegand Rashad	NkSdSRUw	Nadlac	02 05 2020 05:52:4625 04 2020 10:29:2625 04 2020 12:34:45
-//0O8XB6	Hane Nolan	XSBurXDQ	Nadlac	02 05 2020 05:52:3025 04 2020 15:25:1528 04 2020 02:35:01
-//**//FJHMGU	Towne Bertha	vXWJgOPb	Nadlac	02 05 2020 05:51:0127 04 2020 12:48:19
-//**//CNMZX5	Powlowski Abagail	2CHwl69s	Nadlac	02 05 2020 05:51:1130 04 2020 17:44:31
-//4E0ZCH	Christiansen Juanita	5bILUAGU	Nadlac	02 05 2020 05:51:22
-//IWAFCE	Homenick Julien	4zKlbOIf	Nadlac	02 05 2020 05:52:3730 04 2020 07:03:3325 04 2020 13:49:48
-//SKKML0	Becker Triston	RsdRT1DQ	Nadlac	02 05 2020 05:51:0029 04 2020 08:41:00
-//CARPOR	Murazik Vernie	CKKq2DRF	Nadlac	02 05 2020 05:51:1527 04 2020 00:24:1930 04 2020 01:59:55
-//I9NO8G	Leannon Randall	AniDJcUx	Nadlac	02 05 2020 05:51:0827 04 2020 12:43:0727 04 2020 09:37:11
-//GVJFXW
