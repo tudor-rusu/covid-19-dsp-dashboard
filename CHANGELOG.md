@@ -1,3 +1,16 @@
+## [0.9.7] - 2020-05-02
+
+### Added
+- build the search specific declaration
+- register declaration with DSP user
+
+### Modify
+- CHANGELOG.md
+- translations files
+- refactor the controller and model to show user based list
+- refactored list of declarations to be shown related to user
+- fix critical jsPDF bug
+
 ## [0.9.6] - 2020-04-29
 
 ### Added
