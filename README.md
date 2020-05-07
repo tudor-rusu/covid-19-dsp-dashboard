@@ -23,7 +23,7 @@ Before start install, user will need:
 ### Install local
 * Clone repository
 ```shell script
-git clone git@github.com:citizennext/covid-19-entry-dsp.git covid-19-entry-dsp
+git clone git@github.com:tudor-rusu/covid-19-dsp-dashboard.git covid-19-entry-dsp
 ```
 * Move into the `covid-19-entry-dsp` directory
 ```shell script
